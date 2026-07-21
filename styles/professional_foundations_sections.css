@@ -58,6 +58,23 @@
     margin-left: auto;
     margin-right: auto;
 }
+/* TOP GLOW */
+.section-intro::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:4px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(120,220,255,.9),
+            transparent
+        );
+    opacity:.65;
+}
 
 .foundationContent {
     position: relative;
