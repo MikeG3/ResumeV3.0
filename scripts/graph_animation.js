@@ -11,6 +11,9 @@ const graph =
     columns: 20,
     rows: 40,
 
+    xAxisOffset: 5,
+    yAxisOffset: 5,
+
     depthOffsetX: -28,
     depthOffsetY: -22
 };
@@ -78,8 +81,8 @@ function createGraph()
 
         for (let col = 0; col < graph.columns; col++)
         {
-            const x = col * graph.spacing;
-            const y = row * graph.spacing;
+            const x = col * graph.spacing + graph.xAxisOffset;
+            const y = row * graph.spacing + graph.yAxisOffset;
 
             front[row][col] =
             {
