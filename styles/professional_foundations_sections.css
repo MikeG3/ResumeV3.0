@@ -82,6 +82,7 @@
     margin-bottom:90px;
 }
 
+/* MOVE GRID UP - FIX TRANSLATE X -> Not working */
 #geometryBackground {
     transform: translateY(-200px);
 }
@@ -112,12 +113,10 @@
 }
 
 @keyframes graphPulse{
-
     0%,100%{
         transform:
             translate(-50%,-50%)
             scale(1);
-
         opacity:.5;
     }
     50%{
@@ -127,7 +126,6 @@
         opacity:1;
     }
 }
-
 
 
 /*==================================================
