@@ -1,12 +1,12 @@
 /*==================================================
     HERO SECTION
 ==================================================*/
-#hero{
-    position:relative;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
 }
 
@@ -17,12 +17,12 @@
     JavaScript draws everything here.
     The canvas fills the hero section completely.
 */
-#networkCanvas{
-    position:fixed;
-    inset:0;
-    width:100vw;
-    height:100vh;
-    z-index:-30;
+#networkCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -30;
 }
 
 
@@ -34,17 +34,15 @@
     This is a separate layer that can be  animated
     independently later if desired.
 */
-#backgroundGradient{
+#backgroundGradient {
     position: fixed;
-    inset:0;
+    inset: 0;
     z-index: -19;
     background:
-        radial-gradient(
-            circle at center,
-            rgba(35,70,120,.18),
-            rgba(5,8,16,.15) 45%,
-            rgba(3,4,8,.70)
-        );
+        radial-gradient(circle at center,
+            rgba(35, 70, 120, .18),
+            rgba(5, 8, 16, .15) 45%,
+            rgba(3, 4, 8, .70));
 }
 
 /*==================================================
@@ -77,106 +75,108 @@
     Opacity will stay very low.
     We may later generate this with JavaScript.
 */
-#noiseOverlay{
+#noiseOverlay {
     position: fixed;
-    inset:0;
+    inset: 0;
     z-index: -18;
-    pointer-events:none;
-    opacity:.025;
+    pointer-events: none;
+    opacity: .025;
 }
 
 /*==================================================
     HERO CONTENT
 ==================================================*/
-#heroContent{
-    position:relative;
-    z-index:15;
-    width:min(900px,90%);
-    text-align:center;
+#heroContent {
+    position: relative;
+    z-index: 15;
+    width: min(900px, 90%);
+    text-align: center;
 }
 
 
 /*==================================================
     MAIN TITLE
 ==================================================*/
-#heroTitle{
+#heroTitle {
     font-family: 'audiowide';
-    font-size:clamp(3rem,7vw,6rem);
-    font-weight:700;
-    letter-spacing:.08em;
-    line-height:1.05;
-    margin-bottom:30px;
-    color:var(--text);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.05;
+    margin-bottom: 30px;
+    color: var(--text);
 }
 
 
 /*==================================================
     MISSION STATEMENT
 ==================================================*/
-#heroStatement{
+#heroStatement {
     font-family: 'Kode Mono';
-    max-width:700px;
-    font-size:clamp(1.15rem,2vw,1.5rem);
-    line-height:1.8;
-    color:var(--text-secondary);
-    margin-bottom:50px;
+    max-width: 700px;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*==================================================
     BUTTON CONTAINER
 ==================================================*/
-#heroButtons{
+#heroButtons {
     font-family: 'audiowide';
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 /*==================================================
     PRIMARY BUTTON
 ==================================================*/
-.primaryButton{
+.primaryButton {
     padding: 18px 36px;
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:999px;
-    backdrop-filter:blur(8px);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
     transition:
         transform .35s,
         background .35s,
         border-color .35s;
 }
 
-.primaryButton:hover{
-    transform:translateY(-3px);
-    background: rgba(255,255,255,.06);
-    border-color: rgba(255,255,255,.40);
+.primaryButton:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, .06);
+    border-color: rgba(255, 255, 255, .40);
 }
 
 /*==================================================
     SCROLL INDICATOR
 ==================================================*/
-#scrollIndicator{
-    position:absolute;
-    left:50%;
-    bottom:40px;
-    transform:translateX(-50%);
-    width:26px;
-    height:46px;
-    border: 2px solid rgba(255,255,255,.35);
-    border-radius:18px;
-    z-index:20;
+#scrollIndicator {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 46px;
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-radius: 18px;
+    z-index: 20;
 }
 
-#scrollIndicator span{
-    position:absolute;
-    left:50%;
-    top:8px;
-    width:5px;
-    height:10px;
-    border-radius:50%;
-    background:white;
-    transform:translateX(-50%);
+#scrollIndicator span {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    width: 5px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    transform: translateX(-50%);
 
 }
 
@@ -184,21 +184,21 @@
 /*==================================================
     MOBILE
 ==================================================*/
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    #hero{
-        min-height:600px;
+    #hero {
+        min-height: 600px;
     }
 
-    #heroContent{
-        width:92%;
+    #heroContent {
+        width: 92%;
     }
 
-    #heroStatement{
-        line-height:1.6;
+    #heroStatement {
+        line-height: 1.6;
     }
 
-    .primaryButton{
+    .primaryButton {
         padding: 15px 28px;
     }
 
