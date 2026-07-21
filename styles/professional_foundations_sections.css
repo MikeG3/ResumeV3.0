@@ -57,6 +57,7 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 80px;
 }
 /* TOP GLOW */
 .section-intro::before{
