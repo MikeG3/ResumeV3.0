@@ -75,3 +75,40 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width:768px){
+
+    #introduction{
+        padding:80px 20px;
+        min-height:auto;
+    }
+
+    #introductionContent{
+        width:100%;
+        padding:28px 22px;
+        border-radius:18px;
+    }
+
+    #introductionHeading{
+        font-size:1.6rem;
+        margin-bottom:30px;
+    }
+
+    .introductionContent{
+        font-size:1.05rem;
+        line-height:1.8;
+        margin-bottom:28px;
+    }
+
+    .question{
+        font-size:1.35rem;
+        margin:40px 0;
+    }
+
+    #introductionBlockquote{
+        font-size:1.6rem;
+        line-height:1.5;
+        margin-top:45px;
+    }
+
+}
