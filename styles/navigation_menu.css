@@ -1,0 +1,166 @@
+/* BURGER MENU */
+#menuButton span{
+    width:24px;
+    height:2px;
+    background:white;
+    border-radius:2px;
+    transition:.4s;
+}
+
+
+/*==================================================
+    MENU BUTTON
+==================================================*/
+#menuButton{
+    position:fixed;
+    top:35px;
+    right:40px;
+    width:54px;
+    height:54px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    z-index:1000;
+    transition:.4s;
+}
+
+#menuButton:hover{
+    background:rgba(255,255,255,.15);
+    transform:scale(1.05);
+}
+
+/*==================================================
+    MENU OPEN STATE --> BURGER TRANSFORMS TO X
+==================================================*/
+#menuButton.active span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+#menuButton.active span:nth-child(2){
+    opacity:0;
+}
+
+#menuButton.active span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+
+
+/*==================================================
+    MENU
+==================================================*/
+#menuOverlay{
+    position:fixed;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+    opacity:0;
+    pointer-events:none;
+    backdrop-filter:blur(16px);
+    background:rgba(5,12,30, 0.5);
+    transition:.6s;
+    z-index:900;
+}
+
+/* MENU LINKS */
+#menuOverlay a{
+    color:white;
+    text-decoration:none;
+    font-size:2rem;
+    letter-spacing:4px;
+    font-family:"Emblema One", serif;
+    opacity:0;
+    transform:translateY(25px);
+    transition:.45s;
+}
+
+#menuOverlay a:hover {
+    text-decoration: underline;
+}
+
+#menuOverlay.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+#menuOverlay.active a{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+.menu-divider-line {
+  /* Dimensions & Positioning */
+  width: 25dvw;
+  height: 2px;
+  
+  /* Futuristic Gradient & Glow */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(255, 255, 255, 1) 85%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+  
+  /* Reset Defaults */
+  border: none;
+  outline: none;
+}
+
+
+/*==================================================
+    LANGUAGE BUTTON
+==================================================*/
+#languageButton{
+    position:fixed;
+    top:35px;
+    right:105px;
+    height:54px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    color:white;
+    text-decoration:none;
+    font-family:"Emblema One", serif;
+    font-size:1rem;
+    letter-spacing:2px;
+    z-index:1000;
+    transition:
+        transform .35s,
+        background .35s,
+        box-shadow .35s,
+        letter-spacing .35s;
+}
+
+#languageButton:hover{
+    background:rgba(255,255,255,.16);
+    transform:scale(1.08);
+    letter-spacing:3px;
+    box-shadow:0 0 20px rgba(120,220,255,.35);
+}
+
+#languageButton:active{
+    transform:scale(.96);
+}
+
+#languageButton{
+    top:20px;
+    right:82px;
+    width:46px;
+    height:46px;
+    font-size:.9rem;
+}

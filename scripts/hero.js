@@ -562,6 +562,7 @@ function animate() {
     if (Math.random() < 0.002)
         createThought();
     */
+    /* MENU ACTIVATED THOUGHT */
     updateThoughts();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     /* Draw Nebula */
