@@ -1,85 +1,91 @@
-#professionalFoundation{
-    position:relative;
-    overflow:hidden;
-
-    padding:140px 0;
-
+#professionalFoundation {
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0;
     background:
-        linear-gradient(
-            180deg,
-            rgba(7,10,18,.96),
-            rgba(10,14,24,.98)
-        );
+        linear-gradient(180deg,
+            rgba(7, 10, 18, .96),
+            rgba(10, 14, 24, .98));
 }
 
-#professionalFoundation::before{
-    content:"";
-    position:absolute;
-    inset:0;
+#professionalFoundation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-image:
-        linear-gradient(
-            rgba(130,180,255,.035) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(130,180,255,.035) 1px,
-            transparent 1px
-        );
-    background-size:70px 70px;
-    opacity:.9;
-    pointer-events:none;
+        linear-gradient(rgba(130, 180, 255, .035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(130, 180, 255, .035) 1px,
+            transparent 1px);
+    background-size: 70px 70px;
+    opacity: .9;
+    pointer-events: none;
 }
 
-#professionalFoundation::after{
-    content:"";
-    position:absolute;
-    inset:0;
+#professionalFoundation::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-image:
-        radial-gradient(
-            circle,
-            rgba(150,220,255,.22) 1px,
-            transparent 1.5px
-        );
-    background-size:70px 70px;
-    opacity:.25;
-    animation:gridFloat 30s linear infinite;
-    pointer-events:none;
+        radial-gradient(circle,
+            rgba(150, 220, 255, .22) 1px,
+            transparent 1.5px);
+    background-size: 70px 70px;
+    opacity: .25;
+    animation: gridFloat 30s linear infinite;
+    pointer-events: none;
 }
 
-@keyframes gridFloat{
-    from{
+@keyframes gridFloat {
+    from {
         transform:
-            translate(0px,0px);
+            translate(0px, 0px);
     }
-    to{
+
+    to {
         transform:
-            translate(70px,70px);
+            translate(70px, 70px);
     }
 }
 
-.foundationContent{
-    position:relative;
-    z-index:5;
-    width:min(1200px,92%);
-    margin:auto;
+.section-intro {
+    border: 1px solid rgba(140, 220, 255, .12);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .045);
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.foundationHeading{
-    font-family:"Audiowide";
-    font-size:clamp(2.4rem,5vw,4rem);
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    margin-bottom:25px;
+.foundationContent {
+    position: relative;
+    z-index: 5;
+    width: min(1200px, 92%);
+    margin: auto;
 }
 
-.foundationSubtitle{
-    font-family:"Kode Mono";
-    font-size:1.2rem;
-    color:var(--text-secondary);
-    max-width:750px;
-    line-height:1.8;
-    margin-bottom:90px;
+.foundationHeading {
+    font-family: "Audiowide";
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.foundationSubtitle {
+    font-family: "Kode Mono";
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 750px;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* MOVE GRID UP - FIX TRANSLATE X -> Not working */
@@ -87,43 +93,42 @@
     transform: translateY(-200px);
 }
 
-.graphPoint{
-    position:absolute;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:#7edbff;
-    box-shadow:   0 0 10px rgba(126,219,255,.55);
-    transform:translate(-50%,-50%);
+.graphPoint {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7edbff;
+    box-shadow: 0 0 10px rgba(126, 219, 255, .55);
+    transform: translate(-50%, -50%);
     animation: graphPulse 5s ease-in-out infinite;
 }
 
-.graphLine{
-    position:absolute;
-    height:1px;
-    transform-origin:left center;
+.graphLine {
+    position: absolute;
+    height: 1px;
+    transform-origin: left center;
     background:
-        linear-gradient(
-            90deg,
-            rgba(126,219,255,.06),
-            rgba(126,219,255,.30),
-            rgba(126,219,255,.06)
-        );
-    opacity:.35;
+        linear-gradient(90deg,
+            rgba(126, 219, 255, .06),
+            rgba(126, 219, 255, .30),
+            rgba(126, 219, 255, .06));
+    opacity: .35;
 }
 
-@keyframes graphPulse{
-    0%,100%{
+@keyframes graphPulse {
+
+    0%,
+    100% {
         transform:
-            translate(-50%,-50%)
-            scale(1);
-        opacity:.5;
+            translate(-50%, -50%) scale(1);
+        opacity: .5;
     }
-    50%{
+
+    50% {
         transform:
-            translate(-50%,-50%)
-            scale(1.45);
-        opacity:1;
+            translate(-50%, -50%) scale(1.45);
+        opacity: 1;
     }
 }
 
@@ -133,64 +138,60 @@
 /*==================================================
     BACK GRID POINTS
 ==================================================*/
-.graphBackPoint{
-    position:absolute;
-    width:4px;
-    height:4px;
-    border-radius:50%;
-    background:rgba(120,200,255,.55);
-    box-shadow: 0 0 8px rgba(120,200,255,.25);
-    transform:translate(-50%,-50%);
-    opacity:.45;
+.graphBackPoint {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(120, 200, 255, .55);
+    box-shadow: 0 0 8px rgba(120, 200, 255, .25);
+    transform: translate(-50%, -50%);
+    opacity: .45;
     animation: graphBackPulse 7s ease-in-out infinite;
 }
 
 /*==================================================
     BACK GRID LINES
 ==================================================*/
-.graphBackLine{
-    position:absolute;
-    height:1px;
-    transform-origin:left center;
+.graphBackLine {
+    position: absolute;
+    height: 1px;
+    transform-origin: left center;
     background:
-        linear-gradient(
-            90deg,
-            rgba(120,200,255,0),
-            rgba(120,200,255,.16),
-            rgba(120,200,255,0)
-        );
-    opacity:.22;
+        linear-gradient(90deg,
+            rgba(120, 200, 255, 0),
+            rgba(120, 200, 255, .16),
+            rgba(120, 200, 255, 0));
+    opacity: .22;
 }
 
 /*==================================================
     DEPTH CONNECTIONS
 ==================================================*/
-.graphDepthLine{
-    position:absolute;
-    height:1px;
-    transform-origin:left center;
+.graphDepthLine {
+    position: absolute;
+    height: 1px;
+    transform-origin: left center;
     background:
-        linear-gradient(
-            90deg,
-            rgba(180,230,255,0),
-            rgba(180,230,255,.30),
-            rgba(180,230,255,0)
-        );
-    opacity:.28;
+        linear-gradient(90deg,
+            rgba(180, 230, 255, 0),
+            rgba(180, 230, 255, .30),
+            rgba(180, 230, 255, 0));
+    opacity: .28;
 }
 
-@keyframes graphBackPulse{
-    0%,100%{
+@keyframes graphBackPulse {
+
+    0%,
+    100% {
         transform:
-            translate(-50%,-50%)
-            scale(.9);
-        opacity:.30;
+            translate(-50%, -50%) scale(.9);
+        opacity: .30;
     }
-    50%{
+
+    50% {
         transform:
-            translate(-50%,-50%)
-            scale(1.2);
-        opacity:.55;
+            translate(-50%, -50%) scale(1.2);
+        opacity: .55;
     }
 }
-
