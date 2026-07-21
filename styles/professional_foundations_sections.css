@@ -88,11 +88,6 @@
     margin-right: auto;
 }
 
-/* MOVE GRID UP - FIX TRANSLATE X -> Not working */
-#geometryBackground {
-    transform: translateY(-200px);
-}
-
 .graphPoint {
     position: absolute;
     width: 6px;
