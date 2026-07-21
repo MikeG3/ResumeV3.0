@@ -44,7 +44,7 @@
 
 
 #introductionBlockquote { 
-    font-family:"audiowide",sans-serif;
+    font-family:"syne mono",sans-serif;
     font-style:italic;
     font-size:clamp(1.5rem,3vw,2.4rem);
     line-height:1.8;
