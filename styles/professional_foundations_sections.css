@@ -82,6 +82,10 @@
     margin-bottom:90px;
 }
 
+#geometryBackground {
+    transform: translateY(-200px);
+}
+
 .graphPoint{
     position:absolute;
     width:6px;
