@@ -1,69 +1,13 @@
 /*==================================================
-    RESET
-==================================================*/
-/* Remove browser default spacing */
-*,
-*::before,
-*::after{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/*==================================================
-    ROOT VARIABLES
-==================================================*/
-/*
-    Site-wide color palette.
-    These variables make it easy to update the
-    appearance of the entire website later.
-*/
-:root{
-    --background:#070B14;
-    --background-dark:#04060D;
-    --text:#F5F7FA;
-    --text-secondary:#B6C2D1;
-    --node:#7FD6FF;
-    --node-glow:#BFEFFF;
-    --accent:#62FFB0;
-}
-
-/*==================================================
-    HTML / BODY
-==================================================*/
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:var(--background);
-    color:var(--text);
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-    overflow-x:hidden;
-}
-
-/*==================================================
-    LINKS
-==================================================*/
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-
-/*==================================================
     HERO SECTION
 ==================================================*/
 #hero{
     position:relative;
-    width:100%;
-    height:100dvh;
-    overflow:hidden;
-    background:var(--background);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 10;
 }
 
 /*==================================================
@@ -74,12 +18,11 @@ a{
     The canvas fills the hero section completely.
 */
 #networkCanvas{
-    position:absolute;
+    position:fixed;
     inset:0;
-    width:100%;
-    height:100dvh;
-    display:block;
-    z-index:1;
+    width:100vw;
+    height:100vh;
+    z-index:-30;
 }
 
 
@@ -92,9 +35,9 @@ a{
     independently later if desired.
 */
 #backgroundGradient{
-    position:absolute;
+    position: fixed;
     inset:0;
-    z-index:2;
+    z-index: -19;
     background:
         radial-gradient(
             circle at center,
@@ -113,9 +56,9 @@ a{
 */
 /*
 #backgroundGlow{
-    position:absolute;
+    position: fixed;
     inset:0;
-    z-index:3;
+    z-index: -20;
     pointer-events:none;
     background:
         radial-gradient(
@@ -134,11 +77,10 @@ a{
     Opacity will stay very low.
     We may later generate this with JavaScript.
 */
-
 #noiseOverlay{
-    position:absolute;
+    position: fixed;
     inset:0;
-    z-index:4;
+    z-index: -18;
     pointer-events:none;
     opacity:.025;
 }
@@ -148,14 +90,8 @@ a{
 ==================================================*/
 #heroContent{
     position:relative;
-    z-index:10;
+    z-index:15;
     width:min(900px,90%);
-    height:100%;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
     text-align:center;
 }
 
@@ -242,16 +178,6 @@ a{
     background:white;
     transform:translateX(-50%);
 
-}
-
-
-/*==================================================
-    MAIN CONTENT
-==================================================*/
-main{
-    position:relative;
-    background:var(--background-dark);
-    min-height:100vh;
 }
 
 

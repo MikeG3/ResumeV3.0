@@ -1,14 +1,16 @@
 <html>
 
 <head>
-    <title>Hero</title>
+    <title>Michael Garner Resume | Software Engineer & Multi-Disciplinary Technologist</title>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <link rel="stylesheet" type="text/css" href="styles/content.css">
     <link rel="stylesheet" type="text/css" href="styles/hero.css">
     <link rel="stylesheet" type="text/css" href="styles/navigation_menu.css">
+    <link rel="stylesheet" type="text/css" href="styles/introduction.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +27,17 @@
 
 
 <body>
+
+    <!-- ==================================================================
+         Animated Background Canvas -  (Rendered entirely with JavaScript)
+    ==================================================================== -->
+    <canvas id="networkCanvas"></canvas>
+    <!-- ===============================================================================================
+         Optional Background Effects -Additional layers that can later be animated independently
+        ================================================================================================ -->
+    <div id="backgroundGlow"></div>
+    <div id="backgroundGradient"></div>
+    <div id="noiseOverlay"></div>
 
     <!-- FRENCH LANGUAGE LINK -->
     <a id="languageButton" href="indexFR.html" aria-label="Version française">
@@ -44,33 +57,16 @@
 
     <header id="hero">
 
-        <!-- ==================================================================
-         Animated Background Canvas -  (Rendered entirely with JavaScript)
-        ==================================================================== -->
-
-        <canvas id="networkCanvas"></canvas>
-
-
-        <!-- ==========================================
-         Optional Background Effects
-         Additional layers that can later be animated
-         independently if desired.
-        =========================================== -->
-
-        <div id="backgroundGlow"></div>
-        <div id="backgroundGradient"></div>
-        <div id="noiseOverlay"></div>
-
         <!-- ==========================================
          Hero Content
         =========================================== -->
-        <section id="heroContent">
+        <section id="heroContent" class="fadeSection">
 
             <!-- Main Identity -->
-            <h1 id="heroTitle">Michael Garner</h1>
+            <h1 id="heroTitle" class="fadeSection">Michael Garner</h1>
 
             <!-- Short Mission Statement -->
-            <p id="heroStatement">
+            <p id="heroStatement" class="fadeSection">
                 Creating thoughtful technology that connects people,
                 ideas, and engineering to solve real-world problems.
             </p>
@@ -101,19 +97,10 @@
         </section>
 
 
-        <!-- ==========================================
-         Scroll Indicator
-        =========================================== -->
-        <!-- 
-        <div id="scrollIndicator">
-        -->
-        <span></span>
-
-        </div>
-
     </header>
 
 
+    <div class="empty-space"></div>
 
     <!-- ==========================================================
             MAIN CONTENT
@@ -121,7 +108,43 @@
 
     <main>
 
-        <!-- The remainder of the website begins here -->
+        <!--==================================================
+             INTRODUCTION
+        ===================================================-->
+        <section id="introduction" class="fadeSection">
+            <div id="introductionContent">
+                <h2 id="introductionHeading" class="fadeSection">Building technology with purpose.</h2>
+                <p class="introductionContent fadeSection">
+                    Building technology isn't just about writing code or designing systems.
+                </p>
+                <p class="introductionContent fadeSection">
+                    It's about understanding people, solving meaningful problems,
+                    and creating tools that make life a little simpler.
+                </p>
+                <p class="introductionContent fadeSection">
+                    Whether I'm developing software, engineering automated systems,
+                    repairing electronics, or designing websites, every project
+                    begins with the same question:
+                </p>
+                <p class="question fadeSection">
+                    How can I make the world better?
+                </p>
+                <blockquote id="introductionBlockquote" class="fadeSection">
+                    The best technology doesn't demand attention.
+                    It quietly improves lives.
+                </blockquote>
+            </div>
+        </section>
+
+
+        <div class="empty-space"></div>
+
+
+
+
+
+
+
 
         <section id="about"></section>
 
@@ -132,6 +155,7 @@
     <!-- JavaScript -->
     <script src="scripts/hero.js"></script>
     <script src="scripts/burger_menu.js"></script>
+    <script src="scripts/fade_text.js"></script>
 
 </body>
 

@@ -1,0 +1,68 @@
+/*==================================================
+    RESET
+==================================================*/
+/* Remove browser default spacing */
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*==================================================
+    ROOT VARIABLES
+==================================================*/
+/*
+    Site-wide color palette.
+    These variables make it easy to update the
+    appearance of the entire website later.
+*/
+:root{
+    --background:#070B14;
+    --background-dark:#04060D;
+    --text:#F5F7FA;
+    --text-secondary:#B6C2D1;
+    --node:#7FD6FF;
+    --node-glow:#BFEFFF;
+    --accent:#62FFB0;
+}
+
+/*==================================================
+    HTML / BODY
+==================================================*/
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--background);
+    color:var(--text);
+    font-family:
+        "Inter",
+        Arial,
+        Helvetica,
+        sans-serif;
+    overflow-x:hidden;
+}
+
+.empty-space {
+    height: 40dvh;
+}
+
+/*==================================================
+    MAIN CONTENT
+==================================================*/
+main{
+    position:relative;
+    background:transparent;
+}
+
+/*==================================================
+    LINKS
+==================================================*/
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
