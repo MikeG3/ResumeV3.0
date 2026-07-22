@@ -165,3 +165,9 @@
     height:46px;
     font-size:.9rem;
 }
+
+@media (max-width: 600px) {
+    #menuOverlay a {
+        font-size: 1.5rem;
+    }
+}
