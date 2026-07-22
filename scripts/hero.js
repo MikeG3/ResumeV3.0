@@ -552,6 +552,44 @@ class Packet {
     }
 }
 
+
+/*==================================================
+    MOUSE EVENTS
+==================================================*/
+window.addEventListener("pointermove", event => {
+    mouse.x = event.clientX;
+    mouse.y = event.clientY;
+});
+
+canvas.addEventListener("pointerleave", () => {
+    mouse.x = -1000;
+    mouse.y = -1000;
+});
+
+function getMouseInfluence(x, y) {
+    const dx = mouse.x - x;
+    const dy = mouse.y - y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    return Math.max(0, 1 - distance / mouse.radius);
+}
+
+
+/*==================================================
+    RESIZE HANDLING
+==================================================*/
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    createNodes();
+    createNebulae();
+}
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
 /*==================================================
     ANIMATION LOOP for Network animation
 ==================================================*/
@@ -598,45 +636,18 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-/*==================================================
-    MOUSE EVENTS
-==================================================*/
-window.addEventListener("pointermove", event => {
-    mouse.x = event.clientX;
-    mouse.y = event.clientY;
-});
-
-canvas.addEventListener("pointerleave", () => {
-    mouse.x = -1000;
-    mouse.y = -1000;
-});
-
-function getMouseInfluence(x, y) {
-    const dx = mouse.x - x;
-    const dy = mouse.y - y;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-    return Math.max(0, 1 - distance / mouse.radius);
-}
-
-
-/*==================================================
-    RESIZE HANDLING
-==================================================*/
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    createNodes();
-    createNebulae();
-}
-
-window.addEventListener(
-    "resize",
-    resizeCanvas
-);
-
 
 /*==================================================
     INITIALIZE
 ==================================================*/
 resizeCanvas();
 animate();
+
+
+
+
+
+
+/*==================================================
+    EXPOSURE TO EXTERNAL FILE 
+==================================================*/
