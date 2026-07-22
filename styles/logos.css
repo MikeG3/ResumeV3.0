@@ -1,0 +1,42 @@
+/*==================================================
+    CARD LOGOS
+==================================================*/
+.credentialLogo,
+.experienceLogo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin-bottom:24px;
+    text-decoration:none;
+}
+
+
+/*==================================================
+    LOGO IMAGE
+==================================================*/
+.credentialLogo img,
+.experienceLogo img{
+    width: 80%;
+    height: auto;
+    min-height: 150px;
+    object-fit:contain;
+    opacity:.72;
+    transition:
+        transform .35s,
+        opacity .35s,
+        filter .35s;
+
+}
+
+/*==================================================
+    LOGO HOVER
+==================================================*/
+.credentialLogo:hover img,
+.experienceLogo:hover img{
+    opacity:1;
+    transform:scale(1.08);
+    filter:
+        drop-shadow(0 0 12px rgba(130,220,255,.45));
+
+}
