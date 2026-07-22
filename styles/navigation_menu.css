@@ -81,6 +81,7 @@
     opacity:0;
     transform:translateY(25px);
     transition:.45s;
+    text-align: center;
 }
 
 #menuOverlay a:hover {
