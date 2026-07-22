@@ -1,9 +1,7 @@
 /*==================================================
     GRAPH BACKGROUND
 ==================================================*/
-
 const geometry = document.getElementById("geometryBackground");
-
 const graph =
 {
     spacing: 70,
@@ -53,8 +51,7 @@ function createLine(x1, y1, x2, y2, className)
     line.style.top = y1 + "px";
     line.style.width = length + "px";
 
-    line.style.transform =
-        `rotate(${Math.atan2(dy, dx)}rad)`;
+    line.style.transform = `rotate(${Math.atan2(dy, dx)}rad)`;
 
     geometry.appendChild(line);
 }
@@ -73,7 +70,6 @@ function createGraph()
     //------------------------------------------
     // FRONT GRID
     //------------------------------------------
-
     for (let row = 0; row < graph.rows; row++)
     {
         front[row] = [];
@@ -84,11 +80,7 @@ function createGraph()
             const x = col * graph.spacing + graph.xAxisOffset;
             const y = row * graph.spacing + graph.yAxisOffset;
 
-            front[row][col] =
-            {
-                x,
-                y
-            };
+            front[row][col] = { x, y };
 
             back[row][col] =
             {
@@ -96,11 +88,7 @@ function createGraph()
                 y: y + graph.depthOffsetY
             };
 
-            createPoint(
-                x,
-                y,
-                "graphPoint"
-            );
+            createPoint( x, y, "graphPoint" );
 
             createPoint(
                 x + graph.depthOffsetX,
@@ -113,7 +101,6 @@ function createGraph()
     //------------------------------------------
     // FRONT GRID LINES
     //------------------------------------------
-
     for (let row = 0; row < graph.rows; row++)
     {
         for (let col = 0; col < graph.columns; col++)
@@ -145,7 +132,6 @@ function createGraph()
     //------------------------------------------
     // BACK GRID LINES
     //------------------------------------------
-
     for (let row = 0; row < graph.rows; row++)
     {
         for (let col = 0; col < graph.columns; col++)
@@ -177,7 +163,6 @@ function createGraph()
     //------------------------------------------
     // DEPTH LINES
     //------------------------------------------
-
     for (let row = 0; row < graph.rows; row++)
     {
         for (let col = 0; col < graph.columns; col++)
@@ -195,9 +180,8 @@ function createGraph()
 
 
 /*==================================================
-    INITIALIZE
+    INITIALIZE Graph
 ==================================================*/
-
 createGraph();
 
 window.addEventListener(

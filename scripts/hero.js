@@ -553,7 +553,7 @@ class Packet {
 }
 
 /*==================================================
-    ANIMATION LOOP
+    ANIMATION LOOP for Network animation
 ==================================================*/
 function animate() {
     //updateCamera();

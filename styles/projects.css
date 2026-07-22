@@ -91,6 +91,7 @@
 ==================================================*/
 .projectImage{
     height:300px;
+    width: 100%;
     background:
         radial-gradient(
             circle at top,
@@ -98,6 +99,7 @@
             rgba(20,30,55,.85)
         );
     border-bottom: 1px solid rgba(255,255,255,.05);
+    object-fit: cover;
 }
 
 /*==================================================
@@ -165,12 +167,32 @@
     background: rgba(120,220,255,.14);
 }
 
+/*==================================================
+    PROJECT LIST
+==================================================*/
+.projectList{
+    margin:30px 0;
+    padding-left:24px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.projectList li{
+    font-family:"Kode Mono";
+    color:var(--text-secondary);
+    line-height:1.7;
+}
+
+.projectList li::marker{
+    color:#7edbff;
+}
+
 
 
 /*==================================================
     MOBILE
 ==================================================*/
-
 @media (max-width:900px){
 
     .projectCard.featured{
