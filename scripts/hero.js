@@ -556,7 +556,7 @@ class Packet {
     ANIMATION LOOP
 ==================================================*/
 function animate() {
-    updateCamera();
+    //updateCamera();
     /* Thoughts at random cycles */
     /* TEMP REMOVE THOUGHTS - Maybe trigger them with clicks
     if (Math.random() < 0.002)
