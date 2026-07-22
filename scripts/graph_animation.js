@@ -7,7 +7,7 @@ const graph =
     spacing: 70,
 
     columns: 20,
-    rows: 100,
+    rows: 80,
 
     xAxisOffset: 5,
     yAxisOffset: 5,
