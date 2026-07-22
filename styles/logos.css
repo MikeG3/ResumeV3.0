@@ -30,8 +30,12 @@
 }
 
 .circleLogo {
-    height: 100px !important;
-    width: 100px !important;
+    height: 110px !important;
+    width: 110px !important;
+}
+
+.rectLogo {
+    border-radius: 20px !important;
 }
 
 /*==================================================
