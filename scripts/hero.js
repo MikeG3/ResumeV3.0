@@ -641,7 +641,7 @@ function animate() {
     INITIALIZE
 ==================================================*/
 resizeCanvas();
-animate();
+//animate();
 
 
 
@@ -651,3 +651,40 @@ animate();
 /*==================================================
     EXPOSURE TO EXTERNAL FILE 
 ==================================================*/
+function updateHeroScene(){
+
+    //updateCamera();
+    //updateThoughts();
+    for(const nebula of nebulae)
+        nebula.update();
+
+    for(const node of nodes)
+        node.update();
+
+    /*
+    if(Math.random()<config.constellationChance)
+        createConstellation();
+    */
+    /*
+    for(let i=packets.length-1;i>=0;i--){
+        packets[i].update();
+
+        if(packets[i].life<=0)
+            packets.splice(i,1);
+    }
+    */
+}
+
+function drawHeroScene(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(const nebula of nebulae)
+        nebula.draw();
+
+    drawConnections();
+    drawPulses();
+    drawConstellations();
+
+    for(const node of nodes)
+        node.draw();
+
+}
