@@ -563,7 +563,7 @@ function animate() {
         createThought();
     */
     /* MENU ACTIVATED THOUGHT */
-    updateThoughts();
+    //updateThoughts();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     /* Draw Nebula */
     for (const nebula of nebulae) {
@@ -571,10 +571,13 @@ function animate() {
         nebula.draw();
     }
     /* Draw Constellation */
+    /*
     if (Math.random() < config.constellationChance) {
         createConstellation();
     }
+    */
     drawConnections();
+    /*
     //Energy Packets
     for (let i = packets.length - 1; i >= 0; i--) {
         packets[i].update();
@@ -583,6 +586,7 @@ function animate() {
         if (packets[i].life <= 0)
             packets.splice(i, 1);
     }
+    */
     drawPulses();
     drawConstellations();
 
