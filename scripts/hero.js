@@ -627,7 +627,7 @@ function animate() {
     }
     */
     drawPulses();
-    drawConstellations();
+    /*drawConstellations();*/
 
     for (const node of nodes) {
         node.update();
@@ -689,7 +689,7 @@ function drawHeroScene(){
 
     drawConnections();
     drawPulses();
-    drawConstellations();
+    /* drawConstellations(); */
 
     for(const node of nodes)
         node.draw();
