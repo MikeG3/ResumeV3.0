@@ -594,6 +594,7 @@ window.addEventListener(
     ANIMATION LOOP for Network animation
 ==================================================*/
 function animate() {
+
     //updateCamera();
     /* Thoughts at random cycles */
     /* TEMP REMOVE THOUGHTS - Maybe trigger them with clicks
@@ -644,14 +645,20 @@ resizeCanvas();
 //animate();
 
 
-
-
-
-
+//let frameCounter = 0;
 /*==================================================
     EXPOSURE TO EXTERNAL FILE 
 ==================================================*/
 function updateHeroScene(){
+
+    /*
+        frameCounter++;
+    if(frameCounter % 120 === 0)
+    {
+        console.log("Hero animation running");
+    }
+    */
+
 
     //updateCamera();
     //updateThoughts();

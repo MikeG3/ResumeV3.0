@@ -50,14 +50,19 @@ function animationLoop() {
     switch (currentScene) {
 
         case "hero":
-
             updateHeroScene();
             drawHeroScene();
+            break;
 
+        case "intro":
+            updateHeroScene();
+            drawHeroScene();
             break;
 
         case "foundation":
-
+            break;
+           
+        case "crededentials":
             break;
 
         case "projects":

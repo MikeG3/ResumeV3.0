@@ -2,6 +2,49 @@
     GRAPH BACKGROUND
 ==================================================*/
 const geometry = document.getElementById("geometryBackground");
+let screenColumns, screenRows = 0;
+
+/*==================================================
+    CREATE POINT
+==================================================*/
+function getGraphDimensions()
+{
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    console.log('width: ' + width);
+    console.log('height: ' + height);
+
+    graph.columns = Math.ceil( width / 70 );
+
+    if (width < 500) {
+        graph.rows = 100;
+        //graph.columns = 8;
+    }
+    else if (width < 700) {
+        graph.rows = 70;
+       // graph.columns = 12;
+    }
+    else if (width < 900) {
+        graph.rows = 70;
+        //graph.columns = 14;
+    }
+    else if (width < 1100) {
+        graph.rows = 82;
+       // graph.columns = 16;
+    }
+    else {
+        graph.rows = 50;
+        //graph.columns = 19;
+    }
+
+     
+
+    console.log('columns: ' + graph.columns);
+    console.log('rows: ' + graph.rows);
+}
+
+
 const graph =
 {
     spacing: 70,
@@ -62,7 +105,8 @@ function createLine(x1, y1, x2, y2, className)
 ==================================================*/
 function createGraph()
 {
-    geometry.innerHTML = "";
+    
+    getGraphDimensions();
 
     const front = [];
     const back = [];
@@ -179,12 +223,12 @@ function createGraph()
 }
 
 
-/*==================================================
-    INITIALIZE Graph
-==================================================*/
-createGraph();
-
 window.addEventListener(
     "resize",
     createGraph
 );
+
+/*==================================================
+    INITIALIZE Graph
+==================================================*/
+createGraph();

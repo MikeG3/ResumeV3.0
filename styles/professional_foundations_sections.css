@@ -165,7 +165,7 @@
     box-shadow: 0 0 8px rgba(120, 200, 255, .25);
     transform: translate(-50%, -50%);
     opacity: .45;
-    animation: graphBackPulse 7s ease-in-out infinite;
+    /* animation: graphBackPulse 7s ease-in-out infinite; */
 }
 
 /*==================================================
@@ -198,6 +198,7 @@
     opacity: .28;
 }
 
+/*
 @keyframes graphBackPulse {
 
     0%,
@@ -213,3 +214,4 @@
         opacity: .55;
     }
 }
+    */
