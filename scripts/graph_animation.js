@@ -12,8 +12,10 @@ function getGraphDimensions()
     const width = window.innerWidth;
     const height = window.innerHeight;
 
+    /*
     console.log('width: ' + width);
     console.log('height: ' + height);
+    */
 
     graph.columns = Math.ceil( width / 70 );
 
@@ -39,9 +41,10 @@ function getGraphDimensions()
     }
 
      
-
+    /*
     console.log('columns: ' + graph.columns);
     console.log('rows: ' + graph.rows);
+    */
 }
 
 

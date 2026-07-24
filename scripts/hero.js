@@ -37,6 +37,32 @@ const ctx = canvas.getContext("2d");
             OBJECT LITERALS - NOT A CLASS, SINGLE INSTANCE ONJECT
 ====================================================================================*/
 
+function setNetworkDensity() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    if (width < 500) {
+        config.rows = 10;
+        config.columns = 5;
+    }
+    else if (width < 700) {
+        config.rows = 10;
+       config.columns = 7;
+    }
+    else if (width < 900) {
+        config.rows = 10;
+        config.columns = 8;
+    }
+    else if (width < 1100) {
+        config.rows = 10;
+       config.columns = 11;
+    }
+    else {
+        config.rows = 10;
+        config.columns = 19;
+    }
+}
+
 /*==================================================
     CONFIGURATION - VISUAL TUNING PARAMETERS
 ==================================================*/
@@ -49,6 +75,8 @@ const config =
     glowRadius: 10,
     //Network Density
     nodeSpacing: 90,
+    rows: 10, 
+    columns: 19,
 
     //MOUSE INTERACTION
     mouseForce: 0.8,
@@ -296,10 +324,25 @@ function createNodes() {
 
     nodes.length = 0;
 
+    setNetworkDensity()
+
+    /*
     const columns = Math.max(4, Math.floor(canvas.width / config.nodeSpacing));
     const rows = Math.max(4, Math.floor(canvas.height / config.nodeSpacing));
+    */
+    const columns = config.columns;
+    const rows = config.rows; 
     const cellWidth = canvas.width / columns;
     const cellHeight = canvas.height / rows;
+
+
+    console.log('network width:  ' + canvas.width);
+    console.log('network height:  ' + canvas.height);
+    console.log('network rows: ' + rows);
+    console.log('network columns: ' + columns);
+    console.log('network cell width: ' + cellWidth);
+    console.log('network cell height: ' + cellHeight);
+
 
     for (let row = 0; row < rows; row++) {
         for (let column = 0; column < columns; column++) {
@@ -649,7 +692,7 @@ resizeCanvas();
 /*==================================================
     EXPOSURE TO EXTERNAL FILE 
 ==================================================*/
-function updateHeroScene(){
+function updateHeroScene() {
 
     /*
         frameCounter++;
@@ -662,10 +705,10 @@ function updateHeroScene(){
 
     //updateCamera();
     //updateThoughts();
-    for(const nebula of nebulae)
+    for (const nebula of nebulae)
         nebula.update();
 
-    for(const node of nodes)
+    for (const node of nodes)
         node.update();
 
     /*
@@ -682,16 +725,16 @@ function updateHeroScene(){
     */
 }
 
-function drawHeroScene(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    for(const nebula of nebulae)
+function drawHeroScene() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const nebula of nebulae)
         nebula.draw();
 
     drawConnections();
     drawPulses();
     /* drawConstellations(); */
 
-    for(const node of nodes)
+    for (const node of nodes)
         node.draw();
 
 }

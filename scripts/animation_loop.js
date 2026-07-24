@@ -66,8 +66,6 @@ function animationLoop() {
             break;
 
         case "projects":
-
-
             break;
 
     }
