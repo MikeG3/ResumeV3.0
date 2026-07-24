@@ -335,14 +335,14 @@ function createNodes() {
     const cellWidth = canvas.width / columns;
     const cellHeight = canvas.height / rows;
 
-
+/*
     console.log('network width:  ' + canvas.width);
     console.log('network height:  ' + canvas.height);
     console.log('network rows: ' + rows);
     console.log('network columns: ' + columns);
     console.log('network cell width: ' + cellWidth);
     console.log('network cell height: ' + cellHeight);
-
+*/
 
     for (let row = 0; row < rows; row++) {
         for (let column = 0; column < columns; column++) {
