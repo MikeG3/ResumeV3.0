@@ -36,7 +36,7 @@
     animation: gridFloat 30s linear infinite;
     pointer-events: none;
 }
-
+/*
 @keyframes gridFloat {
     from {
         transform:
@@ -48,6 +48,7 @@
             translate(70px, 70px);
     }
 }
+    */
 
 
 .main-intro{
