@@ -186,10 +186,9 @@
 
 .projectList li a{
     font-family:"Kode Mono";
-    color:var(--text-secondary);
+    color:var(--text-glow-color);
     line-height:1.7;
     text-decoration: underline;
-    color: --text-glow-color;
 }
 
 .projectList li::marker{
