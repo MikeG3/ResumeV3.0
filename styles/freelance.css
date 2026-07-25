@@ -1,0 +1,348 @@
+/*==================================================
+    INDEPENDENT ENGINEERING
+==================================================*/
+#independentEngineering{
+    position:relative;
+    overflow:hidden;
+    padding:140px 0 160px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10,14,24,.96),
+            rgba(8,12,22,.98)
+        );
+}
+
+
+/*==================================================
+    SUBTLE LIGHTING
+==================================================*/
+#independentEngineering::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(120,220,255,.08),
+            transparent 60%
+        );
+
+    pointer-events:none;
+}
+
+
+/*==================================================
+    CONTENT
+==================================================*/
+#independentEngineering .contentWidth{
+    width:min(1250px,92%);
+    margin:auto;
+    text-align:center;
+}
+
+
+/*==================================================
+    TITLE
+==================================================*/
+#independentEngineering .sectionTitle{
+    font-family:"Audiowide";
+    font-size:clamp(2.8rem,5vw,4.4rem);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    margin-bottom:30px;
+    color:white;
+}
+
+
+/*==================================================
+    INTRO
+==================================================*/
+#independentEngineering .sectionIntro{
+    max-width:900px;
+    margin:0 auto 90px;
+    font-family:"Kode Mono";
+    font-size:1.15rem;
+    line-height:1.9;
+    color:var(--text-secondary);
+}
+
+
+/*==================================================
+    SHOWCASE
+==================================================*/
+#brandShowcase{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:min(1500px,96%);
+    margin:auto;
+}
+
+
+/*==================================================
+    SCROLLER
+==================================================*/
+#brandScroller{
+    display:flex;
+    gap:40px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    padding:20px 10px 30px;
+    scrollbar-width:none;
+}
+
+#brandScroller::-webkit-scrollbar{
+    display:none;
+}
+
+
+/*==================================================
+    BRAND CARD
+==================================================*/
+.brandCard{
+    flex:0 0 430px;
+    scroll-snap-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:55px 40px;
+    border-radius:28px;
+    background: rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.10);
+    backdrop-filter:blur(18px);
+    transition:
+        transform .45s,
+        border-color .45s,
+        box-shadow .45s,
+        background .45s;
+}
+
+
+.brandCard:hover{
+    border-color: rgba(120,220,255,.35);
+    background: rgba(255,255,255,.075);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35),
+        0 0 30px rgba(120,220,255,.10);
+}
+
+
+/*==================================================
+    LOGO
+==================================================*/
+.brandLogoLink{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+
+.brandLogo{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    opacity:.92;
+    transition:
+        transform .45s,
+        opacity .45s;
+}
+
+.brandCard:hover .brandLogo{
+    transform:scale(1.07);
+    opacity:1;
+}
+
+
+/*==================================================
+    COMPANY NAME
+==================================================*/
+.brandCard h3{
+    font-family:"Audiowide";
+    font-size:1.55rem;
+    letter-spacing:.06em;
+    color:white;
+    margin-bottom:22px;
+}
+
+
+/*==================================================
+    DESCRIPTION
+==================================================*/
+.brandCard p{
+    font-family:"Kode Mono";
+    color:var(--text-secondary);
+    line-height:1.8;
+    flex-grow:1;
+    margin-bottom:45px;
+}
+
+
+/*==================================================
+    EXPLORE BUTTON
+==================================================*/
+.brandExploreButton{
+    align-self:center;
+    padding:14px 34px;
+    border-radius:999px;
+    text-decoration:none;
+    color:white;
+    font-family:"Audiowide";
+    letter-spacing:.08em;
+    background: rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(10px);
+    transition:
+        transform .35s,
+        background .35s,
+        border-color .35s;
+}
+
+.brandExploreButton:hover{
+    transform:translateY(-3px);
+    background: rgba(255,255,255,.10);
+    border-color: rgba(120,220,255,.45);
+}
+
+
+/*==================================================
+    ARROWS
+==================================================*/
+.showcaseArrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-size:2rem;
+    background: rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    transition:
+        transform .35s,
+        background .35s;
+
+    z-index:10;
+}
+
+.showcaseArrow:hover{
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
+    background: rgba(255,255,255,.16);
+}
+
+
+.leftArrow{
+    left:-20px;
+}
+
+.rightArrow{
+    right:-20px;
+}
+
+/*==================================================
+    Brand Card Scrolling
+==================================================*/
+/*==================================================
+    ACTIVE CARD
+==================================================*/
+/*
+.brandCard{
+
+    transform:scale(.92);
+
+    opacity:.55;
+
+    filter:blur(1px);
+
+    transition:
+        transform .55s,
+        opacity .55s,
+        filter .55s,
+        box-shadow .55s,
+        border-color .55s,
+        background .55s;
+}
+        */
+
+
+.brandCard.activeCard{
+    transform:scale(1);
+    opacity:1;
+    filter:none;
+    border-color:rgba(120,220,255,.35);
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35),
+        0 0 35px rgba(120,220,255,.12);
+}
+
+
+.brandCard.activeCard .brandLogo{
+    transform:scale(1.08);
+    filter:
+        drop-shadow(0 0 18px rgba(120,220,255,.4));
+}
+
+
+.brandCard.activeCard .brandExploreButton{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.brandExploreButton{
+    transform:translateY(12px);
+    opacity:.75;
+    transition:
+        transform .4s,
+        opacity .4s,
+        background .35s;
+}
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+@media (max-width:900px){
+
+    #independentEngineering{
+        padding:90px 0 120px;
+    }
+
+    #brandScroller{
+        gap:24px;
+        padding-inline:20px;
+    }
+
+    .brandCard{
+        flex:0 0 82vw;
+        padding:40px 28px;
+    }
+
+    .brandLogo{
+        width:90px;
+        height:90px;
+    }
+
+    .brandCard h3{
+        font-size:1.35rem;
+    }
+
+    .brandCard p{
+        font-size:.96rem;
+    }
+
+    .showcaseArrow{
+        display:none;
+    }
+}
+

@@ -67,6 +67,11 @@ function animationLoop() {
 
         case "projects":
             break;
+            
+        case "freelance":
+            updateHeroScene();
+            drawHeroScene();
+            break;
 
     }
 
