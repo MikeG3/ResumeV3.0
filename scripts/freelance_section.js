@@ -8,133 +8,202 @@ const brandCards = [...document.querySelectorAll(".brandCard")];
 const leftArrow = document.querySelector(".leftArrow");
 const rightArrow = document.querySelector(".rightArrow");
 
-
-/*==================================================
-    FIND ACTIVE CARD
-==================================================*/
-
-function updateActiveCard()
+if (brandScroller && brandCards.length > 0)
 {
-    if (!brandScroller)
-        return;
+    /*==================================================
+        SETTINGS
+    ==================================================*/
 
-    const center =
-        brandScroller.scrollLeft +
-        brandScroller.clientWidth / 2;
+    const cardGap = 40; // Match CSS gap
 
-    let closestCard = null;
-    let closestDistance = Infinity;
 
-    brandCards.forEach(card =>
+    /*==================================================
+        ACTIVE CARD
+    ==================================================*/
+
+    function updateActiveCard()
     {
-        const cardCenter =
-            card.offsetLeft +
-            card.offsetWidth / 2;
+        const center =
+            brandScroller.scrollLeft +
+            brandScroller.clientWidth / 2;
 
-        const distance =
-            Math.abs(cardCenter - center);
+        let activeCard = null;
+        let closestDistance = Infinity;
 
-        if (distance < closestDistance)
+        brandCards.forEach(card =>
         {
-            closestDistance = distance;
-            closestCard = card;
-        }
-    });
+            const cardCenter =
+                card.offsetLeft +
+                card.offsetWidth / 2;
 
-    brandCards.forEach(card =>
-    {
-        card.classList.remove("activeCard");
-    });
+            const distance =
+                Math.abs(cardCenter - center);
 
-    if (closestCard)
-        closestCard.classList.add("activeCard");
-}
-
-
-/*==================================================
-    SCROLL TO CARD
-==================================================*/
-
-function scrollCards(direction)
-{
-    const amount =
-        brandScroller.clientWidth * 0.85;
-
-    brandScroller.scrollBy({
-
-        left: amount * direction,
-
-        behavior: "smooth"
-
-    });
-}
-
-
-/*==================================================
-    BUTTONS
-==================================================*/
-
-if (leftArrow)
-{
-    leftArrow.addEventListener(
-        "click",
-        () => scrollCards(-1)
-    );
-}
-
-if (rightArrow)
-{
-    rightArrow.addEventListener(
-        "click",
-        () => scrollCards(1)
-    );
-}
-
-
-/*==================================================
-    MOUSE WHEEL
-==================================================*/
-
-brandScroller.addEventListener(
-
-    "wheel",
-
-    event =>
-    {
-        event.preventDefault();
-
-        brandScroller.scrollBy({
-
-            left: event.deltaY,
-
-            behavior: "auto"
-
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                activeCard = card;
+            }
         });
 
-    },
+        brandCards.forEach(card =>
+            card.classList.remove("activeCard"));
 
-    { passive:false }
-
-);
-
-
-/*==================================================
-    UPDATE ACTIVE CARD
-==================================================*/
-
-brandScroller.addEventListener(
-    "scroll",
-    updateActiveCard
-);
-
-window.addEventListener(
-    "resize",
-    updateActiveCard
-);
+        if (activeCard)
+            activeCard.classList.add("activeCard");
+    }
 
 
-/*==================================================
-    INITIALIZE
-==================================================*/
+    /*==================================================
+        SCROLL TO CARD
+    ==================================================*/
 
-updateActiveCard();
+    function scrollToCard(index)
+    {
+        brandScroller.scrollTo({
+
+            left: brandCards[index].offsetLeft -
+                  (brandScroller.clientWidth - brandCards[index].offsetWidth) / 2,
+
+            behavior: "smooth"
+
+        });
+    }
+
+
+    /*==================================================
+        CURRENT CARD INDEX
+    ==================================================*/
+
+    function currentCardIndex()
+    {
+        const center =
+            brandScroller.scrollLeft +
+            brandScroller.clientWidth / 2;
+
+        let index = 0;
+        let closest = Infinity;
+
+        brandCards.forEach((card, i) =>
+        {
+            const cardCenter =
+                card.offsetLeft +
+                card.offsetWidth / 2;
+
+            const distance =
+                Math.abs(center - cardCenter);
+
+            if (distance < closest)
+            {
+                closest = distance;
+                index = i;
+            }
+        });
+
+        return index;
+    }
+
+
+    /*==================================================
+        NEXT / PREVIOUS CARD
+    ==================================================*/
+
+    function scrollCards(direction)
+    {
+        let index = currentCardIndex();
+
+        index += direction;
+
+        if (index < 0)
+            index = brandCards.length - 1;
+
+        if (index >= brandCards.length)
+            index = 0;
+
+        scrollToCard(index);
+    }
+
+
+    /*==================================================
+        BUTTONS
+    ==================================================*/
+
+    if (leftArrow)
+    {
+        leftArrow.addEventListener(
+            "click",
+            () => scrollCards(-1)
+        );
+    }
+
+    if (rightArrow)
+    {
+        rightArrow.addEventListener(
+            "click",
+            () => scrollCards(1)
+        );
+    }
+
+
+    /*==================================================
+        MOUSE WHEEL
+    ==================================================*/
+
+    brandScroller.addEventListener(
+
+        "wheel",
+
+        event =>
+        {
+            event.preventDefault();
+
+            brandScroller.scrollBy({
+
+                left: event.deltaY,
+
+                behavior: "auto"
+
+            });
+
+        },
+
+        { passive: false }
+
+    );
+
+
+    /*==================================================
+        KEYBOARD
+    ==================================================*/
+
+    window.addEventListener("keydown", event =>
+    {
+        if (event.key === "ArrowRight")
+            scrollCards(1);
+
+        if (event.key === "ArrowLeft")
+            scrollCards(-1);
+    });
+
+
+    /*==================================================
+        UPDATE ACTIVE CARD
+    ==================================================*/
+
+    brandScroller.addEventListener(
+        "scroll",
+        updateActiveCard
+    );
+
+    window.addEventListener(
+        "resize",
+        updateActiveCard
+    );
+
+
+    /*==================================================
+        INITIALIZE
+    ==================================================*/
+
+    updateActiveCard();
+}
