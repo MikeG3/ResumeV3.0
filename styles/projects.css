@@ -184,6 +184,14 @@
     line-height:1.7;
 }
 
+.projectList li a{
+    font-family:"Kode Mono";
+    color:var(--text-secondary);
+    line-height:1.7;
+    text-decoration: underline;
+    color: --text-glow-color;
+}
+
 .projectList li::marker{
     color:#7edbff;
 }
