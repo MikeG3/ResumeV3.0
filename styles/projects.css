@@ -1,198 +1,194 @@
 /*==================================================
     PROJECTS SECTION
 ==================================================*/
-#projects{
-    position:relative;
-    padding:160px 0;
+#projects {
+    position: relative;
+    padding: 160px 0;
     background:
-        linear-gradient(
-            180deg,
-            rgba(9,14,24,.98),
-            rgba(6,10,18,.99)
-        );
-    overflow:hidden;
+        linear-gradient(180deg,
+            rgba(9, 14, 24, .98),
+            rgba(6, 10, 18, .99));
+    overflow: hidden;
 }
 
 /*==================================================
     CONTENT
 ==================================================*/
-.projectsContent{
-    width:min(1350px,92%);
-    margin:auto;
-    position:relative;
-    z-index:5;
+.projectsContent {
+    width: min(1350px, 92%);
+    margin: auto;
+    position: relative;
+    z-index: 5;
 }
 
 
 /*==================================================
     SECTION TITLE
 ==================================================*/
-#projects .sectionTitle{
-    font-family:"Audiowide";
-    font-size:clamp(2.6rem,5vw,4.4rem);
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    margin-bottom:30px;
+#projects .sectionTitle {
+    font-family: "Audiowide";
+    font-size: clamp(2.2rem, 5vw, 4.4rem);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 /*==================================================
     INTRO
 ==================================================*/
-#projects .sectionIntro{
-    font-family:"Kode Mono";
-    max-width:820px;
-    line-height:1.9;
-    font-size:1.15rem;
-    color:var(--text-secondary);
-    margin-bottom:100px;
+#projects .sectionIntro {
+    font-family: "Kode Mono";
+    max-width: 820px;
+    line-height: 1.9;
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 100px;
 }
 
 /*==================================================
     GRID
 ==================================================*/
-#projectGrid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
-    gap:45px;
+#projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 45px;
 }
 
 /*==================================================
     PROJECT CARD
 ==================================================*/
-.projectCard{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    border-radius:26px;
-    background:   rgba(255,255,255,.03);
-    border:  1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(14px);
+.projectCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .08);
+    backdrop-filter: blur(14px);
     transition:
         transform .45s,
         border-color .45s,
         box-shadow .45s;
 }
 
-.projectCard:hover{
-    border-color:  rgba(130,220,255,.28);
-    box-shadow: 0 25px 70px rgba(0,0,0,.45);
+.projectCard:hover {
+    border-color: rgba(130, 220, 255, .28);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .45);
 }
 
 /*==================================================
     FEATURED PROJECT
 ==================================================*/
-.projectCard.featured{
-    grid-column:span 2;
+.projectCard.featured {
+    grid-column: span 2;
 }
 
 /*==================================================
     PROJECT IMAGE
 ==================================================*/
-.projectImage{
-    height:300px;
+.projectImage {
+    height: 300px;
     width: 100%;
     background:
-        radial-gradient(
-            circle at top,
-            rgba(80,160,255,.18),
-            rgba(20,30,55,.85)
-        );
-    border-bottom: 1px solid rgba(255,255,255,.05);
+        radial-gradient(circle at top,
+            rgba(80, 160, 255, .18),
+            rgba(20, 30, 55, .85));
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
     object-fit: cover;
 }
 
 /*==================================================
     BODY
 ==================================================*/
-.projectBody{
-    padding:42px;
+.projectBody {
+    padding: 42px;
 }
 
 /*==================================================
     CATEGORY
 ==================================================*/
-.projectCategory{
-    font-family:"Kode Mono";
-    font-size:.82rem;
-    letter-spacing:.28rem;
-    text-transform:uppercase;
-    color:#8bdfff;
-    margin-bottom:18px;
+.projectCategory {
+    font-family: "Kode Mono";
+    font-size: .82rem;
+    letter-spacing: .28rem;
+    text-transform: uppercase;
+    color: #8bdfff;
+    margin-bottom: 18px;
 }
 
 
 /*==================================================
     TITLE
 ==================================================*/
-.projectCard h3{
-    font-family:"Audiowide";
-    font-size:1.8rem;
-    line-height:1.4;
-    margin-bottom:28px;
+.projectCard h3 {
+    font-family: "Audiowide";
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 28px;
 }
 
 /*==================================================
     DESCRIPTION
 ==================================================*/
-.projectCard p{
-    font-family:"Kode Mono";
-    color:var(--text-secondary);
-    line-height:1.9;
+.projectCard p {
+    font-family: "Kode Mono";
+    color: var(--text-secondary);
+    line-height: 1.9;
 }
 
 /*==================================================
     TECHNOLOGY TAGS
 ==================================================*/
-.technologyTags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:35px;
+.technologyTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
 }
 
-.technologyTags span{
+.technologyTags span {
     padding: 8px 18px;
-    border-radius:999px;
-    background: rgba(110,190,255,.08);
-    border: 1px solid rgba(120,220,255,.15);
-    font-family:"Kode Mono";
-    font-size:.8rem;
-    letter-spacing:.05rem;
-    color:#bfefff;
-    transition:.35s;
+    border-radius: 999px;
+    background: rgba(110, 190, 255, .08);
+    border: 1px solid rgba(120, 220, 255, .15);
+    font-family: "Kode Mono";
+    font-size: .8rem;
+    letter-spacing: .05rem;
+    color: #bfefff;
+    transition: .35s;
 }
 
-.projectCard:hover .technologyTags span{
-    background: rgba(120,220,255,.14);
+.projectCard:hover .technologyTags span {
+    background: rgba(120, 220, 255, .14);
 }
 
 /*==================================================
     PROJECT LIST
 ==================================================*/
-.projectList{
-    margin:30px 0;
-    padding-left:24px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
+.projectList {
+    margin: 30px 0;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.projectList li{
-    font-family:"Kode Mono";
-    color:var(--text-secondary);
-    line-height:1.7;
+.projectList li {
+    font-family: "Kode Mono";
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
-.projectList li a{
-    font-family:"Kode Mono";
-    color:var(--text-glow-color);
-    line-height:1.7;
+.projectList li a {
+    font-family: "Kode Mono";
+    color: var(--text-glow-color);
+    line-height: 1.7;
     text-decoration: underline;
 }
 
-.projectList li::marker{
-    color:#7edbff;
+.projectList li::marker {
+    color: #7edbff;
 }
 
 
@@ -200,18 +196,25 @@
 /*==================================================
     MOBILE
 ==================================================*/
-@media (max-width:900px){
+@media (max-width:900px) {
 
-    .projectCard.featured{
-        grid-column:span 1;
+    .projectCard.featured {
+        grid-column: span 1;
     }
 
-    .projectImage{
-        height:220px;
+    .projectImage {
+        height: 220px;
     }
 
-    .projectBody{
-        padding:32px;
+    .projectBody {
+        padding: 32px;
     }
 
+}
+
+@media (max-width:600px) {
+    .projectCard {
+        max-width: 90%;
+        align-items: center;
+    }
 }
