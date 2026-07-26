@@ -8,180 +8,153 @@ const brandCards = [...document.querySelectorAll(".brandCard")];
 const leftArrow = document.querySelector(".leftArrow");
 const rightArrow = document.querySelector(".rightArrow");
 
-if (brandScroller && brandCards.length > 0)
+let currentCard = 0;
+
+
+/*==================================================
+    CENTER CARD
+==================================================*/
+
+function centerCurrentCard(smooth = true)
 {
-    /*==================================================
-        SETTINGS
-    ==================================================*/
-    const cardGap = 40; // Match CSS gap
+    const card = brandCards[currentCard];
 
+    if (!card)
+        return;
 
-    /*==================================================
-        ACTIVE CARD
-    ==================================================*/
-    function updateActiveCard()
-    {
-        const center = brandScroller.scrollLeft + brandScroller.clientWidth / 2;
+    const left =
+        card.offsetLeft -
+        (brandScroller.clientWidth - card.offsetWidth) / 2;
 
-        let activeCard = null;
-        let closestDistance = Infinity;
+    brandScroller.scrollTo({
 
-        brandCards.forEach(card =>
-        {
-            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-            const distance = Math.abs(cardCenter - center);
+        left,
 
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                activeCard = card;
-            }
-        });
+        behavior: smooth ? "smooth" : "auto"
 
-        brandCards.forEach(card =>
-            card.classList.remove("activeCard"));
-
-        if (activeCard)
-            activeCard.classList.add("activeCard");
-    }
-
-
-    /*==================================================
-        SCROLL TO CARD
-    ==================================================*/
-    function scrollToCard(index)
-    {
-        brandScroller.scrollTo({
-
-            left: brandCards[index].offsetLeft - (brandScroller.clientWidth - brandCards[index].offsetWidth) / 2,
-            behavior: "smooth"
-
-        });
-    }
-
-    /*==================================================
-        CURRENT CARD INDEX
-    ==================================================*/
-    function currentCardIndex()
-    {
-        const center =  brandScroller.scrollLeft + brandScroller.clientWidth / 2;
-
-        let index = 0;
-        let closest = Infinity;
-
-        brandCards.forEach((card, i) =>
-        {
-            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-            const distance =  Math.abs(center - cardCenter);
-
-            if (distance < closest)
-            {
-                closest = distance;
-                index = i;
-            }
-        });
-
-        return index;
-    }
-
-
-    /*==================================================
-        NEXT / PREVIOUS CARD
-    ==================================================*/
-    function scrollCards(direction)
-    {
-        let index = currentCardIndex();
-
-        index += direction;
-
-        if (index < 0)
-            index = brandCards.length - 1;
-
-        if (index >= brandCards.length)
-            index = 0;
-
-        scrollToCard(index);
-    }
-
-
-    /*==================================================
-        BUTTONS
-    ==================================================*/
-
-    if (leftArrow)
-    {
-        leftArrow.addEventListener(
-            "click",
-            () => scrollCards(-1)
-        );
-    }
-
-    if (rightArrow)
-    {
-        rightArrow.addEventListener(
-            "click",
-            () => scrollCards(1)
-        );
-    }
-
-
-    /*==================================================
-        MOUSE WHEEL
-    ==================================================*/
-/*
-    brandScroller.addEventListener(
-
-        "wheel",
-
-        event =>
-        {
-            event.preventDefault();
-
-            brandScroller.scrollBy({
-
-                left: event.deltaY,
-
-                behavior: "auto"
-
-            });
-
-        },
-
-        { passive: false }
-
-    );
-*/
-
-    /*==================================================
-        KEYBOARD
-    ==================================================*/
-    window.addEventListener("keydown", event =>
-    {
-        if (event.key === "ArrowRight")
-            scrollCards(1);
-
-        if (event.key === "ArrowLeft")
-            scrollCards(-1);
     });
-
-
-    /*==================================================
-        UPDATE ACTIVE CARD
-    ==================================================*/
-    brandScroller.addEventListener(
-        "scroll",
-        updateActiveCard
-    );
-
-    window.addEventListener(
-        "resize",
-        updateActiveCard
-    );
-
-
-    /*==================================================
-        INITIALIZE
-    ==================================================*/
 
     updateActiveCard();
 }
+
+
+/*==================================================
+    ACTIVE CARD
+==================================================*/
+
+function updateActiveCard()
+{
+    brandCards.forEach(card =>
+        card.classList.remove("activeCard"));
+
+    brandCards[currentCard].classList.add("activeCard");
+}
+
+
+/*==================================================
+    NEXT CARD
+==================================================*/
+
+function nextCard()
+{
+    currentCard++;
+
+    if (currentCard >= brandCards.length)
+        currentCard = 0;
+
+    centerCurrentCard();
+}
+
+
+/*==================================================
+    PREVIOUS CARD
+==================================================*/
+
+function previousCard()
+{
+    currentCard--;
+
+    if (currentCard < 0)
+        currentCard = brandCards.length - 1;
+
+    centerCurrentCard();
+}
+
+
+/*==================================================
+    BUTTONS
+==================================================*/
+
+if (rightArrow)
+{
+    rightArrow.addEventListener(
+        "click",
+        nextCard
+    );
+}
+
+if (leftArrow)
+{
+    leftArrow.addEventListener(
+        "click",
+        previousCard
+    );
+}
+
+
+/*==================================================
+    KEYBOARD
+==================================================*/
+
+window.addEventListener("keydown", event =>
+{
+    if (event.key === "ArrowRight")
+        nextCard();
+
+    if (event.key === "ArrowLeft")
+        previousCard();
+});
+
+
+/*==================================================
+    TOUCH SUPPORT
+==================================================*/
+
+let touchStart = 0;
+
+brandScroller.addEventListener("touchstart", event =>
+{
+    touchStart = event.touches[0].clientX;
+});
+
+brandScroller.addEventListener("touchend", event =>
+{
+    const delta =
+        touchStart -
+        event.changedTouches[0].clientX;
+
+    if (Math.abs(delta) < 40)
+        return;
+
+    if (delta > 0)
+        nextCard();
+    else
+        previousCard();
+});
+
+
+/*==================================================
+    RESIZE
+==================================================*/
+
+window.addEventListener("resize", () =>
+{
+    centerCurrentCard(false);
+});
+
+
+/*==================================================
+    INITIALIZE
+==================================================*/
+
+centerCurrentCard(false);
