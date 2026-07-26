@@ -165,6 +165,7 @@
 
 
 .brandLogo {
+    min-height: 140px;
     width: 120px;
     height: 120px;
     object-fit: contain;
@@ -173,6 +174,29 @@
         transform .45s,
         opacity .45s;
 }
+
+.brandLogoRect {
+    min-height: 140px;
+    width: 180px;
+    height: 140px;
+    object-fit: contain;
+    opacity: .92;
+    transition:
+        transform .45s,
+        opacity .45s;
+}
+
+.brandLogoMath {
+    min-height: 140px;
+    width: 105px;
+    height: auto;
+    object-fit: contain;
+    opacity: .92;
+    transition:
+        transform .45s,
+        opacity .45s;
+}
+
 
 .brandCard:hover .brandLogo {
     transform: scale(1.07);
@@ -321,7 +345,6 @@
 }
 
 .brandExploreButton {
-    transform: translateY(12px);
     opacity: .75;
     transition:
         transform .4s,
