@@ -1,0 +1,189 @@
+/*==================================================
+    RESUME LIBRARY
+==================================================*/
+
+#resumeLibrary{
+
+    position:relative;
+
+    padding:180px 0;
+
+    overflow:hidden;
+
+    background:transparent;
+}
+
+.resumeContent{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+    text-align:center;
+}
+
+
+/*==================================================
+    RESUME GRID
+==================================================*/
+
+.resumeGrid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(340px,1fr));
+
+    gap:50px;
+
+    margin-top:90px;
+}
+
+
+/*==================================================
+    RESUME CARD
+==================================================*/
+
+.resumeCard{
+
+    background:
+        rgba(10,20,40,.30);
+
+    backdrop-filter:blur(14px);
+
+    border:
+
+        1px solid
+        rgba(140,210,255,.12);
+
+    border-radius:26px;
+
+    padding:55px;
+
+    transition:
+        transform .45s,
+        box-shadow .45s,
+        border-color .45s;
+
+}
+
+
+.resumeCard:hover{
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+
+        rgba(140,210,255,.35);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(110,210,255,.18);
+
+}
+
+
+/*==================================================
+    PDF ICON
+==================================================*/
+
+.resumeIcon{
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+
+/*==================================================
+    TITLE
+==================================================*/
+
+.resumeCard h3{
+
+    font-family:"Audiowide";
+
+    font-size:1.4rem;
+
+    margin-bottom:20px;
+
+}
+
+
+/*==================================================
+    DESCRIPTION
+==================================================*/
+
+.resumeCard p{
+
+    font-family:"Kode Mono";
+
+    line-height:1.8;
+
+    color:var(--text-secondary);
+
+    min-height:95px;
+
+}
+
+
+/*==================================================
+    BUTTON
+==================================================*/
+
+.resumeButton{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:35px;
+
+    padding:
+
+        16px 34px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-family:"Audiowide";
+
+    color:white;
+
+    background:
+
+        rgba(60,160,255,.14);
+
+    border:
+
+        1px solid
+        rgba(120,210,255,.28);
+
+    transition:.35s;
+
+}
+
+.resumeButton:hover{
+
+    background:
+
+        rgba(90,190,255,.24);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(120,220,255,.30);
+
+}
