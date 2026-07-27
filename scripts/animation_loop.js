@@ -81,6 +81,8 @@ function animationLoop() {
             break;
 
         case "freelance":
+            networkCanvas.classList.add("fadeOut");
+            geometryBackground.classList.add("fadeIn");
             break;
 
         case "resume":

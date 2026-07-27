@@ -20,23 +20,23 @@ function getGraphDimensions()
     graph.columns = Math.ceil( width / 70 );
 
     if (width < 500) {
-        graph.rows = 22;
+        graph.rows = 12;
         //graph.columns = 8;
     }
     else if (width < 700) {
-        graph.rows = 22;
+        graph.rows = 12;
        // graph.columns = 12;
     }
     else if (width < 900) {
-        graph.rows = 22;
+        graph.rows = 12;
         //graph.columns = 14;
     }
     else if (width < 1100) {
-        graph.rows = 22;
+        graph.rows = 12;
        // graph.columns = 16;
     }
     else {
-        graph.rows = 20;
+        graph.rows = 12;
         //graph.columns = 19;
     }
 
