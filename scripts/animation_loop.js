@@ -68,13 +68,11 @@ function animationLoop() {
         case "foundation":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
-            console.log(geometryBackground.classList.contains("fadeIn"));
             break;
 
         case "credentials":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
-            console.log(geometryBackground.classList.contains("fadeIn"));
             break;
 
         case "projects":
@@ -83,8 +81,6 @@ function animationLoop() {
             break;
 
         case "freelance":
-            updateHeroScene();
-            drawHeroScene();
             break;
 
         case "resume":

@@ -33,7 +33,7 @@
             rgba(10,14,24,.20)
         );
 }
-/*
+
 #professionalFoundation::before {
     content: "";
     position: absolute;
@@ -62,7 +62,7 @@
     animation: gridFloat 30s linear infinite;
     pointer-events: none;
 }
-    */
+    
 /*
 @keyframes gridFloat {
     from {
