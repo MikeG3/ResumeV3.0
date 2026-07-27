@@ -63,6 +63,22 @@ main {
     margin:0 auto;
 }
 
+
+footer {
+    border-top: #7FD6FF 3px solid;
+    border-radius: 30px;
+}
+
+footer p {
+    margin-left: 20px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-family: 'zen dots';
+    border-top: #7FD6FF;
+    border-radius: 30px;
+}
+
+
 /*==================================================
     LINKS
 ==================================================*/
