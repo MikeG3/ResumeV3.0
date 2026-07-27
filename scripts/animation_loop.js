@@ -1,8 +1,11 @@
 /*==================================================
     GLOBAL ANIMATION MANAGER
 ==================================================*/
-
 let currentScene = "hero";
+
+const networkCanvas = document.getElementById("networkCanvas");
+const geometryBackground = document.getElementById("geometryBackground");
+
 
 /*==================================================
     OBSERVE SECTIONS
@@ -27,6 +30,7 @@ const sceneObserver = new IntersectionObserver(
         threshold: 0.35
     }
 
+
 );
 
 /*==================================================
@@ -38,13 +42,11 @@ document
     .forEach(section => {
 
         sceneObserver.observe(section);
-
     });
 
 /*==================================================
     MAIN LOOP
 ==================================================*/
-
 function animationLoop() {
 
     switch (currentScene) {
@@ -52,25 +54,44 @@ function animationLoop() {
         case "hero":
             updateHeroScene();
             drawHeroScene();
+            networkCanvas.classList.remove("fadeOut");
+            geometryBackground.classList.remove("fadeIn");
             break;
 
         case "intro":
             updateHeroScene();
             drawHeroScene();
+            networkCanvas.classList.remove("fadeOut");
+            geometryBackground.classList.remove("fadeIn");
             break;
 
         case "foundation":
+            networkCanvas.classList.add("fadeOut");
+            geometryBackground.classList.add("fadeIn");
+            console.log(geometryBackground.classList.contains("fadeIn"));
             break;
-           
-        case "crededentials":
+
+        case "credentials":
+            networkCanvas.classList.add("fadeOut");
+            geometryBackground.classList.add("fadeIn");
+            console.log(geometryBackground.classList.contains("fadeIn"));
             break;
 
         case "projects":
+            networkCanvas.classList.add("fadeOut");
+            geometryBackground.classList.add("fadeIn");
             break;
-            
+
         case "freelance":
             updateHeroScene();
             drawHeroScene();
+            break;
+
+        case "resume":
+            updateHeroScene();
+            drawHeroScene();
+            networkCanvas.classList.remove("fadeOut");
+            geometryBackground.classList.remove("fadeIn");
             break;
 
     }

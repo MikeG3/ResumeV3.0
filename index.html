@@ -43,6 +43,10 @@
          Animated Background Canvas -  (Rendered entirely with JavaScript)
     ==================================================================== -->
     <canvas id="networkCanvas"></canvas>
+
+    <!-- Animated Geometry Background -->
+    <div id="geometryBackground"></div>
+
     <!-- ===============================================================================================
          Optional Background Effects -Additional layers that can later be animated independently
         ================================================================================================ -->
@@ -67,7 +71,7 @@
         =========================================== -->
     <nav id="menuOverlay">
         <a href="index.html">Home</a>
-        <a href="#education">Credentials</a>
+        <a href="#credentials">Credentials</a>
         <a href="#experience">Proffesional Experience</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Download Resumé</a>
@@ -156,219 +160,222 @@
 ===================================================-->
         <section id="professionalFoundation" data-scene="foundation">
 
-            <!-- Animated Geometry Background -->
-            <div id="geometryBackground"></div>
-
-            <div class="contentWidth">
-
-                <div class="section-intro main-intro" data-scene="intro">
-                    <h2 class="foundationHeading">
-                        Professional Foundations
-                    </h2>
-
-                    <p class="foundationSubtitle">
-                        Great engineering begins with curiosity,
-                        but it is strengthened through education,
-                        discipline, and a lifelong commitment to learning.
-                    </p>
-                </div>
-
-                <!--==================================================
-            EDUCATION
-        ===================================================-->
-                <div class="section-intro" data-scene="credentials">
-                    <h2 class="foundationHeading">
-                        Credentials
-                    </h2>
-                </div>
-
-
-                <section id="credentials">
-                    <div id="credentialsGrid">
-                        <!--==================================================
-                    Bachelor
-                ===================================================-->
-                        <article class="credentialCard">
-                            <a class="credentialLogo" href="https://www.concordia.ca/" target="_blank"
-                                aria-label="Visit Concordia University">
-
-                                <img src="images/logos/concordialogoA.png" alt="Concordia University Logo">
-
-                            </a>
-                            <h3>
-                                BACHELOR OF ENGINEERING
-                            </h3>
-                            <p class="credentialProgram">
-                                Software Engineering
-                            </p>
-                            <p class="credentialSchool">
-                                Concordia University
-                            </p>
-                            <span class="credentialYear">
-                                Completed 2022
-                            </span>
-                        </article>
-
-                        <!--==================================================
-                    DEP
-                ===================================================-->
-                        <article class="credentialCard">
-                            <a class="credentialLogo" href="https://www.rosemount-technology.qc.ca/" target="_blank"
-                                aria-label="Visit Rosemont Technology Center">
-                                <img src="images/logos/rtcLogo3.jpg" alt="Rosemont Technology Center Logo">
-                            </a>
-                            <h3>
-                                AVS - DEP
-                            </h3>
-                            <p class="credentialProgram">
-                                Automated Systems Electro-Mechanics
-                            </p>
-                            <p class="credentialSchool">
-                                Rosemont Technology Centre
-                            </p>
-                            <span class="credentialYear">
-                                Completed 2007
-                            </span>
-                        </article>
-                        <!--==================================================
-                    DEC
-                ===================================================-->
-                        <article class="credentialCard">
-                            <a class="credentialLogo" href="https://johnabbott.qc.ca/" target="_blank"
-                                aria-label="Visit John Abbott College">
-                                <img src="images/logos/JACLogo.png" alt="John Abbott College Logo">
-                            </a>
-                            <h3>
-                                DEC
-                            </h3>
-                            <p class="credentialProgram">
-                                Engineering Technologies
-                            </p>
-                            <p class="credentialSchool">
-                                John Abbott College
-                            </p>
-                            <span class="credentialYear">
-                                2003 – 2004
-                            </span>
-                        </article>
-
-                    </div>
-                </section>
-
-
-            </div>
-
-
-            <!--==================================================
-    PROFESSIONAL EXPERIENCE
-===================================================-->
-            <section id="experience">
+            <div class="professionalFoundationContent">
 
                 <div class="contentWidth">
 
-                    <div class="section-intro">
+                    <div class="section-intro main-intro" data-scene="intro">
                         <h2 class="foundationHeading">
-                            Professional Experience
+                            Professional Foundations
+                        </h2>
+
+                        <p class="foundationSubtitle">
+                            Great engineering begins with curiosity,
+                            but it is strengthened through education,
+                            discipline, and a lifelong commitment to learning.
+                        </p>
+                    </div>
+
+                    <!--==================================================
+            EDUCATION
+        ===================================================-->
+                    <div class="section-intro" data-scene="credentials">
+                        <h2 class="foundationHeading">
+                            Credentials
                         </h2>
                     </div>
 
-                    <div id="experienceGrid">
 
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="mgtech.html" target="_blank"
-                                aria-label="Visit MG Tech - IT Consulting and Software Developpment">
-                                <img class="rectLogo" src="images/logos/MGTechLogo.png" alt="MG Tech Logo">
-                            </a>
-                            <h3>MG Tech Services</h3>
-                            <p>Founder · IT Consultant & Software Developer</p>
-                            <span>2025 – Present</span>
-                        </article>
+                    <section id="credentials">
+                        <div id="credentialsGrid">
+                            <!--==================================================
+                    Bachelor
+                ===================================================-->
+                            <article class="credentialCard">
+                                <a class="credentialLogo" href="https://www.concordia.ca/" target="_blank"
+                                    aria-label="Visit Concordia University">
 
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://www.victrix.ca/en/" target="_blank"
-                                aria-label="Visit Victrix IT Solutions Inc.">
-                                <img src="images/logos/VictrixLogo.SVG" alt="Victrix Logo">
-                            </a>
-                            <h3>Victrix Solutions</h3>
-                            <p>Software Consultant</p>
-                            <span>2022 – 2025</span>
-                        </article>
+                                    <img src="images/logos/concordialogoA.png" alt="Concordia University Logo">
 
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://www.beneva.ca/en" target="_blank"
-                                aria-label="Visit Beneva Insurance">
-                                <img src="images/logos/beneva.png" alt="Beneva Logo">
-                            </a>
-                            <h3>Beneva</h3>
-                            <p>Software Developer</p>
-                            <span>2022 – 2024</span>
-                        </article>
+                                </a>
+                                <h3>
+                                    BACHELOR OF ENGINEERING
+                                </h3>
+                                <p class="credentialProgram">
+                                    Software Engineering
+                                </p>
+                                <p class="credentialSchool">
+                                    Concordia University
+                                </p>
+                                <span class="credentialYear">
+                                    Completed 2022
+                                </span>
+                            </article>
 
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://www.xguard.ca/" target="_blank"
-                                aria-label="Visit X Guard Security">
-                                <img src="images/logos/xguardlogo.svg" alt="X Guard Logo">
-                            </a>
-                            <h3>XGuard</h3>
-                            <p>Full Stack Engineer</p>
-                            <span>2021 – 2022</span>
-                        </article>
+                            <!--==================================================
+                    DEP
+                ===================================================-->
+                            <article class="credentialCard">
+                                <a class="credentialLogo" href="https://www.rosemount-technology.qc.ca/" target="_blank"
+                                    aria-label="Visit Rosemont Technology Center">
+                                    <img src="images/logos/rtcLogo3.jpg" alt="Rosemont Technology Center Logo">
+                                </a>
+                                <h3>
+                                    AVS - DEP
+                                </h3>
+                                <p class="credentialProgram">
+                                    Automated Systems Electro-Mechanics
+                                </p>
+                                <p class="credentialSchool">
+                                    Rosemont Technology Centre
+                                </p>
+                                <span class="credentialYear">
+                                    Completed 2007
+                                </span>
+                            </article>
+                            <!--==================================================
+                    DEC
+                ===================================================-->
+                            <article class="credentialCard">
+                                <a class="credentialLogo" href="https://johnabbott.qc.ca/" target="_blank"
+                                    aria-label="Visit John Abbott College">
+                                    <img src="images/logos/JACLogo.png" alt="John Abbott College Logo">
+                                </a>
+                                <h3>
+                                    DEC
+                                </h3>
+                                <p class="credentialProgram">
+                                    Engineering Technologies
+                                </p>
+                                <p class="credentialSchool">
+                                    John Abbott College
+                                </p>
+                                <span class="credentialYear">
+                                    2003 – 2004
+                                </span>
+                            </article>
 
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://mikeg3.github.io/PlatinumAudio/" target="_blank"
-                                aria-label="Visit Platinum Audio Labs Montreal">
-                                <img class="rectLogo" src="images/logos/PlatinumAudioLogo2.png"
-                                    alt="Platinum Audio Logo">
-                            </a>
-                            <h3>Platinum Audio</h3>
-                            <p>Founder · Electronic Technician</p>
-                            <span>2015 – Present</span>
-                        </article>
+                        </div>
+                    </section>
 
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://stuffyrider.com/" target="_blank"
-                                aria-label="Visit Stuffy Rider Motorized Plush Toys which acquired Mini Safari">
-                                <img class="circleLogo" src="images/logos/minisafarilogo.png" alt="Mini Safari Logo">
-                            </a>
-                            <h3>Mini Safari</h3>
-                            <p>Chief Technology Officer (CTO)</p>
-                            <span>2016 – 2018</span>
-                        </article>
-
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://www.ekyrail.com/en target=" _blank"
-                                aria-label="Visit Ekyrail which acquired Transtronic">
-                                <img class="tilogo" src="images/logos/TranstronicLogo.png" alt="Transtronic Logo">
-                            </a>
-                            <h3>Transtronic Inc.</h3>
-                            <p>Assistant Production Supervisor</p>
-                            <span>2009 – 2015</span>
-                        </article>
-
-                        <article class="experienceCard">
-                            <a class="credentialLogo" href="https://www.stelpro.com/ target=" _blank"
-                                aria-label="Visit Stelpro Design Heating">
-                                <img class="circleLogo" src="images/logos/stelprologoc.png" alt="Stelpro Logo">
-                            </a>
-                            <h3>Stelpro Design</h3>
-                            <p>Technical Support Agent</p>
-                            <span>2008</span>
-                        </article>
-
-                        <article class="experienceCard">
-                            <a class="credentialLogo">
-                                <img class="rectLogo" src="images/logos/ElantechLogo.png" alt="Elantech Logo">
-                            </a>
-                            <h3>Elantech</h3>
-                            <p>Electro-Mechanical Equipment Manufacturing, Repair & Installation Technician</p>
-                            <span>2007</span>
-                        </article>
-
-                    </div>
 
                 </div>
 
-            </section>
+
+                <!--==================================================
+    PROFESSIONAL EXPERIENCE
+===================================================-->
+                <section id="experience">
+
+                    <div class="contentWidth">
+
+                        <div class="section-intro">
+                            <h2 class="foundationHeading">
+                                Professional Experience
+                            </h2>
+                        </div>
+
+                        <div id="experienceGrid">
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="mgtech.html" target="_blank"
+                                    aria-label="Visit MG Tech - IT Consulting and Software Developpment">
+                                    <img class="rectLogo" src="images/logos/MGTechLogo.png" alt="MG Tech Logo">
+                                </a>
+                                <h3>MG Tech Services</h3>
+                                <p>Founder · IT Consultant & Software Developer</p>
+                                <span>2025 – Present</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://www.victrix.ca/en/" target="_blank"
+                                    aria-label="Visit Victrix IT Solutions Inc.">
+                                    <img src="images/logos/VictrixLogo.SVG" alt="Victrix Logo">
+                                </a>
+                                <h3>Victrix Solutions</h3>
+                                <p>Software Consultant</p>
+                                <span>2022 – 2025</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://www.beneva.ca/en" target="_blank"
+                                    aria-label="Visit Beneva Insurance">
+                                    <img src="images/logos/beneva.png" alt="Beneva Logo">
+                                </a>
+                                <h3>Beneva</h3>
+                                <p>Software Developer</p>
+                                <span>2022 – 2024</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://www.xguard.ca/" target="_blank"
+                                    aria-label="Visit X Guard Security">
+                                    <img src="images/logos/xguardlogo.svg" alt="X Guard Logo">
+                                </a>
+                                <h3>XGuard</h3>
+                                <p>Full Stack Engineer</p>
+                                <span>2021 – 2022</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://mikeg3.github.io/PlatinumAudio/" target="_blank"
+                                    aria-label="Visit Platinum Audio Labs Montreal">
+                                    <img class="rectLogo" src="images/logos/PlatinumAudioLogo2.png"
+                                        alt="Platinum Audio Logo">
+                                </a>
+                                <h3>Platinum Audio</h3>
+                                <p>Founder · Electronic Technician</p>
+                                <span>2015 – Present</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://stuffyrider.com/" target="_blank"
+                                    aria-label="Visit Stuffy Rider Motorized Plush Toys which acquired Mini Safari">
+                                    <img class="circleLogo" src="images/logos/minisafarilogo.png"
+                                        alt="Mini Safari Logo">
+                                </a>
+                                <h3>Mini Safari</h3>
+                                <p>Chief Technology Officer (CTO)</p>
+                                <span>2016 – 2018</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://www.ekyrail.com/en target=" _blank"
+                                    aria-label="Visit Ekyrail which acquired Transtronic">
+                                    <img class="tilogo" src="images/logos/TranstronicLogo.png" alt="Transtronic Logo">
+                                </a>
+                                <h3>Transtronic Inc.</h3>
+                                <p>Assistant Production Supervisor</p>
+                                <span>2009 – 2015</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo" href="https://www.stelpro.com/ target=" _blank"
+                                    aria-label="Visit Stelpro Design Heating">
+                                    <img class="circleLogo" src="images/logos/stelprologoc.png" alt="Stelpro Logo">
+                                </a>
+                                <h3>Stelpro Design</h3>
+                                <p>Technical Support Agent</p>
+                                <span>2008</span>
+                            </article>
+
+                            <article class="experienceCard">
+                                <a class="credentialLogo">
+                                    <img class="rectLogo" src="images/logos/ElantechLogo.png" alt="Elantech Logo">
+                                </a>
+                                <h3>Elantech</h3>
+                                <p>Electro-Mechanical Equipment Manufacturing, Repair & Installation Technician</p>
+                                <span>2007</span>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </div> <!-- CONTENT WITH ANIMATED CUBES -->
 
 
             <!--==================================================
@@ -443,7 +450,8 @@
                                 <p>
                                     Building efficient algorithms, creating programming tools,
                                     and developing systems that transform information into meaningful results.
-                                    These projects emphasize problem solving, architecture, and clean software design.
+                                    These projects emphasize problem solving, architecture, and clean software
+                                    design.
                                 </p>
                                 <ul class="projectList">
                                     <li><a href="https://github.com/MikeG3/COMP-479-Project-3-Webcrawl-and-Indexer">Web
@@ -454,7 +462,8 @@
                                     <li><a
                                             href="https://github.com/MikeG3/COMP-442-COMPILER-DESIGN-FINAL-PROJECT-V1/tree/master/SOEN442_Compiler_V1.0">Front
                                             end compiler - custom OOP language</a></li>
-                                    <li><a href="https://github.com/MikeG3/Client-Server-IRC">IRC chat system</a></li>
+                                    <li><a href="https://github.com/MikeG3/Client-Server-IRC">IRC chat system</a>
+                                    </li>
                                     <li>Enterprise accounting and record management system</li>
                                     <li>SQL database design and activity logging</li>
                                 </ul>
@@ -487,11 +496,13 @@
                                     <li>Full-stack web, mobile and embedded system development</li>
                                     <li><a href="https://github.com/abirshah/fullStack-Developer">Video monitoring
                                             application with AI object detection</a></li>
-                                    <li><a href="https://mikeg3.github.io/Microphone-Spectrum-Analyzer/">Audio Frequency
+                                    <li><a href="https://mikeg3.github.io/Microphone-Spectrum-Analyzer/">Audio
+                                            Frequency
                                             Spectrum Analyzer</a></li>
                                     <li><a href="https://github.com/MikeG3/CONPASS">Interactive map mobile
                                             application</a></li>
-                                    <li><a href="https://github.com/christopherdufort/PythonDjangoBookStore">In house
+                                    <li><a href="https://github.com/christopherdufort/PythonDjangoBookStore">In
+                                            house
                                             and client facing web app for inventory and stock</a></li>
                                 </ul>
                                 <div class="technologyTags">
@@ -816,7 +827,7 @@
         <!--==================================================
     RESUME LIBRARY
 ==================================================-->
-        <section id="resume">
+        <section id="resume" data-scene="resume">
 
             <div class="resumeContent">
                 <h2 class="sectionTitle">
@@ -841,7 +852,9 @@
                             Software Engineering, Enterprise Solutions,
                             AI, Electronics and Technical Leadership.
                         </p>
-                        <a class="resumeButton" href="cv/CV Michael Garner 2026 - Software Engineer and IT Consultant (NO PHONE NUMBER).pdf" download>
+                        <a class="resumeButton"
+                            href="cv/CV Michael Garner 2026 - Software Engineer and IT Consultant (NO PHONE NUMBER).pdf"
+                            download>
                             Download PDF
                         </a>
                     </article>
@@ -858,7 +871,9 @@
                             Version française de mon expérience,
                             de mes projets et de mes compétences.
                         </p>
-                        <a class="resumeButton" href="CV/CV Michael Garner 2026 Ingénieur en logiciel et consultant en informatiqu (No Phone NUmber).pdf" download>
+                        <a class="resumeButton"
+                            href="CV/CV Michael Garner 2026 Ingénieur en logiciel et consultant en informatiqu (No Phone NUmber).pdf"
+                            download>
                             Télécharger
                         </a>
                     </article>

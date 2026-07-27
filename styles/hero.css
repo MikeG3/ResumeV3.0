@@ -10,6 +10,39 @@
     z-index: 10;
 }
 
+#networkCanvas,
+#geometryBackground{
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    inset:0;
+    pointer-events:none;
+    transition:opacity .8s ease;
+}
+#networkCanvas{
+    z-index:-2;
+}
+
+#geometryBackground{
+    z-index:-1;
+}
+
+#networkCanvas{
+    opacity:1;
+}
+
+#geometryBackground{
+    opacity:0;
+}
+
+#networkCanvas.fadeOut{
+    opacity:0;
+}
+
+#geometryBackground.fadeIn{
+    opacity:1;
+}
+
 /*==================================================
     CANVAS
 ==================================================*/
@@ -17,6 +50,7 @@
     JavaScript draws everything here.
     The canvas fills the hero section completely.
 */
+/*
 #networkCanvas {
     position: fixed;
     inset: 0;
@@ -24,7 +58,7 @@
     height: 100vh;
     z-index: -30;
 }
-
+*/
 
 /*==================================================
     BACKGROUND GRADIENT
