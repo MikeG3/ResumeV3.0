@@ -29,11 +29,11 @@
     background:
         linear-gradient(
             180deg,
-            rgba(7,10,18,.15),
+            rgba(7,10,18,.10),
             rgba(10,14,24,.20)
         );
 }
-
+/*
 #professionalFoundation::before {
     content: "";
     position: absolute;
@@ -48,7 +48,7 @@
     opacity: .9;
     pointer-events: none;
 }
-
+*/
 #professionalFoundation::after {
     content: "";
     position: absolute;
@@ -63,7 +63,7 @@
     pointer-events: none;
 }
     
-/*
+
 @keyframes gridFloat {
     from {
         transform:
@@ -75,7 +75,7 @@
             translate(70px, 70px);
     }
 }
-    */
+    
 
 
 .main-intro{
@@ -226,7 +226,7 @@
     opacity: .28;
 }
 
-/*
+
 @keyframes graphBackPulse {
 
     0%,
@@ -242,4 +242,3 @@
         opacity: .55;
     }
 }
-*/
