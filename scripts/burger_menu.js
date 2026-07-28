@@ -10,3 +10,17 @@ menuButton.addEventListener("click", () => {
 
     menuOverlay.classList.toggle("active");
 });
+
+/*==================================================
+    CLOSE MENU AFTER LINK CLICK
+==================================================*/
+const menuLinks = menuOverlay.querySelectorAll("a");
+
+menuLinks.forEach(link =>
+{
+    link.addEventListener("click", () =>
+    {
+        menuButton.classList.remove("active");
+        menuOverlay.classList.remove("active");
+    });
+});
