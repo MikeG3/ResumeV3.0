@@ -119,3 +119,261 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+    ABOUT SECTION
+==================================================*/
+
+.aboutContent{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+.aboutStory{
+    max-width:900px;
+    margin:80px auto 0 auto;
+}
+
+.aboutBlock {
+    
+    margin:80px auto;
+
+    padding:35px 50px;
+     background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.25);
+}
+
+.aboutStory p{
+    font-family: 'bruno ace sc';
+    font-size:1.18rem;
+    line-height:2;
+
+    color:var(--text-secondary);
+
+    margin-bottom:38px;
+}
+
+
+/*==================================================
+    EMPHASIS
+==================================================*/
+
+.aboutHighlight{
+
+    color:#9FE7FF;
+
+    font-weight:600;
+
+    text-shadow:
+        0 0 10px rgba(120,220,255,.25);
+}
+
+
+.aboutEmphasis{
+
+    font-style:italic;
+
+    color:#D7F6FF;
+}
+
+
+/*==================================================
+    PULL QUOTES
+==================================================*/
+
+.aboutQuote{
+
+    position:relative;
+
+    margin:80px auto;
+
+    padding:35px 50px;
+
+    max-width:700px;
+
+    text-align:center;
+
+    font-family:"Audiowide";
+
+    font-size:clamp(1.2rem,2.2vw,1.7rem);
+
+    line-height:1.8;
+
+    color:#AEEBFF;
+
+    border-left:4px solid rgba(120,220,255,.55);
+
+    background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.25);
+}
+
+.aboutQuote::before{
+
+    content:"“";
+
+    position:absolute;
+
+    top:-40px;
+    left:15px;
+
+    font-size:5rem;
+
+    color:rgba(120,220,255,.18);
+
+    font-family:serif;
+}
+
+.aboutQuote::after{
+
+    content:"”";
+
+    position:absolute;
+
+    bottom:-80px;
+    right:20px;
+
+    font-size:5rem;
+
+    color:rgba(120,220,255,.18);
+
+    font-family:serif;
+}
+
+
+/*==================================================
+    CLOSING SECTION
+==================================================*/
+
+.aboutClosing{
+
+    margin-top:90px;
+
+    padding:50px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(120,220,255,.12);
+
+    backdrop-filter:blur(14px);
+}
+
+.aboutClosing p{
+
+    margin-bottom:20px;
+}
+
+.closingStatement{
+
+    margin-top:35px;
+
+    font-family:"Audiowide";
+
+    font-size:clamp(1.25rem,2.5vw,2rem);
+
+    line-height:1.7;
+
+    color:#B7F0FF;
+
+    letter-spacing:.05em;
+
+    text-shadow:
+        0 0 20px rgba(120,220,255,.18);
+}
+
+
+/*==================================================
+    FIRST PARAGRAPH
+==================================================*/
+
+.aboutStory p:first-of-type{
+
+    font-size:1.35rem;
+
+    color:white;
+
+    font-weight:300;
+}
+
+
+/*==================================================
+    STRONG TAGS
+==================================================*/
+
+.aboutStory strong{
+
+    color:white;
+
+    font-weight:600;
+}
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    .aboutStory{
+
+        margin-top:60px;
+    }
+
+    .aboutStory p{
+
+        font-size:1.05rem;
+
+        line-height:1.9;
+    }
+
+    .aboutQuote{
+
+        padding:28px;
+
+        margin:60px auto;
+    }
+
+    .aboutClosing{
+
+        padding:35px 25px;
+    }
+
+}
