@@ -38,6 +38,11 @@
     margin:auto;
 }
 
+.aboutContent p {
+    margin-bottom: 15px;
+    margin-top: 12px;
+}
+
 #about .sectionTitle{
     font-family:"Audiowide";
     font-size:clamp(2rem,5vw,4rem);
