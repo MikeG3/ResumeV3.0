@@ -1,11 +1,11 @@
 /*==================================================
     RESUME LIBRARY
 ==================================================*/
-#resume{
-    position:relative;
-    padding:180px 0;
-    overflow:hidden;
-    background:transparent;
+#resume {
+    position: relative;
+    padding: 180px 0;
+    overflow: hidden;
+    background: transparent;
 }
 
 #resume .sectionTitle {
@@ -17,99 +17,127 @@
     color: white;
 }
 
+.divider-line-resume {
+    /* Dimensions & Positioning */
+    width: 80dvw;
+    height: 2px;
+    z-index: 200000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+    /* Futuristic Gradient & Glow */
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 15%,
+            rgba(255, 255, 255, 1) 85%,
+            rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+
+    /* Reset Defaults */
+    border: none;
+    outline: none;
+}
+
 #resume .sectionIntro {
     max-width: 900px;
     margin: 0 auto 90px;
     font-family: "Kode Mono";
     font-size: 1.15rem;
     line-height: 1.9;
-    color: var(--text-secondary);
+    color: var(--text-glow-color);
+    background-color: rgba(0, 0, 0, .10);
+
+    padding: 8px 5%;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
 }
 
-.resumeContent{
-    position:relative;
-    z-index:5;
-    width:min(1200px,92%);
-    margin:auto;
-    text-align:center;
+.resumeContent {
+    position: relative;
+    z-index: 5;
+    width: min(1200px, 92%);
+    margin: auto;
+    text-align: center;
 }
 
 /*==================================================
     RESUME GRID
 ==================================================*/
-.resumeGrid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
-    gap:50px;
-    margin-top:90px;
+.resumeGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 50px;
+    margin-top: 90px;
 }
 
 /*==================================================
     RESUME CARD
 ==================================================*/
-.resumeCard{
-    background: rgba(10,20,40,.30);
-    backdrop-filter:blur(14px);
-    border: 1px solid rgba(140,210,255,.12);
-    border-radius:26px;
-    padding:55px;
+.resumeCard {
+    background: rgba(10, 20, 40, .30);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(140, 210, 255, .12);
+    border-radius: 26px;
+    padding: 55px;
     transition:
         transform .45s,
         box-shadow .45s,
         border-color .45s;
 }
 
-.resumeCard:hover{
-    border-color:  rgba(140,210,255,.35);
-    box-shadow: 0 0 50px rgba(110,210,255,.18);
+.resumeCard:hover {
+    border-color: rgba(140, 210, 255, .35);
+    box-shadow: 0 0 50px rgba(110, 210, 255, .18);
 }
 
 /*==================================================
     PDF ICON
 ==================================================*/
-.resumeIcon{
-    font-size:4rem;
-    margin-bottom:25px;
+.resumeIcon {
+    font-size: 4rem;
+    margin-bottom: 25px;
 }
 
 /*==================================================
     TITLE
 ==================================================*/
-.resumeCard h3{
-    font-family:"Audiowide";
-    font-size:1.4rem;
-    margin-bottom:20px;
+.resumeCard h3 {
+    font-family: "Audiowide";
+    font-size: 1.4rem;
+    margin-bottom: 20px;
 }
 
 /*==================================================
     DESCRIPTION
 ==================================================*/
-.resumeCard p{
-    font-family:"Kode Mono";
-    line-height:1.8;
-    color:var(--text-secondary);
-    min-height:95px;
+.resumeCard p {
+    font-family: "Kode Mono";
+    line-height: 1.8;
+    color: var(--text-secondary);
+    min-height: 95px;
 }
 
 /*==================================================
     BUTTON
 ==================================================*/
-.resumeButton{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    margin-top:35px;
+.resumeButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
     padding: 16px 34px;
-    border-radius:999px;
-    text-decoration:none;
-    font-family:"Audiowide";
-    color:white;
-    background:  rgba(60,160,255,.14);
-    border:  1px solid  rgba(120,210,255,.28);
-    transition:.35s;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: "Audiowide";
+    color: white;
+    background: rgba(60, 160, 255, .14);
+    border: 1px solid rgba(120, 210, 255, .28);
+    transition: .35s;
 }
 
-.resumeButton:hover{
-    background:rgba(90,190,255,.24);
-    box-shadow: 0 0 25px rgba(120,220,255,.30);
+.resumeButton:hover {
+    background: rgba(90, 190, 255, .24);
+    box-shadow: 0 0 25px rgba(120, 220, 255, .30);
 }
