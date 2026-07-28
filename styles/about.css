@@ -1,22 +1,116 @@
 /*==================================================
-    Sliding UP EFFECT
+    ABOUT SECTION
 ==================================================*/
 #about{
-
     position:relative;
+    padding:180px 0 220px;
+    overflow:hidden;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(60,110,180,.10),
+            transparent 55%
+        );
 }
 
-#about::after{
+/* subtle glow behind text */
+#about::before{
     content:"";
     position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:220px;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(120,220,255,.05),
+            transparent 70%
+        );
     pointer-events:none;
+}
+
+/*==================================================
+    CONTENT
+==================================================*/
+.aboutContent{
+    font-family: 'bruno ace sc';
+    position:relative;
+    z-index:5;
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+#about .sectionTitle{
+    font-family:"Audiowide";
+    font-size:clamp(2rem,5vw,4rem);
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/*==================================================
+    MAIN CARD
+==================================================*/
+.aboutCard{
+    position:relative;
+    background:
+        rgba(255,255,255,.045);
+    border:1px solid rgba(140,220,255,.12);
+    border-radius:28px;
+    backdrop-filter:blur(18px);
+    overflow:hidden;
+    padding:60px;
+}
+
+/* animated glow */
+.aboutCard::before{
+    content:"";
+    position:absolute;
+    left:-40%;
+    top:0;
+    width:180%;
+    height:3px;
     background:
         linear-gradient(
+            90deg,
             transparent,
-            rgba(7,10,18,.95)
+            rgba(130,220,255,.8),
+            transparent
         );
+    animation:aboutGlow 7s linear infinite;
+}
+
+@keyframes aboutGlow{
+    from{
+        transform:translateX(-35%);
+    }
+
+    to{
+        transform:translateX(35%);
+    }
+
+}
+
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+@media(max-width:768px){
+    #about{
+        padding:120px 0 160px;
+    }
+
+    .aboutCard{
+        padding:35px 28px;
+    }
+
+    .aboutCard p{
+        font-size:1rem;
+        line-height:1.9;
+    }
+
+    .aboutQuote{
+        font-size:1rem;
+    }
+
 }
