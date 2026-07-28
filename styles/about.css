@@ -1,0 +1,22 @@
+/*==================================================
+    Sliding UP EFFECT
+==================================================*/
+#about{
+
+    position:relative;
+}
+
+#about::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:220px;
+    pointer-events:none;
+    background:
+        linear-gradient(
+            transparent,
+            rgba(7,10,18,.95)
+        );
+}

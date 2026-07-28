@@ -2,8 +2,8 @@
     CONTACT SECTION
 ==================================================*/
 #contact{
-    position:relative;
-    padding:140px 0;
+    position: relative;
+    padding: 140px 0;
     background:
         linear-gradient(
             180deg,
@@ -12,7 +12,11 @@
         );
         
     backdrop-filter:blur(1px);
+    border-radius: 33px 33px 0 0;
+    z-index:20;
 }
+
+
 
 /*==================================================
     CONTAINER
@@ -22,6 +26,22 @@
     margin:auto;
     text-align:center;
 }
+/*
+#contact::before{
+    content:"";
+    position:absolute;
+    inset:-200px;
+    z-index:-1;
+    background:
+        radial-gradient(
+            circle,
+            rgba(100,220,255,.10),
+            transparent 70%
+        );
+    filter:blur(50px);
+    pointer-events:none;
+}
+*/
 
 /*==================================================
     TITLE
