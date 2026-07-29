@@ -139,7 +139,6 @@
 /*==================================================
     ABOUT SECTION
 ==================================================*/
-
 .aboutContent{
     width:min(1100px,92%);
     margin:auto;
@@ -293,4 +292,27 @@
     .aboutClosing{
         padding:35px 25px;
     }
+}
+
+
+.divider-line-about {
+    /* Dimensions & Positioning */
+    width: 80%;
+    height: 2px;
+    z-index: 200000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+    /* Futuristic Gradient & Glow */
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 15%,
+            rgba(255, 255, 255, 1) 85%,
+            rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+
+    /* Reset Defaults */
+    border: none;
+    outline: none;
 }
