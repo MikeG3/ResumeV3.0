@@ -2,6 +2,7 @@
     PROFESSIONAL EXPERIENCE
 ==================================================*/
 #experience{
+    scroll-margin-top: -140px;
     position:relative;
     padding:140px 0;
     overflow:hidden;

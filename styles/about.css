@@ -2,6 +2,7 @@
     ABOUT SECTION
 ==================================================*/
 #about{
+    scroll-margin-top: -180px;
     position:relative;
     padding:180px 0 220px;
     overflow:hidden;
@@ -50,98 +51,6 @@
     letter-spacing:.12em;
     text-align:center;
     margin-bottom:20px;
-}
-
-/*==================================================
-    MAIN CARD
-==================================================*/
-.aboutCard{
-    position:relative;
-    background:
-        rgba(255,255,255,.045);
-    border:1px solid rgba(140,220,255,.12);
-    border-radius:28px;
-    backdrop-filter:blur(18px);
-    overflow:hidden;
-    padding:60px;
-}
-
-/* animated glow */
-.aboutCard::before{
-    content:"";
-    position:absolute;
-    left:-40%;
-    top:0;
-    width:180%;
-    height:3px;
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(130,220,255,.8),
-            transparent
-        );
-    animation:aboutGlow 7s linear infinite;
-}
-
-@keyframes aboutGlow{
-    from{
-        transform:translateX(-35%);
-    }
-
-    to{
-        transform:translateX(35%);
-    }
-
-}
-
-
-
-/*==================================================
-    MOBILE
-==================================================*/
-@media(max-width:768px){
-    #about{
-        padding:120px 0 160px;
-    }
-
-    .aboutCard{
-        padding:35px 28px;
-    }
-
-    .aboutCard p{
-        font-size:1rem;
-        line-height:1.9;
-    }
-
-    .aboutQuote{
-        font-size:1rem;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*==================================================
-    ABOUT SECTION
-==================================================*/
-.aboutContent{
-    width:min(1100px,92%);
-    margin:auto;
 }
 
 .aboutStory{
