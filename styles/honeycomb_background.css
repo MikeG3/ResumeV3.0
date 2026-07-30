@@ -1,0 +1,56 @@
+#projects::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:2;
+
+    background:
+
+        radial-gradient(
+
+            circle at 18% 20%,
+
+            rgba(120,220,255,.08),
+
+            transparent 42%
+
+        ),
+
+        radial-gradient(
+
+            circle at 82% 72%,
+
+            rgba(90,130,255,.07),
+
+            transparent 45%
+
+        ),
+
+        radial-gradient(
+
+            circle at 52% 12%,
+
+            rgba(160,120,255,.05),
+
+            transparent 38%
+
+        ),
+
+        radial-gradient(
+
+            circle at 40% 85%,
+
+            rgba(40,180,255,.05),
+
+            transparent 35%
+
+        );
+
+    filter:blur(80px);
+}
