@@ -68,8 +68,8 @@
     border: 1px solid rgba(120, 220, 255, .15);
     box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
     background: linear-gradient(145deg,
-            rgba(10, 20, 30, 0.12),
-            rgba(10, 20, 30, 0.96));
+            rgba(10, 20, 30, 0.52),
+            rgba(15, 30, 45, 0.96));
     backdrop-filter: blur(14px);
     transition:
         transform .35s,
