@@ -63,13 +63,18 @@
     max-width: 900px;
     margin: auto;
     transform: none !important;
-    overflow-y: scroll;
-    background: rgba(5, 10, 20, .82);
+    border-color: rgba(120, 220, 255, .45);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
+    background: linear-gradient(145deg,
+            rgba(10, 20, 30, .92),
+            rgba(18, 35, 60, .96));
+    box-shadow:
+        0 0 25px rgba(120, 220, 255, .18),
+        0 0 80px rgba(120, 220, 255, .08);
     height: 98%;
-
-        display:block;
-    width:100%;
-    overflow-y:auto;
+    display: block;
+    width: 100%;
+    overflow-y: auto;
 }
 
 .projectViewerCard:hover {
@@ -91,32 +96,36 @@
 /*==================================================
     PROJECT VIEWER TITLE
 ==================================================*/
-.projectViewerCard .projectImage{
-    min-height:auto;
-    height:auto;
-    padding:50px 50px 30px 50px;
-    gap:0;
+.projectViewerCard .projectImage {
+    min-height: auto;
+    height: auto;
+    padding: 50px 50px 30px 50px;
+    gap: 0;
 }
 
-.projectViewerCard .projectImage h3{
-    min-height:auto;
-    height:auto;
-    display:block;
-    font-size:clamp(2rem,4vw,3rem);
-    line-height:1.2;
-    margin:0;
+.projectViewerCard .projectImage h3 {
+    min-height: auto;
+    height: auto;
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin: 0;
 }
 
-.projectViewerCard .projectHint{
-    display:none;
+.projectViewerCard .projectHint {
+    display: none;
 }
 
-.projectViewerCard .projectHint{
-    display:none;
+.projectViewerCard .projectHint {
+    display: none;
 }
 
 @media (max-width: 768px) {
     .projectViewerWindow {
         overflow-y: auto;
+    }
+
+    .projectViewerCard {
+        width: 95%;
     }
 }
