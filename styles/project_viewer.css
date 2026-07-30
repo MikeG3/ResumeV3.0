@@ -64,8 +64,9 @@
     max-width:900px;
     margin:auto;
     transform:none !important;
+    
 
-
+    overflow-y: scroll;
     background:rgba(5,10,20,.82);
     height: 98%;
 }

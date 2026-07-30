@@ -21,7 +21,7 @@ function getGraphDimensions()
 
     if (width < 500) {
         graph.rows = 12;
-        //graph.columns = 8;
+        graph.columns = 7;
     }
     else if (width < 700) {
         graph.rows = 12;

@@ -114,6 +114,7 @@
 ==================================================*/
 .resumeCard p {
     font-family: "Kode Mono";
+    font-size: 1.5rem;
     line-height: 1.8;
     color: var(--text-secondary);
     min-height: 95px;
