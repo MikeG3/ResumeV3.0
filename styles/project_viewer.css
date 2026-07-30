@@ -1,88 +1,125 @@
 /*==================================================
     PROJECT VIEWER
 ==================================================*/
-#projectViewer{
-    position:fixed;
-    inset:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    opacity:0;
-    visibility:hidden;
-    transition:.35s;
-    z-index:1000;
+#projectViewer {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s;
+    z-index: 1000;
 }
 
-#projectViewer.active{
-    opacity:1;
-    visibility:visible;
+#projectViewer.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-.projectViewerBackdrop{
-    position:absolute;
-    inset:0;
-    background:rgba(5,10,20,.82);
-    backdrop-filter:blur(12px);
+.projectViewerBackdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 10, 20, .82);
+    backdrop-filter: blur(12px);
     background: black;
 }
 
-.projectViewerWindow{
-    position:relative;
-    width:min(1050px,92vw);
-    max-height:90vh;
-    overflow-y:auto;
-    border-radius:28px;
-    padding:50px;
-    background:rgb(11,20,34);
-    border:1px solid rgba(120,220,255,.18);
-    box-shadow:  0 40px 100px rgba(0,0,0,.55);
-    z-index:2;
+.projectViewerWindow {
+    position: relative;
+    width: min(1050px, 92vw);
+    max-height: 90vh;
+    border-radius: 28px;
+    padding: 50px;
+    background: rgb(11, 20, 34);
+    border: 1px solid rgba(120, 220, 255, .18);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, .55);
+    z-index: 2;
     background: black;
 }
 
-.projectViewerWindow .projectDetails{
-    display:block;
+.projectViewerWindow .projectDetails {
+    display: block;
 }
 
-.projectViewerClose{
-    position:absolute;
-    top:20px;
-    right:24px;
-    width:46px;
-    height:46px;
-    border:none;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:2rem;
-    background:transparent;
-    color:white;
+.projectViewerClose {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2rem;
+    background: transparent;
+    color: white;
     background: black;
 }
 
-.projectViewerCard{
-    cursor:default;
-    max-width:900px;
-    margin:auto;
-    transform:none !important;
-    
+.projectViewerCard {
+    cursor: default;
+    max-width: 900px;
+    margin: auto;
+    transform: none !important;
+
 
     overflow-y: scroll;
-    background:rgba(5,10,20,.82);
+    background: rgba(5, 10, 20, .82);
     height: 98%;
 }
 
-.projectViewerCard:hover{
-    transform:none;
+.projectViewerCard:hover {
+    transform: none;
 }
 
-#closeProjectViewer{
-    position:absolute;
-    top:18px;
-    right:18px;
-    z-index:500;
-    width:46px;
-    height:46px;
-    border-radius:50%;
-    border:none;
-    cursor:pointer;
+#closeProjectViewer {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 500;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/*==================================================
+    PROJECT VIEWER TITLE
+==================================================*/
+
+.projectViewerCard .projectImage{
+
+    min-height:auto;
+
+    height:auto;
+
+    padding:50px 50px 30px 50px;
+
+    gap:0;
+}
+
+.projectViewerCard .projectImage h3{
+    min-height:auto;
+    height:auto;
+    display:block;
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.2;
+    margin:0;
+}
+
+.projectViewerCard .projectHint{
+    display:none;
+}
+
+.projectViewerCard .projectHint{
+    display:none;
+}
+
+@media (max-width: 768px) {
+    .projectViewerWindow {
+        overflow-y: auto;
+    }
 }
