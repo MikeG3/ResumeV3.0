@@ -68,10 +68,14 @@ function createHoneycomb() {
             //--------------------------------------
             // RANDOM BRIGHTNESS
             //--------------------------------------
+            /*
             hex.style.animationDelay = (-Math.random() * 20) + "s";
             hex.style.animationDuration = (10 + Math.random() * 10) + "s";
+            */
+           
             grid.appendChild(rowElement);
             rowElement.appendChild(hex);
+
         }
     }
 }
