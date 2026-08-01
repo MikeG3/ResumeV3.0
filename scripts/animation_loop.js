@@ -88,7 +88,7 @@ function animationLoop() {
         case "freelance":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
-            hideEngineeringScene();
+            showEngineeringScene();
             break;
 
         case "resume":
