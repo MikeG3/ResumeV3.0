@@ -56,6 +56,7 @@ function animationLoop() {
             drawHeroScene();
             networkCanvas.classList.remove("fadeOut");
             geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
             break;
 
         case "intro":
@@ -63,26 +64,31 @@ function animationLoop() {
             drawHeroScene();
             networkCanvas.classList.remove("fadeOut");
             geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
             break;
 
         case "foundation":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
+            hideEngineeringScene();
             break;
 
         case "credentials":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
+            hideEngineeringScene();
             break;
 
         case "projects":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
+            showEngineeringScene();
             break;
 
         case "freelance":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
+            hideEngineeringScene();
             break;
 
         case "resume":
@@ -90,6 +96,7 @@ function animationLoop() {
             drawHeroScene();
             networkCanvas.classList.remove("fadeOut");
             geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
             break;
 
     }

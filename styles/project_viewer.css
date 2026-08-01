@@ -60,7 +60,6 @@
 
 .projectViewerCard {
     cursor: default;
-    max-width: 900px;
     margin: auto;
     transform: none !important;
     border-color: rgba(120, 220, 255, .45);
@@ -73,7 +72,7 @@
         0 0 80px rgba(120, 220, 255, .08);
     height: 98%;
     display: block;
-    width: 100%;
+    width: 92%;
     overflow-y: auto;
 }
 

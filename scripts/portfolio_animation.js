@@ -1,6 +1,7 @@
 /*==================================================
     ENGINEERING SCENE
 ==================================================*/
+const engineeringSection = document.getElementById("engineeringScene");
 const engineeringCanvas = document.getElementById("engineeringCanvas");
 const engineeringContext = engineeringCanvas.getContext("2d");
 
@@ -61,6 +62,17 @@ const scanner =
     speed: 1.1,
     width: 220
 };
+
+/*==================================================
+    SHOW / HIDE
+==================================================*/
+function showEngineeringScene(){
+    engineeringSection.style.opacity = 1;
+}
+
+function hideEngineeringScene(){
+    engineeringSection.style.opacity = 0;
+}
 
 /*==================================================
     RESIZE
