@@ -3,6 +3,7 @@
 ==================================================*/
 const engineeringSection = document.getElementById("engineeringScene");
 const engineeringCanvas = document.getElementById("engineeringCanvas");
+const projectsSection = document.getElementById("projects");
 const engineeringContext = engineeringCanvas.getContext("2d");
 
 /*==================================================
@@ -66,11 +67,11 @@ const scanner =
 /*==================================================
     SHOW / HIDE
 ==================================================*/
-function showEngineeringScene(){
+function showEngineeringScene() {
     engineeringSection.style.opacity = 1;
 }
 
-function hideEngineeringScene(){
+function hideEngineeringScene() {
     engineeringSection.style.opacity = 0;
 }
 
@@ -78,10 +79,31 @@ function hideEngineeringScene(){
     RESIZE
 ==================================================*/
 function resizeEngineeringScene() {
-    engineeringScene.width = window.innerWidth;
-    engineeringScene.height = window.innerHeight;
-    engineeringCanvas.width = engineeringScene.width;
-    engineeringCanvas.height = engineeringScene.height;
+
+    requestAnimationFrame(() => {
+
+        const rect = projectsSection.getBoundingClientRect();
+
+        engineeringCanvas.width = Math.round(rect.width);
+        engineeringCanvas.height = Math.round(rect.height);
+
+        engineeringScene.width = engineeringCanvas.width;
+        engineeringScene.height = engineeringCanvas.height;
+
+        console.log({
+            projectsWidth: rect.width,
+            projectsHeight: rect.height,
+            canvasWidth: engineeringCanvas.width,
+            canvasHeight: engineeringCanvas.height
+        });
+
+        createEngineeringGrid();
+        createNebula();
+        createDraftingLayer();
+        createEngineeringTraces();
+
+    });
+
 }
 
 /*==================================================
@@ -89,10 +111,6 @@ function resizeEngineeringScene() {
 ==================================================*/
 function initializeEngineeringScene() {
     resizeEngineeringScene();
-    createNebula();
-    createEngineeringGrid();
-    createDraftingLayer();
-    createEngineeringTraces();
     requestAnimationFrame(updateEngineeringScene);
 }
 
@@ -352,16 +370,16 @@ function drawEngineeringTraces() {
             trace.alpha -= 0.012;
         }
         if (trace.life <= 0) {
-            trace.start =engineeringGrid[Math.floor( Math.random() *  engineeringGrid.length)];
+            trace.start = engineeringGrid[Math.floor(Math.random() * engineeringGrid.length)];
 
             do {
-                trace.end = engineeringGrid[ Math.floor( Math.random() * engineeringGrid.length ) ];
+                trace.end = engineeringGrid[Math.floor(Math.random() * engineeringGrid.length)];
             }
             while (trace.end === trace.start);
 
             trace.progress = 0;
             trace.alpha = 0;
-            trace.life =300 + Math.random() * 500;
+            trace.life = 300 + Math.random() * 500;
         }
     });
 }
@@ -457,4 +475,6 @@ window.addEventListener(
 /*==================================================
     START
 ==================================================*/
-initializeEngineeringScene();
+window.addEventListener("load", () => {
+    initializeEngineeringScene();
+});
