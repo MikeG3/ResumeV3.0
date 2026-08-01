@@ -483,7 +483,7 @@ function drawEngineeringScene() {
 /*==================================================
     EVENTS
 ==================================================*/
-window.addEventListener( "resize", resizeEngineeringScene;
+window.addEventListener( "resize", resizeEngineeringScene);
 window.addEventListener("pagehide", stopEngineeringScene);
 window.addEventListener("beforeunload", stopEngineeringScene);
 
