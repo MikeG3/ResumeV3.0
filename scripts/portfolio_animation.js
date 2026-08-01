@@ -93,13 +93,6 @@ function resizeEngineeringScene() {
         engineeringScene.width = engineeringCanvas.width;
         engineeringScene.height = engineeringCanvas.height;
 
-        console.log({
-            projectsWidth: rect.width,
-            projectsHeight: rect.height,
-            canvasWidth: engineeringCanvas.width,
-            canvasHeight: engineeringCanvas.height
-        });
-
         createEngineeringGrid();
         createNebula();
         createDraftingLayer();
