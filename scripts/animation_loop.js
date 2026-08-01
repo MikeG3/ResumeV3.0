@@ -79,6 +79,10 @@ function animationLoop() {
             hideEngineeringScene();
             break;
 
+        case "end-of-work-XP":
+            showEngineeringScene();
+            break;
+
         case "projects":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
