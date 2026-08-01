@@ -6,6 +6,9 @@ const engineeringCanvas = document.getElementById("engineeringCanvas");
 const projectsSection = document.getElementById("projects");
 const engineeringContext = engineeringCanvas.getContext("2d");
 
+let engineeringAnimationFrame = null;
+let engineeringRunning = false;
+
 /*==================================================
     COLOR PALETTE
 ==================================================*/
@@ -110,10 +113,15 @@ function resizeEngineeringScene() {
     INITIALIZE
 ==================================================*/
 function initializeEngineeringScene() {
-    resizeEngineeringScene();
-    requestAnimationFrame(updateEngineeringScene);
-}
 
+    if (engineeringRunning)
+        return;
+
+    engineeringRunning = true;
+    resizeEngineeringScene();
+    engineeringAnimationFrame = requestAnimationFrame(updateEngineeringScene);
+
+}
 /*==================================================
     CREATE NEBULA
 ==================================================*/
@@ -216,7 +224,20 @@ function updateEngineeringScene(currentTime) {
     engineeringScene.previousTime = currentTime;
     engineeringScene.time += engineeringScene.deltaTime;
     drawEngineeringScene();
-    requestAnimationFrame(updateEngineeringScene);
+    if (engineeringRunning) {
+        engineeringAnimationFrame = requestAnimationFrame(updateEngineeringScene);
+    }
+}
+
+function stopEngineeringScene()
+{
+    engineeringRunning = false;
+
+    if (engineeringAnimationFrame)
+    {
+        cancelAnimationFrame(engineeringAnimationFrame);
+        engineeringAnimationFrame = null;
+    }
 }
 
 /*==================================================
@@ -357,16 +378,12 @@ function drawEngineeringTraces() {
             // Second vertical leg
             //----------------------------------
             const amount = (trace.progress - .5) / .5;
-            engineeringContext.lineTo(
-                corner.x,
-                corner.y +
-                (trace.end.y - corner.y) * amount
-            );
+            engineeringContext.lineTo(corner.x, corner.y + (trace.end.y - corner.y) * amount);
         }
 
         engineeringContext.stroke();
         engineeringContext.globalAlpha = 1;
-        if (trace.life < 80) {
+        if (trace.life < 120) {
             trace.alpha -= 0.012;
         }
         if (trace.life <= 0) {
@@ -466,11 +483,9 @@ function drawEngineeringScene() {
 /*==================================================
     EVENTS
 ==================================================*/
-window.addEventListener(
-    "resize",
-    resizeEngineeringScene
-);
-
+window.addEventListener( "resize", resizeEngineeringScene;
+window.addEventListener("pagehide", stopEngineeringScene);
+window.addEventListener("beforeunload", stopEngineeringScene);
 
 /*==================================================
     START
