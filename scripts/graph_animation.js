@@ -32,11 +32,11 @@ function getGraphDimensions()
         //graph.columns = 14;
     }
     else if (width < 1100) {
-        graph.rows = 12;
+        graph.rows = 15;
        // graph.columns = 16;
     }
     else {
-        graph.rows = 12;
+        graph.rows = 15;
         //graph.columns = 19;
     }
 
