@@ -150,6 +150,7 @@
 
     #experienceGrid{
         grid-template-columns:1fr;
+    margin-top: 25px;
     }
 
     .experienceCard{
