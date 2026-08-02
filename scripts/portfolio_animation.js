@@ -135,7 +135,7 @@ function createNebula() {
                 y: Math.random() * engineeringScene.height,
                 radius: 250 + Math.random() * 450,
                 color: palette[Math.floor(Math.random() * palette.length)],
-                opacity: 0.05 + Math.random() * 0.05,
+                opacity: 0.1 + Math.random() * 0.05,
                 angle: Math.random() * Math.PI * 2,
                 speed: 0.02 + Math.random() * 0.03
             });
