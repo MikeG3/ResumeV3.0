@@ -112,9 +112,8 @@ function initializeEngineeringScene() {
 
     engineeringRunning = true;
     resizeEngineeringScene();
-    engineeringAnimationFrame = requestAnimationFrame(updateEngineeringScene);
-
 }
+
 /*==================================================
     CREATE NEBULA
 ==================================================*/
@@ -159,7 +158,7 @@ function createDraftingLayer() {
                 radius: 40 + Math.random() * 140,
                 rotation: Math.random() * Math.PI * 2,
                 speed: (Math.random() - .5) * 0.00025,
-                opacity: .05 + Math.random() * .06
+                opacity: 0.40 + Math.random() * .06
             });
     }
 }
@@ -211,15 +210,11 @@ function createEngineeringTraces() {
 /*==================================================
     UPDATE
 ==================================================*/
-function updateEngineeringScene(currentTime) {
+function updateEngineeringScene(currentTime = performance.now()) {
 
     engineeringScene.deltaTime = currentTime - engineeringScene.previousTime;
     engineeringScene.previousTime = currentTime;
     engineeringScene.time += engineeringScene.deltaTime;
-    drawEngineeringScene();
-    if (engineeringRunning) {
-        engineeringAnimationFrame = requestAnimationFrame(updateEngineeringScene);
-    }
 }
 
 function stopEngineeringScene()

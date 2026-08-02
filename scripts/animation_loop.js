@@ -1,6 +1,7 @@
 /*==================================================
     GLOBAL ANIMATION MANAGER
 ==================================================*/
+let animationLoopRunning = true;
 let currentScene = "hero";
 
 const networkCanvas = document.getElementById("networkCanvas");
@@ -81,18 +82,25 @@ function animationLoop() {
 
         case "end-of-work-XP":
             showEngineeringScene();
+            updateEngineeringScene();
+            drawEngineeringScene();
             break;
 
         case "projects":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
+
             showEngineeringScene();
+            updateEngineeringScene();
+            drawEngineeringScene();
             break;
 
         case "freelance":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
             showEngineeringScene();
+            updateEngineeringScene();
+            drawEngineeringScene();
             break;
 
         case "resume":
@@ -105,8 +113,15 @@ function animationLoop() {
 
     }
 
-    requestAnimationFrame(animationLoop);
+    if (animationLoopRunning)
+        requestAnimationFrame(animationLoop);
 
 }
 
 animationLoop();
+
+
+
+window.addEventListener("pagehide", () => {
+    animationLoopRunning = false;
+});
