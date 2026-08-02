@@ -166,9 +166,8 @@
     FIRST PARAGRAPH
 ==================================================*/
 .aboutStory p:first-of-type{
-    font-size:1.35rem;
+    font-size:1.18rem;
     color:white;
-    font-weight:300;
 }
 
 /*==================================================
