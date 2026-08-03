@@ -111,6 +111,14 @@ function animationLoop() {
             hideEngineeringScene();
             break;
 
+        case "howIWork":
+            updateHeroScene();
+            drawHeroScene();
+            networkCanvas.classList.remove("fadeOut");
+            geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
+            break;
+
     }
 
     if (animationLoopRunning)

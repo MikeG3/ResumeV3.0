@@ -1,0 +1,222 @@
+/*==================================================
+    RECENT PROJECTS
+==================================================*/
+#recentProjects{
+    position:relative;
+    padding:180px 0;
+    overflow:hidden;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(70,130,200,.06),
+            transparent 70%
+        );
+}
+
+#recentProjects .sectionTitle {
+    font-family: "Audiowide";
+    font-size: clamp(2.1rem, 5vw, 4.4rem);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+#recentProjects .sectionIntro {
+    max-width: 900px;
+    margin: 0 auto 90px;
+    font-family: "Kode Mono";
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-glow-color);
+    background-color: rgba(0, 0, 0, .30);
+    padding: 8px 5%;
+    background: rgba(10,25,35,.45);
+    backdrop-filter:blur(12px);
+    border: 1px solid rgba(120,220,255,.35);
+    border-radius: 22px;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35),
+        0 0 20px rgba(120,220,255,.18);
+}
+
+
+/*==================================================
+    BACKGROUND GLOW
+==================================================*/
+#recentProjects::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(120,220,255,.04),
+            transparent 70%
+        );
+}
+
+/*==================================================
+    CONTENT
+==================================================*/
+.recentProjectsContent{
+    position:relative;
+    z-index:2;
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/*==================================================
+    INTRO
+==================================================*/
+.recentProjectsContent .sectionIntro{
+    max-width:900px;
+    margin: 30px auto 90px;
+    text-align:center;
+    line-height:2;
+    color:var(--text-secondary);
+    font-size:1.15rem;
+}
+
+/*==================================================
+    SHOWCASE
+==================================================*/
+.projectShowcase{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/*==================================================
+    PROJECT CARD
+==================================================*/
+.clientProject{
+    position:relative;
+    padding:45px;
+    border-radius:24px;
+    background: rgba(10,25,35,.45);
+    backdrop-filter:blur(12px);
+    border: 1px solid rgba(120,220,255,.10);
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+/*==================================================
+    LEFT ACCENT BAR
+==================================================*/
+.clientProject::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:30px;
+    bottom:30px;
+    width:4px;
+    border-radius:20px;
+    background:
+        linear-gradient(
+            180deg,
+            #72F3FF,
+            #53B9FF
+        );
+    opacity:.55;
+    transition:opacity .35s ease;
+}
+
+/*==================================================
+    HOVER
+==================================================*/
+.clientProject:hover{
+    border-color: rgba(120,220,255,.30);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        0 0 20px rgba(120,220,255,.12);
+}
+
+.clientProject:hover::before{
+    opacity:1;
+}
+
+/*==================================================
+    TITLE
+==================================================*/
+.projectInformation h3{
+    margin-bottom:20px;
+    font-family:"Audiowide";
+    font-size:1.6rem;
+    color:white;
+    letter-spacing:.03em;
+}
+
+/*==================================================
+    DESCRIPTION
+==================================================*/
+.projectInformation p{
+    color:var(--text-secondary);
+    line-height:2;
+    font-size:1.08rem;
+    margin-bottom:30px;
+}
+
+/*==================================================
+    TAGS
+==================================================*/
+.projectTags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.projectTags span{
+    padding: 8px 16px;
+    border-radius:100px;
+    font-size:.9rem;
+    letter-spacing:.05em;
+    color:#D9F7FF;
+    background: rgba(120,220,255,.08);
+    border: 1px solid rgba(120,220,255,.12);
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.clientProject:hover .projectTags span{
+    background: rgba(120,220,255,.14);
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+@media(max-width:768px){
+
+    #recentProjects{
+        padding:120px 0;
+    }
+
+    .clientProject{
+        padding:30px;
+    }
+
+    .projectInformation h3{
+        font-size:1.35rem;
+    }
+
+    .projectInformation p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .projectTags{
+        gap:10px;
+    }
+
+    .projectTags span{
+        font-size:.82rem;
+        padding: 7px 12px;
+    }
+
+}
