@@ -1,0 +1,350 @@
+<html lang="en">
+
+<head>
+    <title>Michael Garner Resume | Software Engineer & Multi-Disciplinary Technologist</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles/content.css">
+    <link rel="stylesheet" type="text/css" href="styles/hero.css">
+    <link rel="stylesheet" type="text/css" href="styles/navigation_menu.css">
+    <link rel="stylesheet" type="text/css" href="styles/introduction.css">
+    <link rel="stylesheet" type="text/css" href="styles/professional_foundations_sections.css">
+    <link rel="stylesheet" type="text/css" href="styles/credentials.css">
+    <link rel="stylesheet" type="text/css" href="styles/work_xp.css">
+    <link rel="stylesheet" type="text/css" href="styles/logos.css">
+    <link rel="stylesheet" type="text/css" href="styles/projects.css">
+    <link rel="stylesheet" type="text/css" href="styles/freelance.css">
+    <link rel="stylesheet" type="text/css" href="styles/resume.css">
+    <link rel="stylesheet" type="text/css" href="styles/about.css">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css">
+    <link rel="stylesheet" type="text/css" href="styles/project_viewer.css">
+    <link rel="stylesheet" type="text/css" href="styles/portfolio_animation.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="styles/mgtech/services.css">
+    <link rel="stylesheet" type="text/css" href="styles/mgtech/recent_projects.css">
+    <link rel="stylesheet" type="text/css" href="styles/mgtech/contact.css">
+    <!--
+    <link rel="stylesheet" type="text/css" href="styles/honeycomb_animation.css">
+    <link rel="stylesheet" type="text/css" href="styles/honeycomb_background.css">
+    <link rel="stylesheet" type="text/css" href="styles/hex.css">
+    -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Kode+Mono:wght@400..700&family=Michroma&display=swap"
+        rel="stylesheet">
+    <link rel="canonical" href="https://mikeg3.github.io/ResumeV3.0/index.html">
+
+    <!-- ==================================================
+     BASIC META
+=================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Garner">
+    <meta name="description"
+        content="Michael Garner is a software engineer & multi-disciplinary technologist specializing in Microsoft Power Platform, SharePoint, engineering design, automation, cloud computing, and custom software development in Montreal, Canada.">
+    <meta name="keywords"
+        content="Michael Garner, Software Engineer, Power Platform, Microsoft 365, SharePoint, Power Apps, Power Automate, Engineering Portfolio, Automation, Montreal, Quebec, Canada">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050816">
+
+    <!-- ==================================================
+     OPEN GRAPH - PREVIEW FOR SHARING SITE
+=================================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Michael Garner | Software Engineer">
+    <meta property="og:description"
+        content="Engineering thoughtful technology that connects people, ideas, and innovation through software development, automation, and modern engineering solutions.">
+    <meta property="og:url" content="https://mikeg3.github.io/ResumeV3.0/index.html">
+    <meta property="og:image" content="https://mikeg3.github.io/ResumeV3.0/index.html/images/favicons/MG Favicon.png">
+
+    <!-- ==================================================
+     TWITTER
+=================================================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Michael Garner | Software Engineer">
+    <meta name="twitter:description"
+        content="Engineering thoughtful technology through software, automation, and modern engineering design.">
+    <meta name="twitter:image" content="https://mikeg3.github.io/ResumeV3.0/index.html/images/MG Favicon.png">
+
+    <!-- ==================================================
+     FAVICON
+=================================================== -->
+    <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="images/favicons/site.webmanifest" />
+
+</head>
+
+
+
+<body>
+
+    <!-- ==================================================================
+         Animated Background Canvas -  (Rendered entirely with JavaScript)
+    ==================================================================== -->
+    <canvas id="networkCanvas"></canvas>
+
+    <!-- Animated Geometry Background -->
+    <div id="geometryBackground"></div>
+
+    <!-- ===============================================================================================
+         Optional Background Effects -Additional layers that can later be animated independently
+        ================================================================================================ -->
+    <div id="backgroundGlow"></div>
+    <div id="backgroundGradient"></div>
+    <div id="noiseOverlay"></div>
+
+    <!-- FRENCH LANGUAGE LINK -->
+    <a id="languageButton" href="indexFR.html" aria-label="Version française">
+        FR
+    </a>
+
+    <!-- BURGER MENU FOR NAVIGATION -->
+    <button id="menuButton" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- ==========================================
+                NAVIGATION MENU LINKS
+        =========================================== -->
+    <nav id="menuOverlay">
+        <a href="index.html">Home</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#experience">Proffesional Experience</a>
+        <a href="#projects">Engineering Portfolio</a>
+        <a href="#resume">Download Resumé</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="menu-divider-line"></div>
+        <a href="https://www.linkedin.com/in/michael-garner-08a668181/">LinkedIn</a>
+        <a href="https://github.com/MikeG3">GitHub</a>
+    </nav>
+
+
+    <!-- ==========================================================
+     HERO EXPERIENCE
+      =========================================================== -->
+
+    <header id="hero" data-scene="hero">
+
+        <!-- ==========================================
+         Hero Content
+        =========================================== -->
+        <section id="heroContent" class="fadeSection">
+
+            <!-- Main Identity -->
+            <h1 id="heroTitle" class="fadeSection">MG Tech Services</h1>
+
+            <!-- Short Mission Statement -->
+            <p id="heroStatement" class="fadeSection">
+                Providing software and IT solutions for you and your business.
+                <br>
+                From custom software development, IT consulting to automation,
+                I can help you achieve your goals and more
+            </p>
+
+            <div id="heroButtons">
+                <a href="#credentials" class="primaryButton">
+                    See Details Below
+                </a>
+            </div>
+
+        </section>
+
+
+    </header>
+
+
+    <div class="empty-space"></div>
+
+    <!-- ==========================================================
+            MAIN CONTENT
+    =========================================================== -->
+
+    <main>
+
+
+        <div class="mg-page-empty-space"></div>
+
+        <!-- ==========================================================
+        SERVICES
+=========================================================== -->
+<section id="services">
+
+    <div class="servicesContent">
+        <h2 class="sectionTitle">
+            Services
+        </h2>
+        <p class="sectionIntro">
+            Every business is unique, and so are the challenges it faces.
+            Whether you're starting from scratch, modernizing existing
+            systems, or looking to automate repetitive work, MG Tech
+            provides practical technology solutions tailored to your goals.
+        </p>
+
+
+        <div class="servicesGrid">
+            <!-- ==========================================
+                    SOFTWARE DEVELOPMENT
+            =========================================== -->
+            <article class="serviceCard">
+                <h3>
+                    Custom Software Development
+                </h3>
+                <p>
+                    Purpose-built software designed around your business.
+                    From internal management systems to customer-facing
+                    applications, every solution is created specifically
+                    for your workflow.
+                </p>
+            </article>
+
+            <!-- ==========================================
+                    BUSINESS AUTOMATION
+            =========================================== -->
+            <article class="serviceCard">
+                <h3>
+                    Business Automation
+                </h3>
+                <p>
+                    Eliminate repetitive work with custom automation,
+                    intelligent document management, digital record keeping,
+                    workflow optimization and business process automation.
+                </p>
+            </article>
+
+            <!-- ==========================================
+                    AI
+            =========================================== -->
+            <article class="serviceCard">
+                <h3>
+                    Artificial Intelligence Integration
+                </h3>
+                <p>
+                    Discover practical ways AI can improve productivity,
+                    reduce manual work and streamline daily operations.
+                    From intelligent assistants to custom AI workflows,
+                    modern tools can transform almost any industry.
+                </p>
+            </article>
+
+            <!-- ==========================================
+                    WEB
+            =========================================== -->
+            <article class="serviceCard">
+                <h3>
+                    Website Design & Development
+                </h3>
+                <p>
+                    Modern, responsive websites designed to represent your
+                    business professionally while improving usability,
+                    accessibility, search engine visibility and customer
+                    engagement.
+                </p>
+            </article>
+
+            <!-- ==========================================
+                    CLOUD
+            =========================================== -->
+            <article class="serviceCard">
+                <h3>
+                    Cloud & Microsoft Solutions
+                </h3>
+                <p>
+                    Microsoft 365, SharePoint, Power Platform, Azure,
+                    cloud migration, collaboration tools and secure
+                    business infrastructure designed to grow with your
+                    organization.
+                </p>
+            </article>
+
+
+            <!-- ==========================================
+                    CONSULTING
+            =========================================== -->
+            <article class="serviceCard">
+                <h3>
+                    IT Consulting
+                </h3>
+                <p>
+                    Independent technical guidance to help you choose the
+                    right technologies, plan future growth, and make
+                    informed business decisions before investing in new
+                    systems.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!--==================================================
+    PROFESSIONAL FOUNDATION - WORK XP & CREDENTIALS
+===================================================-->
+        <section id="professionalFoundation" data-scene="foundation">
+
+            <div class="professionalFoundationContent">
+
+                <div class="contentWidth">
+
+                    <div class="section-intro main-intro" data-scene="intro">
+                        <h2 class="foundationHeading">
+                            Professional Foundations
+                        </h2>
+
+                        <p class="foundationSubtitle">
+                            Great engineering begins with curiosity,
+                            but it is strengthened through education,
+                            discipline, and a lifelong commitment to learning.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div id="engineeringScene">
+            <canvas id="engineeringCanvas"></canvas>
+        </div>
+                <section id="credentials"></section>
+                <section id="experience"></section>
+                <section id="projects" data-scene="projects"></section>
+                <section id="independentEngineering" data-scene="freelance"></section>
+                <section id="resume" data-scene="resume"></section>
+                <section id="about"></section>
+                <section id="contact"></section>
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/burger_menu.js"></script>
+    <script src="scripts/fade_text.js"></script>
+    <script src="scripts/graph_animation.js"></script>
+    <script src="scripts/engineering_scene_animation.js"></script>
+    <script src="scripts/animation_loop.js"></script>
+
+</body>
+
+</html>

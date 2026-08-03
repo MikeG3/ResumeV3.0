@@ -14,7 +14,6 @@ let currentCard = 0;
 /*==================================================
     CENTER CARD
 ==================================================*/
-
 function centerCurrentCard(smooth = true)
 {
     const card = brandCards[currentCard];
@@ -22,26 +21,19 @@ function centerCurrentCard(smooth = true)
     if (!card)
         return;
 
-    const left =
-        card.offsetLeft -
-        (brandScroller.clientWidth - card.offsetWidth) / 2;
+    const left = card.offsetLeft - (brandScroller.clientWidth - card.offsetWidth) / 2;
 
     brandScroller.scrollTo({
-
         left,
-
         behavior: smooth ? "smooth" : "auto"
-
     });
 
     updateActiveCard();
 }
 
-
 /*==================================================
     ACTIVE CARD
 ==================================================*/
-
 function updateActiveCard()
 {
     brandCards.forEach(card =>
@@ -50,11 +42,9 @@ function updateActiveCard()
     brandCards[currentCard].classList.add("activeCard");
 }
 
-
 /*==================================================
     NEXT CARD
 ==================================================*/
-
 function nextCard()
 {
     currentCard++;
@@ -65,11 +55,9 @@ function nextCard()
     centerCurrentCard();
 }
 
-
 /*==================================================
     PREVIOUS CARD
 ==================================================*/
-
 function previousCard()
 {
     currentCard--;
@@ -80,11 +68,9 @@ function previousCard()
     centerCurrentCard();
 }
 
-
 /*==================================================
     BUTTONS
 ==================================================*/
-
 if (rightArrow)
 {
     rightArrow.addEventListener(
@@ -101,11 +87,9 @@ if (leftArrow)
     );
 }
 
-
 /*==================================================
     KEYBOARD
 ==================================================*/
-
 window.addEventListener("keydown", event =>
 {
     if (event.key === "ArrowRight")
@@ -115,11 +99,9 @@ window.addEventListener("keydown", event =>
         previousCard();
 });
 
-
 /*==================================================
     TOUCH SUPPORT
 ==================================================*/
-
 let touchStart = 0;
 
 brandScroller.addEventListener("touchstart", event =>
@@ -142,19 +124,15 @@ brandScroller.addEventListener("touchend", event =>
         previousCard();
 });
 
-
 /*==================================================
     RESIZE
 ==================================================*/
-
 window.addEventListener("resize", () =>
 {
     centerCurrentCard(false);
 });
 
-
 /*==================================================
     INITIALIZE
 ==================================================*/
-
 centerCurrentCard(false);

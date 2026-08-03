@@ -1,0 +1,170 @@
+/*==================================================
+    SERVICES SECTION
+==================================================*/
+#services{
+    position:relative;
+    padding:180px 0;
+    overflow:hidden;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(70,130,200,.08),
+            transparent 60%
+        );
+}
+
+#services .sectionTitle {
+    font-family: "Audiowide";
+    font-size: clamp(2.1rem, 5vw, 4.4rem);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+#services .sectionIntro {
+    max-width: 900px;
+    margin: 0 auto 90px;
+    font-family: "Kode Mono";
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-glow-color);
+    background-color: rgba(0, 0, 0, .30);
+
+    padding: 8px 5%;
+    background: rgba(10,25,35,.45);
+    backdrop-filter:blur(12px);
+    border: 1px solid rgba(120,220,255,.35);
+    border-radius: 22px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35),
+        0 0 20px rgba(120,220,255,.18);
+}
+
+
+/*==================================================
+    BACKGROUND GLOW
+==================================================*/
+#services::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(120,220,255,.05),
+            transparent 70%
+        );
+    pointer-events:none;
+}
+
+/*==================================================
+    CONTENT
+==================================================*/
+.servicesContent{
+    position:relative;
+    z-index:2;
+    width:min(1250px,92%);
+    margin:auto;
+}
+
+/*==================================================
+    INTRODUCTION
+==================================================*/
+.servicesContent .sectionIntro{
+    max-width:900px;
+    margin:30px auto 80px;
+    text-align:center;
+    line-height:2;
+    color:var(--text-secondary);
+    font-size:1.15rem;
+}
+
+/*==================================================
+    GRID
+==================================================*/
+.servicesGrid{
+    display:grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(320px,1fr)
+        );
+    gap:35px;
+}
+
+/*==================================================
+    SERVICE CARD
+==================================================*/
+.serviceCard{
+    font-family: "Kode Mono";
+    padding:40px;
+    border-radius:22px;
+    background: rgba(10,25,35,.45);
+    backdrop-filter:blur(12px);
+    border: 1px solid rgba(120,220,255,.10);
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+/*==================================================
+    HOVER
+==================================================*/
+.serviceCard:hover{
+    border-color: rgba(120,220,255,.35);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35),
+        0 0 20px rgba(120,220,255,.18);
+}
+
+/*==================================================
+    TITLE
+==================================================*/
+.serviceCard h3{
+    font-family:"Audiowide";
+    color:white;
+    font-size:1.35rem;
+    line-height:1.4;
+    margin-bottom:25px;
+}
+
+/*==================================================
+    DESCRIPTION
+==================================================*/
+.serviceCard p{
+    color:var(--text-secondary);
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+@media (max-width:768px){
+
+    #services{
+        padding:120px 0;
+    }
+
+    .servicesGrid{
+        gap:25px;
+    }
+
+    .serviceCard{
+        padding:30px;
+    }
+
+    .serviceCard h3{
+        font-size:1.2rem;
+    }
+
+    .serviceCard p{
+        font-size:1rem;
+    }
+
+}
