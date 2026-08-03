@@ -62,9 +62,54 @@ main {
     background: transparent;
 }
 
-.contentWidth{
-    width:min(1100px,92%);
-    margin:0 auto;
+.contentWidth {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.paragraphContainerCard {
+    max-width: 900px;
+    margin: 0 auto 90px;
+    margin-top: 45px;
+    font-family: "Kode Mono";
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-glow-color);
+    background-color: rgba(0, 0, 0, .30);
+    padding: 8px 5%;
+    background: rgba(10, 25, 35, .45);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(120, 220, 255, .35);
+    border-radius: 22px;
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, .35),
+        0 0 20px rgba(120, 220, 255, .18);
+}
+
+.nestedParagraphInCard {
+    width: 100%;
+    font-family: "Kode Mono";
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+.paragraph-divider-line {
+    /* Dimensions & Positioning */
+    width: 25dvw;
+    height: 2px;
+    z-index: 200000;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 15%,
+            rgba(255, 255, 255, 1) 85%,
+            rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
