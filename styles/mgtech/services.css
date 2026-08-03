@@ -11,6 +11,7 @@
             rgba(70,130,200,.08),
             transparent 60%
         );
+        padding-bottom: 0px;
 }
 
 #services .sectionTitle {

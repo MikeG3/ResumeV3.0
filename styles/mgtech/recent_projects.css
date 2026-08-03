@@ -94,6 +94,9 @@
     PROJECT CARD
 ==================================================*/
 .clientProject{
+    font-family: "Kode Mono";
+    font-size: 1.15rem;
+    line-height: 1.9;
     position:relative;
     padding:45px;
     border-radius:24px;
