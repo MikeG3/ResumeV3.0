@@ -1,0 +1,193 @@
+/*==================================================
+    CONTACT SECTION
+==================================================*/
+#contact {
+    position: relative;
+    padding: 180px 0 220px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(90,170,255,.08),
+            transparent 65%
+        );
+}
+
+#contact .sectionTitle {
+    font-family: "Audiowide";
+    font-size: clamp(2.1rem, 5vw, 4.4rem);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+#contact .sectionIntro {
+    max-width: 900px;
+    margin: 0 auto 90px;
+    font-family: "Kode Mono";
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-glow-color);
+    background-color: rgba(0, 0, 0, .30);
+    padding: 8px 5%;
+    background: rgba(10,25,35,.45);
+    backdrop-filter:blur(12px);
+    border: 1px solid rgba(120,220,255,.35);
+    border-radius: 22px;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35),
+        0 0 20px rgba(120,220,255,.18);
+}
+
+#contact::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(120,220,255,.05),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+/*==================================================
+    CONTENT
+==================================================*/
+.contactContent{
+    position:relative;
+    z-index:5;
+    width:min(1100px,92%);
+    margin:auto;
+    text-align:center;
+}
+
+.contactContent .sectionTitle{
+    margin-bottom:25px;
+}
+
+.contactContent .sectionIntro{
+    max-width:760px;
+    margin:0 auto 70px;
+}
+
+/*==================================================
+    CONTACT CARD
+==================================================*/
+.contactCard{
+    max-width:850px;
+    margin:0 auto;
+    padding:60px;
+    border-radius:24px;
+    background:  rgba(10,25,35,.45);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(120,220,255,.12);
+    box-shadow: 0 15px 45px rgba(0,0,0,.28);
+
+}
+
+/*==================================================
+    CONTACT ICON
+==================================================*/
+.contactIcon{
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+/*==================================================
+    CONTACT CARD TEXT
+==================================================*/
+.contactCard h3{
+    font-family:"Audiowide";
+    font-size:clamp(1.4rem,2vw,2rem);
+    color:white;
+    margin-bottom:25px;
+}
+
+.contactCard p{
+    font-family:"Bruno Ace SC";
+    color:var(--text-secondary);
+    line-height:1.9;
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+/*==================================================
+    EMAIL BUTTON
+==================================================*/
+.contactButton{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:15px;
+    padding:16px 34px;
+    text-decoration:none;
+    font-family:"Audiowide";
+    font-size:1rem;
+    color:white;
+    border-radius:999px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(80,170,255,.9),
+            rgba(120,220,255,.8)
+        );
+    box-shadow: 0 0 18px rgba(120,220,255,.25);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.contactButton:hover{
+    box-shadow: 0 0 30px rgba(120,220,255,.45);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(110,200,255,.95),
+            rgba(160,235,255,.9)
+        );
+}
+
+/*==================================================
+    FOOTNOTE
+==================================================*/
+.contactFootnote{
+    margin-top:45px;
+    font-size:.95rem;
+    opacity:.75;
+    color:var(--text-secondary);
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+@media (max-width:768px){
+
+    #contact{
+        padding:120px 0 150px;
+    }
+
+    .contactCard{
+        padding:40px 28px;
+    }
+
+    .contactCard h3{
+        font-size:1.45rem;
+    }
+
+    .contactCard p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .contactButton{
+        width:100%;
+        padding:16px;
+    }
+
+}
