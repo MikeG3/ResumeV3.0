@@ -79,6 +79,7 @@
 /*==================================================
     CONTACT CARD
 ==================================================*/
+/*
 .contactCard{
     max-width:850px;
     margin:0 auto;
@@ -90,6 +91,7 @@
     box-shadow: 0 15px 45px rgba(0,0,0,.28);
 
 }
+    */
 
 /*==================================================
     CONTACT ICON
@@ -102,6 +104,7 @@
 /*==================================================
     CONTACT CARD TEXT
 ==================================================*/
+/*
 .contactCard h3{
     font-family:"Audiowide";
     font-size:clamp(1.8rem,2.4vw,2.4rem);
@@ -116,6 +119,7 @@
     max-width:650px;
     margin:0 auto 25px;
 }
+    */
 
 /*==================================================
     EMAIL BUTTON
@@ -173,6 +177,7 @@
         padding:120px 0 150px;
     }
 
+    /*
     .contactCard{
         padding:40px 28px;
     }
@@ -185,6 +190,7 @@
         font-size:1rem;
         line-height:1.8;
     }
+        */
 
     .contactButton{
         width:100%;

@@ -95,7 +95,7 @@ main {
 
 .paragraph-divider-line {
     /* Dimensions & Positioning */
-    width: 25dvw;
+    width: 95%;
     height: 2px;
     z-index: 200000;
     background: linear-gradient(90deg,
