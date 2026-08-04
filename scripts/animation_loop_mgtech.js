@@ -28,7 +28,8 @@ const sceneObserver = new IntersectionObserver(
     },
 
     {
-        threshold: 0.35
+        threshold: 0,
+        rootMargin: "-45% 0px -45% 0px"
     }
 
 
@@ -51,49 +52,32 @@ document
 function animationLoop() {
 
     switch (currentScene) {
+        //hero, services, recentProjects, howIWork, aboutMGTech, contact
+        //hero - network
+        //services - graph 
+        //recentProjects  - engineering
+        //howIWork  - network
+        //aboutMGTech - graph
+        //contact - network
 
         case "hero":
             updateHeroScene();
             drawHeroScene();
             networkCanvas.classList.remove("fadeOut");
             geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
             break;
 
-        case "intro":
-            updateHeroScene();
-            drawHeroScene();
-            networkCanvas.classList.remove("fadeOut");
-            geometryBackground.classList.remove("fadeIn");
-            break;
-
-        case "foundation":
+        case "services":
             networkCanvas.classList.add("fadeOut");
             geometryBackground.classList.add("fadeIn");
-            break;
-
-        case "credentials":
-            networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
-            break;
-
-        case "end-of-work-XP":
+            hideEngineeringScene();
             break;
 
         case "projects":
-            networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
-            break;
-
-        case "freelance":
-            networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
-            break;
-
-        case "resume":
-            updateHeroScene();
-            drawHeroScene();
-            networkCanvas.classList.remove("fadeOut");
-            geometryBackground.classList.remove("fadeIn");
+            showEngineeringScene();
+            updateEngineeringScene();
+            drawEngineeringScene();
             break;
 
         case "howIWork":
@@ -101,7 +85,23 @@ function animationLoop() {
             drawHeroScene();
             networkCanvas.classList.remove("fadeOut");
             geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
             break;
+
+        case "aboutMGTech":
+            networkCanvas.classList.add("fadeOut");
+            geometryBackground.classList.add("fadeIn");
+            hideEngineeringScene();
+            break;
+
+        case "contact":
+            updateHeroScene();
+            drawHeroScene();
+            networkCanvas.classList.remove("fadeOut");
+            geometryBackground.classList.remove("fadeIn");
+            hideEngineeringScene();
+            break;
+
 
     }
 

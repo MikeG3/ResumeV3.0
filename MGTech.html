@@ -125,7 +125,7 @@
     <nav id="menuOverlay">
         <a href="MGTech.html">Home</a>
         <a href="#services">Services</a>
-        <a href="#recentProjects">Recent Projects</a>
+        <a href="#projects">Recent Projects</a>
         <a href="#aboutMGTech">About</a>
         <div class="menu-divider-line"></div>
         <a href="#contact">Contact</a>
@@ -135,7 +135,6 @@
     <!-- ==========================================================
      HERO EXPERIENCE
       =========================================================== -->
-
     <header id="hero" data-scene="hero">
 
         <!-- ==========================================
@@ -157,7 +156,7 @@
                 <a href="#services" class="primaryButton">
                     Services
                 </a>
-                <a href="#recentProjects" class="primaryButton">
+                <a href="#projects" class="primaryButton">
                     Projects
                 </a>
                 <a href="#howIWork" class="primaryButton">
@@ -188,7 +187,7 @@
         <!-- ==========================================================
         SERVICES
 =========================================================== -->
-        <section id="services">
+        <section id="services" data-scene="services">
 
             <div class="servicesContent">
                 <h2 class="sectionTitle">
@@ -304,9 +303,12 @@
         <!-- ==========================================================
         RECENT PROJECTS
 =========================================================== -->
-        <section id="professionalFoundation" data-scene="foundation"></section>
+        <section id="projects" data-scene="projects">
 
-        <section id="recentProjects" data-scene="foundation">
+            <div id="engineeringScene">
+                <canvas id="engineeringCanvas"></canvas>
+            </div>
+
             <div class="recentProjectsContent">
                 <h2 class="sectionTitle">
                     Recent Projects
@@ -567,99 +569,99 @@
 
 
 
-<!--==================================================
+        <!--==================================================
     ABOUT MG TECH
 ===================================================-->
-<section id="aboutMGTech">
+        <section id="aboutMGTech" data-scene="aboutMGTech">
 
-    <div class="aboutMGContent">
-        <h2 class="sectionTitle">
-            About MG Tech
-        </h2>
-        <p class="sectionIntro">
-            Technology should solve problems, not create them.
-            MG Tech was founded to help individuals, entrepreneurs,
-            and small businesses adopt modern technology with practical,
-            reliable, and easy-to-understand solutions.
-        </p>
+            <div class="aboutMGContent">
+                <h2 class="sectionTitle">
+                    About MG Tech
+                </h2>
+                <p class="sectionIntro">
+                    Technology should solve problems, not create them.
+                    MG Tech was founded to help individuals, entrepreneurs,
+                    and small businesses adopt modern technology with practical,
+                    reliable, and easy-to-understand solutions.
+                </p>
 
-        <div class="aboutMGGrid">
+                <div class="aboutMGGrid">
 
-            <!--==================================================
+                    <!--==================================================
                     WHO I AM
             ===================================================-->
-            <div class="aboutMGCard">
-                <h3>
-                    Who I Am
-                </h3>
-                <p>
-                    My name is <strong>Michael Garner</strong>, a Software
-                    Engineer based in Montreal with a multidisciplinary
-                    background spanning enterprise software, artificial
-                    intelligence, web development, industrial automation,
-                    embedded systems, and electronics.
-                </p>
-                <p>
-                    Throughout my career I've worked with organizations ranging
-                    from local businesses to large enterprise environments,
-                    designing software, automating workflows, improving business
-                    processes, and helping people make better use of technology.
-                </p>
-            </div>
+                    <div class="aboutMGCard">
+                        <h3>
+                            Who I Am
+                        </h3>
+                        <p>
+                            My name is <strong>Michael Garner</strong>, a Software
+                            Engineer based in Montreal with a multidisciplinary
+                            background spanning enterprise software, artificial
+                            intelligence, web development, industrial automation,
+                            embedded systems, and electronics.
+                        </p>
+                        <p>
+                            Throughout my career I've worked with organizations ranging
+                            from local businesses to large enterprise environments,
+                            designing software, automating workflows, improving business
+                            processes, and helping people make better use of technology.
+                        </p>
+                    </div>
 
-            <!--==================================================
+                    <!--==================================================
                     HOW I WORK
             ===================================================-->
-            <div class="aboutMGCard">
-                <h3>
-                    How I Work
-                </h3>
-                <p>
-                    Most projects are completed personally, allowing clients
-                    to work directly with the engineer designing and building
-                    their solution from beginning to end.
-                </p>
-                <p>
-                    For larger or specialized projects, I maintain relationships
-                    with trusted professionals across software development,
-                    design, marketing, networking, and business consulting,
-                    making it possible to assemble the right team whenever
-                    additional expertise is required.
-                </p>
-            </div>
+                    <div class="aboutMGCard">
+                        <h3>
+                            How I Work
+                        </h3>
+                        <p>
+                            Most projects are completed personally, allowing clients
+                            to work directly with the engineer designing and building
+                            their solution from beginning to end.
+                        </p>
+                        <p>
+                            For larger or specialized projects, I maintain relationships
+                            with trusted professionals across software development,
+                            design, marketing, networking, and business consulting,
+                            making it possible to assemble the right team whenever
+                            additional expertise is required.
+                        </p>
+                    </div>
 
-            <!--==================================================
+                    <!--==================================================
                     MY PHILOSOPHY
             ===================================================-->
-            <div class="aboutMGCard">
-                <h3>
-                    My Philosophy
-                </h3>
-                <p>
-                    Good technology should disappear into the background.
-                    Whether developing software, designing a website,
-                    implementing artificial intelligence, or automating
-                    business operations, the objective remains the same:
-                </p>
-                <blockquote>
-                    Build solutions that are reliable, intuitive,
-                    and genuinely improve the way people work.
-                </blockquote>
+                    <div class="aboutMGCard">
+                        <h3>
+                            My Philosophy
+                        </h3>
+                        <p>
+                            Good technology should disappear into the background.
+                            Whether developing software, designing a website,
+                            implementing artificial intelligence, or automating
+                            business operations, the objective remains the same:
+                        </p>
+                        <blockquote>
+                            Build solutions that are reliable, intuitive,
+                            and genuinely improve the way people work.
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="aboutPortfolioLink">
+                    <p>
+                        Interested in learning more about my professional background,
+                        engineering projects, certifications, and technical experience?
+                    </p>
+                    <a href="index.html" class="primaryButton">
+                        View My Engineering Portfolio
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="aboutPortfolioLink">
-            <p>
-                Interested in learning more about my professional background,
-                engineering projects, certifications, and technical experience?
-            </p>
-            <a href="index.html" class="primaryButton">
-                View My Engineering Portfolio
-            </a>
-        </div>
-    </div>
-
-</section>
+        </section>
 
 
 
@@ -667,7 +669,7 @@
         <!--==================================================
         CONTACT
 ===================================================-->
-        <section id="contact">
+        <section id="contact" data-scene="contact">
 
             <div class="contactContent">
                 <h2 class="sectionTitle">
@@ -681,7 +683,7 @@
                         modernizing an existing system, or simply looking for
                         technical guidance, I'd be happy to discuss your project.
                     </p>
-                    
+
                     <p class="nestedParagraphInCard">
                         Every successful solution begins with a conversation.
                     </p>
@@ -743,13 +745,6 @@
 
 
 
-
-
-        <div id="engineeringScene">
-            <canvas id="engineeringCanvas"></canvas>
-        </div>
-
-
     </main>
 
 
@@ -759,6 +754,7 @@
     <script src="scripts/burger_menu.js"></script>
     <script src="scripts/fade_text.js"></script>
     <script src="scripts/graph_animation.js"></script>
+    <script src="scripts/engineering_scene_animation.js"></script>
     <script src="scripts/animation_loop_mgtech.js"></script>
 
 </body>
