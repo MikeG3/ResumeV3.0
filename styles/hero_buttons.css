@@ -1,0 +1,42 @@
+/*==================================================
+    HERO BUTTONS
+==================================================*/
+#heroButtons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:45px;
+}
+
+
+/*==================================================
+    BUTTON SIZE
+==================================================*/
+#heroButtons .primaryButton{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:220px;
+
+    min-height:58px;
+
+    padding:0 20px;
+
+    white-space:nowrap;
+
+    text-align:center;
+
+    flex-shrink:0;
+}
