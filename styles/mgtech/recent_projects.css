@@ -4,6 +4,7 @@
 #recentProjects{
     position:relative;
     padding:180px 0;
+    padding-top: 20px;
     overflow:hidden;
     background:
         radial-gradient(
@@ -199,6 +200,7 @@
 
     #recentProjects{
         padding:120px 0;
+        padding-top: 20px;
     }
 
     .clientProject{
