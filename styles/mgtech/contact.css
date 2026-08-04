@@ -77,7 +77,7 @@
 }
 
 /*==================================================
-    CONTACT CARD
+    CONTACT CARD - IN MAIN CSS contact.css
 ==================================================*/
 /*
 .contactCard{
@@ -102,7 +102,7 @@
 }
 
 /*==================================================
-    CONTACT CARD TEXT
+    CONTACT CARD TEXT - IN MAIN CSS contact.css
 ==================================================*/
 /*
 .contactCard h3{
@@ -177,15 +177,13 @@
         padding:120px 0 150px;
     }
 
-    /*
+    /* see main contact.css for contactCard styles 
     .contactCard{
         padding:40px 28px;
     }
-
     .contactCard h3{
         font-size:1.45rem;
     }
-
     .contactCard p{
         font-size:1rem;
         line-height:1.8;
