@@ -28,7 +28,7 @@ const sceneObserver = new IntersectionObserver(
     },
 
     {
-        threshold: 0.35
+        threshold: 0.15
     }
 
 
