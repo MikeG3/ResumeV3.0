@@ -1,0 +1,27 @@
+/*==================================================
+    MAIN TITLE
+==================================================*/
+#heroTitle-mg {
+    font-family: 'audiowide';
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.05;
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+
+/*==================================================
+    MISSION STATEMENT
+==================================================*/
+#heroStatement-mg {
+    font-family: 'Kode Mono';
+    max-width: 700px;
+    font-size: clamp(1.15rem, 1.5vw, 1.25rem);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
