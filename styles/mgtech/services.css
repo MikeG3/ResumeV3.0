@@ -151,10 +151,14 @@
 
     #services{
         padding:120px 0;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
     }
 
     .servicesGrid{
         gap:25px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
     }
 
     .serviceCard{
