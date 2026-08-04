@@ -1,0 +1,588 @@
+<html lang="en">
+
+<head>
+        <title>Michael Garner CV | Ingénieur logiciel et technologue multidisciplinaire</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="styles/content.css" rel="stylesheet" type="text/css" />
+        <link href="styles/hero.css" rel="stylesheet" type="text/css" />
+        <link href="styles/hero_buttons.css" rel="stylesheet" type="text/css" />
+        <link href="styles/navigation_menu.css" rel="stylesheet" type="text/css" />
+        <link href="styles/introduction.css" rel="stylesheet" type="text/css" />
+        <link href="styles/professional_foundations_sections.css" rel="stylesheet" type="text/css" />
+        <link href="styles/credentials.css" rel="stylesheet" type="text/css" />
+        <link href="styles/work_xp.css" rel="stylesheet" type="text/css" />
+        <link href="styles/logos.css" rel="stylesheet" type="text/css" />
+        <link href="styles/projects.css" rel="stylesheet" type="text/css" />
+        <link href="styles/freelance.css" rel="stylesheet" type="text/css" />
+        <link href="styles/resume.css" rel="stylesheet" type="text/css" />
+        <link href="styles/mgtech/about.css" rel="stylesheet" type="text/css" />
+        <link href="styles/contact.css" rel="stylesheet" type="text/css" />
+        <link href="styles/project_viewer.css" rel="stylesheet" type="text/css" />
+        <link href="styles/portfolio_animation.css" rel="stylesheet" type="text/css" />
+        <link href="styles/mgtech/services.css" rel="stylesheet" type="text/css" />
+        <link href="styles/mgtech/recent_projects.css" rel="stylesheet" type="text/css" />
+        <link href="styles/mgtech/howIWork.css" rel="stylesheet" type="text/css" />
+        <link href="styles/mgtech/contact.css" rel="stylesheet" type="text/css" />
+        <!--
+    <link rel="stylesheet" type="text/css" href="styles/honeycomb_animation.css">
+    <link rel="stylesheet" type="text/css" href="styles/honeycomb_background.css">
+    <link rel="stylesheet" type="text/css" href="styles/hex.css">
+    -->
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Anta&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Emblema+One&amp;family=Kode+Mono:wght@400..700&amp;family=Michroma&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://mikeg3.github.io/ResumeV3.0/index.html" rel="canonical" />
+        <!-- ==================================================
+     BASIC META
+=================================================== -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="Michael Garner" name="author" />
+        <meta content="Michael Garner is a software engineer &amp; multi-disciplinary technologist specializing in Microsoft Power Platform, SharePoint, engineering design, automation, cloud computing, and custom software development in Montreal, Canada."
+                name="description" />
+        <meta content="Michael Garner, Software Engineer, Power Platform, Microsoft 365, SharePoint, Power Apps, Power Automate, Engineering Portfolio, Automation, Montreal, Quebec, Canada"
+                name="keywords" />
+        <meta content="index, follow" name="robots" />
+        <meta content="#050816" name="theme-color" />
+        <!-- ==================================================
+     OPEN GRAPH - PREVIEW FOR SHARING SITE
+=================================================== -->
+        <meta content="website" property="og:type" />
+        <meta content="Michael Garner | Software Engineer" property="og:title" />
+        <meta content="Engineering thoughtful technology that connects people, ideas, and innovation through software development, automation, and modern engineering solutions."
+                property="og:description" />
+        <meta content="https://mikeg3.github.io/ResumeV3.0/index.html" property="og:url" />
+        <meta content="https://mikeg3.github.io/ResumeV3.0/index.html/images/favicons/MG Favicon.png"
+                property="og:image" />
+        <!-- ==================================================
+     TWITTER
+=================================================== -->
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="Michael Garner | Software Engineer" name="twitter:title" />
+        <meta content="Engineering thoughtful technology through software, automation, and modern engineering design."
+                name="twitter:description" />
+        <meta content="https://mikeg3.github.io/ResumeV3.0/index.html/images/MG Favicon.png" name="twitter:image" />
+        <!-- ==================================================
+     FAVICON
+=================================================== -->
+        <link href="images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+        <link href="images/favicons/favicon.svg" rel="icon" type="image/svg+xml" />
+        <link href="images/favicons/favicon.ico" rel="shortcut icon" />
+        <link href="images/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+        <link href="images/favicons/site.webmanifest" rel="manifest" />
+</head>
+
+<body>
+        <!-- ==================================================================
+         Animated Background Canvas -  (Rendered entirely with JavaScript)
+    ==================================================================== -->
+        <canvas id="networkCanvas"></canvas>
+        <!-- Animated Geometry Background -->
+        <div id="geometryBackground"></div>
+        <!-- ===============================================================================================
+         Optional Background Effects -Additional layers that can later be animated independently
+        ================================================================================================ -->
+        <div id="backgroundGlow"></div>
+        <div id="backgroundGradient"></div>
+        <div id="noiseOverlay"></div>
+        <!-- FRENCH LANGUAGE LINK -->
+        <a aria-label="Version française" href="MGTech.html" id="languageButton">EN</a>
+        <!-- BURGER MENU FOR NAVIGATION -->
+        <button aria-label="Open navigation" id="menuButton">
+                <span></span>
+                <span></span>
+                <span></span>
+        </button>
+        <!-- ==========================================
+                NAVIGATION MENU LINKS
+        =========================================== -->
+        <nav id="menuOverlay">
+                <a href="MGTech.html">Maison</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projets récents</a>
+                <a href="#aboutMGTech">À propos</a>
+                <div class="menu-divider-line"></div>
+                <a href="#contact">Contact</a>
+        </nav>
+        <!-- ==========================================================
+     HERO EXPERIENCE
+      =========================================================== -->
+        <header data-scene="hero" id="hero">
+                <!-- ==========================================
+         Hero Content
+        =========================================== -->
+                <section class="fadeSection" id="heroContent">
+                        <!-- Main Identity -->
+                        <h1 class="fadeSection" id="heroTitle">Services techniques MG</h1>
+                        <!-- Short Mission Statement -->
+                        <p class="fadeSection" id="heroStatement">Fournir des solutions logicielles et informatiques
+                                pour vous et votre entreprise.
+                                Du développement de logiciels personnalisés, du conseil informatique à l'automatisation,
+                                Je peux vous aider à atteindre vos objectifs et plus encore</p>
+                        <div id="heroButtons">
+                                <a class="primaryButton" href="#services">Services</a>
+                                <a class="primaryButton" href="#projects">Projets</a>
+                                <a class="primaryButton" href="#howIWork">Processus</a>
+                                <a class="primaryButton" href="#contact">Contact</a>
+                        </div>
+                </section>
+        </header>
+        <div class="empty-space"></div>
+        <!-- ==========================================================
+            MAIN CONTENT
+    =========================================================== -->
+        <main>
+                <div class="mg-page-empty-space"></div>
+                <!-- ==========================================================
+        SERVICES
+=========================================================== -->
+                <section data-scene="services" id="services">
+                        <div class="servicesContent">
+                                <h2 class="sectionTitle">
+                                        Services
+                                </h2>
+                                <div class="divider-line"></div>
+                                <p class="sectionIntro">Chaque entreprise est unique, tout comme les défis auxquels elle
+                                        est confrontée.
+                                        Que vous partiez de zéro, modernisiez l'existant
+                                        systèmes, ou cherchant à automatiser le travail répétitif, MG Tech
+                                        fournit des solutions technologiques pratiques adaptées à vos objectifs.</p>
+                                <div class="servicesGrid">
+                                        <!-- ==========================================
+                    SOFTWARE DEVELOPMENT
+            =========================================== -->
+                                        <article class="serviceCard">
+                                                <h3>Développement de logiciels personnalisés</h3>
+                                                <p>Un logiciel spécialement conçu pour votre entreprise.
+                                                        Des systèmes de gestion internes à la relation client
+                                                        applications, chaque solution est créée spécifiquement
+                                                        pour votre flux de travail.</p>
+                                        </article>
+                                        <!-- ==========================================
+                    BUSINESS AUTOMATION
+            =========================================== -->
+                                        <article class="serviceCard">
+                                                <h3>Automatisation des affaires</h3>
+                                                <p>
+                                                        Éliminez le travail répétitif grâce à une automatisation personnalisée,
+gestion intelligente des documents, tenue des dossiers numériques,
+optimisation des flux de travail et automatisation des processus métier
+                                                </p>
+                                        </article>
+                                        <!-- ==========================================
+                    AI
+            =========================================== -->
+                                        <article class="serviceCard">
+                                                <h3>Intégration de l'intelligence artificielle</h3>
+                                                <p>Découvrez comment l'IA peut améliorer la productivité,
+                                                        réduisez le travail manuel et rationalisez les opérations
+                                                        quotidiennes.
+                                                        Des assistants intelligents aux workflows d'IA personnalisés,
+                                                        les outils modernes peuvent transformer presque n’importe quelle
+                                                        industrie.</p>
+                                        </article>
+                                        <!-- ==========================================
+                    WEB
+            =========================================== -->
+                                        <article class="serviceCard">
+                                                <h3>Conception et développement de sites Web</h3>
+                                                <p>
+                                                        Des sites Web modernes et réactifs conçus pour représenter votre
+entreprise professionnellement tout en améliorant la convivialité,
+accessibilité, visibilité sur les moteurs de recherche et clientèle
+fiançailles
+                                                </p>
+                                        </article>
+                                        <!-- ==========================================
+                    CLOUD
+            =========================================== -->
+                                        <article class="serviceCard">
+                                                <h3>
+                                                        Solutions Cloud &amp; Microsoft 
+                                                </h3>
+                                                <p>Microsoft 365, SharePoint, Power Platform, Azure,
+                                                        migration vers le cloud, outils de collaboration et sécurité
+                                                        infrastructure d'entreprise conçue pour évoluer avec votre
+                                                        organisation.</p>
+                                        </article>
+                                        <!-- ==========================================
+                    CONSULTING
+            =========================================== -->
+                                        <article class="serviceCard">
+                                                <h3>
+                                                        Conseil informatique
+                                                </h3>
+                                                <p>Un conseil technique indépendant pour vous aider à choisir le
+                                                        bonnes technologies, planifier la croissance future et faire
+                                                        des décisions commerciales éclairées avant d’investir dans de
+                                                        nouveaux
+                                                        systèmes.</p>
+                                        </article>
+                                </div>
+                        </div>
+                </section>
+                <!-- ==========================================================
+        RECENT PROJECTS
+=========================================================== -->
+                <section data-scene="projects" id="projects">
+                        <div id="engineeringScene">
+                                <canvas id="engineeringCanvas"></canvas>
+                        </div>
+                        <div class="recentProjectsContent">
+                                <h2 class="sectionTitle">Projets récents</h2>
+                                <div class="divider-line"></div>
+                                <p class="sectionIntro">
+                                        Chaque projet commence par un défi unique
+Qu'il s'agisse de soutenir une organisation établie,
+moderniser les systèmes existants ou construire quelque chose
+entièrement nouveau, l’objectif est toujours le même :
+fournir une technologie pratique qui crée une valeur durable
+                                </p>
+                                <div class="projectShowcase">
+                                        <!--==================================================
+                    SWIM CLUB MADD
+            ===================================================-->
+                                        <article class="clientProject">
+                                                <div class="projectInformation">
+                                                        <h3>Club de natation MADD</h3>
+                                                        <p>
+                                                                        Accompagnement de la transformation numérique de l'organisation
+grâce au conseil technique, aux flux de travail assistés par l'IA,
+gestion de contenu multilingue et préservation de
+archives historiques A contribué à la publication
+de matériel biographique à travers plusieurs supports numériques et
+plateformes d'impression
+                                                        </p>
+                                                        <div class="projectTags">
+                                                                <span>Artificial Intelligence</span>
+                                                                <span>Digital Transformation</span>
+                                                                <span>Conseil technique</span>
+                                                                <span>Translation</span>
+                                                                <span>Gestion de contenu</span>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                        <!--==================================================
+                    PRO MOTION MARINE
+            ===================================================-->
+                                        <article class="clientProject">
+                                                <div class="projectInformation">
+                                                        <h3>Pro Motion Marine</h3>
+                                                        <p>Conception et développement d'un site internet professionnel
+                                                                complet,
+                                                                travailler directement avec le propriétaire pour établir
+                                                                le
+                                                                la structure, l'image de marque et la présence en ligne
+                                                                du projet.
+                                                                Mise en œuvre de l'optimisation des moteurs de recherche
+                                                                et de l'analyse
+                                                                intégration et gestion des profils métiers.</p>
+                                                        <div class="projectTags">
+                                                                <span>Développement de sites Web</span>
+                                                                <span>Référencement</span>
+                                                                <span>Google Entreprise</span>
+                                                                <span>Analytique</span>
+                                                                <span>UI/UX</span>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                        <!--==================================================
+                    SODEM
+            ===================================================-->
+                                        <article class="clientProject">
+                                                <div class="projectInformation">
+                                                        <h3>Sodem</h3>
+                                                        <p>Livraison de l'administration Microsoft 365,
+                                                                Support SharePoint et conseil technique,
+                                                                tout en développant des solutions Power Platform qui
+                                                                tâches opérationnelles répétitives automatisées et
+                                                                une efficacité accrue au quotidien.</p>
+                                                        <div class="projectTags">
+                                                                <span>Microsoft 365</span>
+                                                                <span>SharePoint</span>
+                                                                <span>Power Platform</span>
+                                                                <span>Automation</span>
+                                                                <span>Assistance technique</span>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                        <!--==================================================
+                    PRANA STUDIO
+            ===================================================-->
+                                        <article class="clientProject">
+                                                <div class="projectInformation">
+                                                        <h3>Prana Studio Montréal</h3>
+                                                        <p>Consulté sur l'infrastructure informatique lors de la
+                                                                conception
+                                                                et développer une application métier personnalisée qui
+                                                                données d'entreprise centralisées, activation à distance
+                                                                sécurisée
+                                                                accès et flux de travail internes rationalisés.</p>
+                                                        <div class="projectTags">
+                                                                <span>Logiciel personnalisé</span>
+                                                                <span>Automatisation des affaires</span>
+                                                                <span>Conception de base de données</span>
+                                                                <span>Accès au cloud</span>
+                                                                <span>Conseil informatique</span>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                        <!--==================================================
+        ALLO MOVING
+===================================================-->
+                                        <article class="clientProject">
+                                                <div class="projectInformation">
+                                                        <h3>Autoriser le déplacement</h3>
+                                                        <p>Conception et développement d'un logiciel bilingue
+                                                                entièrement réactif
+                                                                site Web à partir de zéro en utilisant HTML, CSS et
+                                                                JavaScript. Le projet comprenait des animations
+                                                                personnalisées,
+                                                                optimisation des moteurs de recherche, optimisation des
+                                                                performances,
+                                                                intégration d'analyses et architecture évolutive
+                                                                conçu pour soutenir la croissance future de
+                                                                l’entreprise.</p>
+                                                        <div class="projectTags">
+                                                                <span>Développement de sites Web</span>
+                                                                <span>HTML5</span>
+                                                                <span>CSS3</span>
+                                                                <span>Javascript</span>
+                                                                <span>Responsive Design</span>
+                                                                <span>SEO</span>
+                                                                <span>Google Analytics</span>
+                                                                <span>Optimisation des performances</span>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                </div>
+                        </div>
+                </section>
+                <!-- ==========================================================
+        HOW I WORK
+=========================================================== -->
+                <section data-scene="howIWork" id="howIWork">
+                        <div class="howIWorkContent">
+                                <h2 class="sectionTitle">Comment je travaille</h2>
+                                <div class="divider-line"></div>
+                                <p class="sectionIntro">Chaque projet est différent, mais tous les projets réussis
+                                        commencez de la même manière : comprendre vos objectifs avant d’écrire
+                                        une seule ligne de code. Mon approche est collaborative,
+                                        transparent et axé sur la fourniture de solutions pratiques
+                                        qui continuent à apporter de la valeur longtemps après la fin du projet.</p>
+                                <div class="workflowGrid">
+                                        <!--==================================================
+                    STEP 1
+            ===================================================-->
+                                        <article class="workflowCard">
+                                                <div class="workflowNumber">
+                                                        01
+                                                </div>
+                                                <h3>Découverte</h3>
+                                                <p>Nous commençons par discuter de votre entreprise,
+                                                        identifier les défis, définir les objectifs,
+                                                        et déterminer le plus efficace
+                                                        solution technique.</p>
+                                        </article>
+                                        <!--==================================================
+                    STEP 2
+            ===================================================-->
+                                        <article class="workflowCard">
+                                                <div class="workflowNumber">
+                                                        02
+                                                </div>
+                                                <h3>Planification</h3>
+                                                <p>Ensemble, nous concevrons une feuille de route réaliste,
+                                                        déterminer les priorités, estimer les délais,
+                                                        et choisissez les technologies qui conviennent le mieux
+                                                        votre projet et votre budget.</p>
+                                        </article>
+                                        <!--==================================================
+                    STEP 3
+            ===================================================-->
+                                        <article class="workflowCard">
+                                                <div class="workflowNumber">
+                                                        03
+                                                </div>
+                                                <h3>
+                                                        Development
+                                                </h3>
+                                                <p>Votre solution se construit progressivement,
+                                                        permettant un feedback régulier tout au long
+                                                        développement afin que des améliorations puissent être apportées
+                                                        avant que le projet ne soit terminé.</p>
+                                        </article>
+                                        <!--==================================================
+                    STEP 4
+            ===================================================-->
+                                        <article class="workflowCard">
+                                                <div class="workflowNumber">
+                                                        04
+                                                </div>
+                                                <h3>Livraison et assistance</h3>
+                                                <p>Une fois terminée, votre solution est déployée,
+                                                        testé, documenté et entièrement remis.
+                                                        Améliorations continues et support technique
+                                                        sont toujours disponibles quand vous en avez besoin.</p>
+                                        </article>
+                                </div>
+                                <div class="workflowClosing">
+                                        <p>Mon objectif n'est pas simplement de fournir des logiciels -
+                                                c'est construire des solutions qui rendent la technologie
+                                                plus facile à comprendre, plus facile à utiliser et précieux
+                                                pour les personnes qui en dépendent quotidiennement.</p>
+                                </div>
+                        </div>
+                </section>
+                <!--==================================================
+    ABOUT MG TECH
+===================================================-->
+                <section data-scene="aboutMGTech" id="aboutMGTech">
+                        <div class="aboutMGContent">
+                                <h2 class="sectionTitle">À propos de MGTech</h2>
+                                <p class="sectionIntro">La technologie doit résoudre les problèmes, pas en créer.
+                                        MG Tech a été fondée pour aider les particuliers, les entrepreneurs,
+                                        et les petites entreprises adoptent la technologie moderne avec des
+                                        fonctionnalités pratiques,
+                                        des solutions fiables et faciles à comprendre.</p>
+                                <div class="aboutMGGrid">
+                                        <!--==================================================
+                    WHO I AM
+            ===================================================-->
+                                        <div class="aboutMGCard">
+                                                <h3>
+                                                        Qui suis-je
+                                                </h3>
+                                                <p>Mon nom est<strong>Michael Garner</strong>, un logiciel
+                                                        Ingénieur basé à Montréal avec une formation multidisciplinaire
+                                                        arrière-plan couvrant les logiciels d'entreprise, artificiel
+                                                        intelligence, développement web, automatisation industrielle,
+                                                        systèmes embarqués et électronique.</p>
+                                                <p>
+                                                        Tout au long de ma carrière, j'ai travaillé avec des organisations allant
+des entreprises locales aux environnements de grandes entreprises,
+concevoir des logiciels, automatiser les flux de travail, améliorer les affaires
+processus et aider les gens à mieux utiliser la technologie
+                                                </p>
+                                        </div>
+                                        <!--==================================================
+                    HOW I WORK
+            ===================================================-->
+                                        <div class="aboutMGCard">
+                                                <h3>
+                                                        Comment je travaille
+                                                </h3>
+                                                <p>La plupart des projets sont réalisés personnellement, permettant aux
+                                                        clients
+                                                        travailler directement avec l'ingénieur qui conçoit et construit
+                                                        leur solution du début à la fin.</p>
+                                                <p>Pour des projets plus importants ou spécialisés, j'entretiens des
+                                                        relations
+                                                        avec des professionnels de confiance dans le développement de
+                                                        logiciels,
+                                                        conception, marketing, réseautage et conseil aux entreprises,
+                                                        permettant de constituer la bonne équipe à tout moment
+                                                        une expertise supplémentaire est requise.</p>
+                                        </div>
+                                        <!--==================================================
+                    MY PHILOSOPHY
+            ===================================================-->
+                                        <div class="aboutMGCard">
+                                                <h3>Ma philosophie</h3>
+                                                <p>La bonne technologie devrait disparaître au second plan.
+                                                        Qu'il s'agisse de développer un logiciel, de concevoir un site
+                                                        Web,
+                                                        mettre en œuvre l’intelligence artificielle ou automatiser
+                                                        opérations commerciales, l’objectif reste le même :</p>
+                                                <blockquote>Construire des solutions fiables, intuitives,
+                                                        et améliorer véritablement la façon dont les gens travaillent.
+                                                </blockquote>
+                                        </div>
+                                </div>
+                                <div class="aboutPortfolioLink">
+                                        <p>
+                                                Intéressé à en savoir plus sur mon parcours professionnel,
+projets d'ingénierie, certifications et expérience technique ?
+                                        </p>
+                                        <a class="primaryButton" href="index.html">
+                                                Voir mon portfolio d'ingénierie
+                                        </a>
+                                </div>
+                        </div>
+                </section>
+                <!--==================================================
+        CONTACT
+===================================================-->
+                <section data-scene="contact" id="contact">
+                        <div class="contactContent">
+                                <h2 class="sectionTitle">
+                                        Construisons quelque chose ensemble
+                                </h2>
+                                <div class="divider-line"></div>
+                                <div class="paragraphContainerCard">
+                                        <p class="nestedParagraphInCard">
+                                                Que vous planifiiez un nouveau site Web, que vous exploriez l'IA,
+moderniser un système existant, ou simplement rechercher
+conseils techniques, je me ferai un plaisir de discuter de votre projet
+                                        </p>
+                                        <p class="nestedParagraphInCard">Toute solution réussie commence par une
+                                                conversation.</p>
+                                        <div class="paragraph-divider-line"></div>
+                                        <p class="nestedParagraphInCard">Mon objectif est de construire des solutions
+                                                pratiques et fiables
+                                                qui vous font gagner du temps, réduisent la frustration et vous
+                                                permettent
+                                                pour se concentrer sur ce qui compte le plus.
+                                                La technologie devrait simplifier le travail, pas le compliquer.</p>
+                                </div>
+                                <!--==========================================
+                CONTACT CARD
+        ===========================================-->
+                                <div class="paragraphContainerCard">
+                                        <h3 class="nestedHeaderInCard">Prêt à commencer ?</h3>
+                                        <p class="nestedParagraphInCard">Envoyez-moi un email avec une brève description
+                                                de votre
+                                                projet, entreprise ou idée.
+
+                                                J'examinerai vos besoins et nous déterminerons
+                                                la meilleure façon d’avancer ensemble.</p>
+                                </div>
+                                <div class="contactGrid">
+                                        <!-- Email -->
+                                        <a class="contactCard" href="mailto:HarveyMichaelGarner@hotmail.com">
+                                                <h3>E-mail</h3>
+                                                <p>HarveyMichaelGarner@hotmail.com</p>
+                                        </a>
+                                        <!-- Location -->
+                                        <div class="contactCard">
+                                                <h3>Emplacement</h3>
+                                                <p>Montréal, Québec, Canada</p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- ========================================= -->
+                <!--                    FOOTER                 -->
+                <!-- ========================================= -->
+                <footer id="footer">
+                        <p class="footer-text">Conception Web, développement de contenu et de code par Michael Garner ©
+                                2026</p>
+                </footer>
+        </main>
+        <!-- JavaScript -->
+        <script src="scripts/hero.js"></script>
+        <script src="scripts/burger_menu.js"></script>
+        <script src="scripts/fade_text.js"></script>
+        <script src="scripts/graph_animation.js"></script>
+        <script src="scripts/engineering_scene_animation.js"></script>
+        <script src="scripts/animation_loop_mgtech.js"></script>
+</body>
+
+</html>
