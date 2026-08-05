@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://mikeg3.github.io/ResumeV3.0/sitemap.xml
