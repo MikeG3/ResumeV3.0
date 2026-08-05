@@ -53,7 +53,7 @@ const graph =
     spacing: 70,
 
     columns: 20,
-    rows: 80,
+    rows: 15,
 
     xAxisOffset: 5,
     yAxisOffset: 5,

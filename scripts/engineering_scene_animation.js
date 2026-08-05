@@ -461,11 +461,11 @@ function drawEngineeringScene() {
     engineeringContext.fillStyle = COLORS.background;
     engineeringContext.fillRect(0, 0, engineeringScene.width, engineeringScene.height);
 
-    drawNebula();
+    //drawNebula();
     drawDraftingLayer();
     drawEngineeringTraces();
     drawEngineeringPulses();
-    drawScanner();
+    //drawScanner();
 }
 
 /*==================================================
