@@ -50,6 +50,48 @@ document
         sceneObserver.observe(section);
     });
 
+/*=============================================================
+    HELPER FUNCTIONS TO ACTIVATE AND DEACTIVATE ANIMATIONS
+==============================================================*/
+/* HERO SCENE */
+function showNetworkScene() {
+    if (heroEffectsEnabled()) {
+        updateHeroScene();
+        drawHeroScene();
+        networkCanvas.classList.remove("fadeOut");
+    }
+    else {
+        networkCanvas.classList.add("fadeOut");
+    }
+}
+
+function hideNetworkScene() {
+    networkCanvas.classList.add("fadeOut");
+}
+
+/*  GRAPH SCENE */
+function showGraphScene() {
+    if (graphEffectsEnabled())
+        geometryBackground.classList.add("fadeIn");
+    else
+        geometryBackground.classList.remove("fadeIn");
+}
+
+function hideGraphScene() {
+    geometryBackground.classList.remove("fadeIn");
+}
+
+/*  ENGINEERING SCENE */
+function showEngineeringSceneFX() {
+    if (engineeringEffectsEnabled())
+        displayEngineeringScene();
+    else
+        hideEngineeringScene();
+}
+
+
+
+
 /*==================================================
     MAIN LOOP
 ==================================================*/
@@ -61,23 +103,9 @@ function animationLoop() {
             HERO
         ==================================================*/
         case "hero":
-
-            if (heroEffectsEnabled()) {
-                updateHeroScene();
-                drawHeroScene();
-                networkCanvas.classList.remove("fadeOut");
-            }
-            else {
-                networkCanvas.classList.add("fadeOut");
-            }
-
-            if (graphEffectsEnabled())
-                geometryBackground.classList.remove("fadeIn");
-            else
-                geometryBackground.classList.remove("fadeIn");
-
+            showNetworkScene();
+            hideGraphScene();
             hideEngineeringScene();
-
             break;
 
 
@@ -85,16 +113,7 @@ function animationLoop() {
             INTRO
         ==================================================*/
         case "intro":
-
-            if (heroEffectsEnabled()) {
-                updateHeroScene();
-                drawHeroScene();
-                networkCanvas.classList.remove("fadeOut");
-            }
-            else {
-                networkCanvas.classList.add("fadeOut");
-            }
-
+            showNetworkScene();
             geometryBackground.classList.remove("fadeIn");
             hideEngineeringScene();
 
@@ -105,16 +124,8 @@ function animationLoop() {
             FOUNDATION
         ==================================================*/
         case "foundation":
-
-            networkCanvas.classList.add("fadeOut");
-
-            if (graphEffectsEnabled())
-                geometryBackground.classList.add("fadeIn");
-            else
-                geometryBackground.classList.remove("fadeIn");
-
+            hideNetworkScene();
             hideEngineeringScene();
-
             break;
 
 
@@ -122,14 +133,8 @@ function animationLoop() {
             CREDENTIALS
         ==================================================*/
         case "credentials":
-
             networkCanvas.classList.add("fadeOut");
-
-            if (graphEffectsEnabled())
-                geometryBackground.classList.add("fadeIn");
-            else
-                geometryBackground.classList.remove("fadeIn");
-
+            showGraphScene();
             hideEngineeringScene();
 
             break;
@@ -139,13 +144,8 @@ function animationLoop() {
             END OF WORK EXPERIENCE
         ==================================================*/
         case "end-of-work-XP":
-
-            networkCanvas.classList.add("fadeOut");
-
-            if (graphEffectsEnabled())
-                geometryBackground.classList.add("fadeIn");
-            else
-                geometryBackground.classList.remove("fadeIn");
+            hideNetworkScene();
+            showGraphScene();
 
             if (engineeringEffectsEnabled())
                 displayEngineeringScene();
@@ -167,10 +167,7 @@ function animationLoop() {
             else
                 geometryBackground.classList.remove("fadeIn");
 
-            if (engineeringEffectsEnabled())
-                displayEngineeringScene();
-            else
-                hideEngineeringScene();
+            showEngineeringSceneFX();
 
             break;
 
@@ -179,18 +176,9 @@ function animationLoop() {
             FREELANCE
         ==================================================*/
         case "freelance":
-
             networkCanvas.classList.add("fadeOut");
-
-            if (graphEffectsEnabled())
-                geometryBackground.classList.add("fadeIn");
-            else
-                geometryBackground.classList.remove("fadeIn");
-
-            if (engineeringEffectsEnabled())
-                displayEngineeringScene();
-            else
-                hideEngineeringScene();
+            showGraphScene();
+            showEngineeringSceneFX();
 
             break;
 
@@ -199,36 +187,7 @@ function animationLoop() {
             RESUME
         ==================================================*/
         case "resume":
-
-            if (heroEffectsEnabled()) {
-                updateHeroScene();
-                drawHeroScene();
-                networkCanvas.classList.remove("fadeOut");
-            }
-            else {
-                networkCanvas.classList.add("fadeOut");
-            }
-
-            geometryBackground.classList.remove("fadeIn");
-            hideEngineeringScene();
-
-            break;
-
-
-        /*==================================================
-            ABOUT
-        ==================================================*/
-        case "howIWork":
-
-            if (heroEffectsEnabled()) {
-                updateHeroScene();
-                drawHeroScene();
-                networkCanvas.classList.remove("fadeOut");
-            }
-            else {
-                networkCanvas.classList.add("fadeOut");
-            }
-
+            showNetworkScene();
             geometryBackground.classList.remove("fadeIn");
             hideEngineeringScene();
 
