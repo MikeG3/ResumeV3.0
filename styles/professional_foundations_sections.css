@@ -13,10 +13,23 @@
     height:100vh;
 }
     
-
 .foundationContent{
     position:relative;
     z-index:5;
+}
+
+#professionalFoundation::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle,
+            rgba(150, 220, 255, .22) 1px,
+            transparent 1.5px);
+    background-size: 70px 70px;
+    opacity: .25;
+    animation: gridFloat 30s linear infinite;
+    pointer-events: none;
 }
 
 /*==================================================
@@ -33,50 +46,6 @@
             rgba(10,14,24,.20)
         );
 }
-/*
-#professionalFoundation::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(130, 180, 255, .035) 1px,
-            transparent 1px),
-        linear-gradient(90deg,
-            rgba(130, 180, 255, .035) 1px,
-            transparent 1px);
-    background-size: 70px 70px;
-    opacity: .9;
-    pointer-events: none;
-}
-*/
-#professionalFoundation::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(circle,
-            rgba(150, 220, 255, .22) 1px,
-            transparent 1.5px);
-    background-size: 70px 70px;
-    opacity: .25;
-    animation: gridFloat 30s linear infinite;
-    pointer-events: none;
-}
-    
-
-@keyframes gridFloat {
-    from {
-        transform:
-            translate(0px, 0px);
-    }
-
-    to {
-        transform:
-            translate(70px, 70px);
-    }
-}
-    
-
 
 .main-intro{
     margin-bottom: 120px !important;
@@ -138,107 +107,4 @@
     margin-left: auto;
     margin-right: auto;
 }
-
-.graphPoint {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #7edbff;
-    box-shadow: 0 0 10px rgba(126, 219, 255, .55);
-    transform: translate(-50%, -50%);
-    animation: graphPulse 5s ease-in-out infinite;
-}
-
-.graphLine {
-    position: absolute;
-    height: 1px;
-    transform-origin: left center;
-    background:
-        linear-gradient(90deg,
-            rgba(126, 219, 255, .06),
-            rgba(126, 219, 255, .30),
-            rgba(126, 219, 255, .06));
-    opacity: .35;
-}
-
-@keyframes graphPulse {
-
-    0%,
-    100% {
-        transform:
-            translate(-50%, -50%) scale(1);
-        opacity: .5;
-    }
-
-    50% {
-        transform:
-            translate(-50%, -50%) scale(1.45);
-        opacity: 1;
-    }
-}
-
-
-/*==================================================
-/* NEXT GRID LAYER */
-/*==================================================
-    BACK GRID POINTS
-==================================================*/
-.graphBackPoint {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(120, 200, 255, .55);
-    box-shadow: 0 0 8px rgba(120, 200, 255, .25);
-    transform: translate(-50%, -50%);
-    opacity: .45;
-    /* animation: graphBackPulse 7s ease-in-out infinite; */
-}
-
-/*==================================================
-    BACK GRID LINES
-==================================================*/
-.graphBackLine {
-    position: absolute;
-    height: 1px;
-    transform-origin: left center;
-    background:
-        linear-gradient(90deg,
-            rgba(120, 200, 255, 0),
-            rgba(120, 200, 255, .16),
-            rgba(120, 200, 255, 0));
-    opacity: .22;
-}
-
-/*==================================================
-    DEPTH CONNECTIONS
-==================================================*/
-.graphDepthLine {
-    position: absolute;
-    height: 1px;
-    transform-origin: left center;
-    background:
-        linear-gradient(90deg,
-            rgba(180, 230, 255, 0),
-            rgba(180, 230, 255, .30),
-            rgba(180, 230, 255, 0));
-    opacity: .28;
-}
-
-
-@keyframes graphBackPulse {
-
-    0%,
-    100% {
-        transform:
-            translate(-50%, -50%) scale(.9);
-        opacity: .30;
-    }
-
-    50% {
-        transform:
-            translate(-50%, -50%) scale(1.2);
-        opacity: .55;
-    }
-}
+    
