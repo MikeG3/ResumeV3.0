@@ -1,3 +1,6 @@
+/* GRAPH BACK PULSE COMMENTED OUT - PULSES BACK POINTS */
+
+/*  THIS ANIMATION IS NOT APPLIED TO ANY CODE BELOW
 @keyframes gridFloat {
     from {
         transform:
@@ -9,6 +12,7 @@
             translate(70px, 70px);
     }
 }
+    */
 
 .graphPoint {
     position: absolute;
@@ -109,7 +113,8 @@
 
     50% {
         transform:
-            translate(-50%, -50%) scale(1.2);
+            translate(-50%, -50%) scale(1.5);
         opacity: .55;
     }
 }
+    
