@@ -469,6 +469,15 @@ function drawEngineeringScene() {
 }
 
 /*==================================================
+    HELPER FUNCTION FOR ENGINEERING SCENE
+==================================================*/
+function displayEngineeringScene() {
+    showEngineeringScene();
+    updateEngineeringScene();
+    drawEngineeringScene();
+}
+
+/*==================================================
     EVENTS
 ==================================================*/
 window.addEventListener( "resize", resizeEngineeringScene);

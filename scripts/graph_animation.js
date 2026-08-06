@@ -17,7 +17,7 @@ function getGraphDimensions()
     console.log('height: ' + height);
     */
 
-    graph.columns = Math.ceil( width / 70 );
+    graph.columns = Math.ceil( width / 70 ) + 1;
 
     if (width < 500) {
         graph.rows = 12;
@@ -25,11 +25,11 @@ function getGraphDimensions()
     }
     else if (width < 700) {
         graph.rows = 12;
-       // graph.columns = 12;
+        graph.columns = 10;
     }
     else if (width < 900) {
         graph.rows = 12;
-        //graph.columns = 14;
+        graph.columns = 19;
     }
     else if (width < 1100) {
         graph.rows = 15;

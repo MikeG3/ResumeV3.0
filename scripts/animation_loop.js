@@ -7,41 +7,46 @@ let currentScene = "hero";
 const networkCanvas = document.getElementById("networkCanvas");
 const geometryBackground = document.getElementById("geometryBackground");
 
+/*==================================================
+    EFFECTS CONTROL VIA BUTTON
+==================================================*/
+function heroEffectsEnabled() {
+    return (currentEffectsMode === EFFECTS.FULL);
+}
+
+function graphEffectsEnabled() {
+    return (currentEffectsMode !== EFFECTS.OFF);
+}
+
+function engineeringEffectsEnabled() {
+    return (currentEffectsMode !== EFFECTS.OFF);
+}
 
 /*==================================================
     OBSERVE SECTIONS
 ==================================================*/
-
 const sceneObserver = new IntersectionObserver(
 
     entries => {
-
         entries.forEach(entry => {
-
             if (!entry.isIntersecting)
                 return;
 
             currentScene = entry.target.dataset.scene;
-
         });
 
     },
 
-    {
-        threshold: 0.15
-    }
-
+    { threshold: 0.15 }
 
 );
 
 /*==================================================
     REGISTER SCENES
 ==================================================*/
-
 document
     .querySelectorAll("[data-scene]")
     .forEach(section => {
-
         sceneObserver.observe(section);
     });
 
@@ -52,71 +57,181 @@ function animationLoop() {
 
     switch (currentScene) {
 
+        /*==================================================
+            HERO
+        ==================================================*/
         case "hero":
-            updateHeroScene();
-            drawHeroScene();
-            networkCanvas.classList.remove("fadeOut");
-            geometryBackground.classList.remove("fadeIn");
+
+            if (heroEffectsEnabled()) {
+                updateHeroScene();
+                drawHeroScene();
+                networkCanvas.classList.remove("fadeOut");
+            }
+            else {
+                networkCanvas.classList.add("fadeOut");
+            }
+
+            if (graphEffectsEnabled())
+                geometryBackground.classList.remove("fadeIn");
+            else
+                geometryBackground.classList.remove("fadeIn");
+
             hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            INTRO
+        ==================================================*/
         case "intro":
-            updateHeroScene();
-            drawHeroScene();
-            networkCanvas.classList.remove("fadeOut");
+
+            if (heroEffectsEnabled()) {
+                updateHeroScene();
+                drawHeroScene();
+                networkCanvas.classList.remove("fadeOut");
+            }
+            else {
+                networkCanvas.classList.add("fadeOut");
+            }
+
             geometryBackground.classList.remove("fadeIn");
             hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            FOUNDATION
+        ==================================================*/
         case "foundation":
+
             networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
+
+            if (graphEffectsEnabled())
+                geometryBackground.classList.add("fadeIn");
+            else
+                geometryBackground.classList.remove("fadeIn");
+
             hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            CREDENTIALS
+        ==================================================*/
         case "credentials":
+
             networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
+
+            if (graphEffectsEnabled())
+                geometryBackground.classList.add("fadeIn");
+            else
+                geometryBackground.classList.remove("fadeIn");
+
             hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            END OF WORK EXPERIENCE
+        ==================================================*/
         case "end-of-work-XP":
-            showEngineeringScene();
-            updateEngineeringScene();
-            drawEngineeringScene();
+
+            networkCanvas.classList.add("fadeOut");
+
+            if (graphEffectsEnabled())
+                geometryBackground.classList.add("fadeIn");
+            else
+                geometryBackground.classList.remove("fadeIn");
+
+            if (engineeringEffectsEnabled())
+                displayEngineeringScene();
+            else
+                hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            PROJECTS
+        ==================================================*/
         case "projects":
-            networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
 
-            showEngineeringScene();
-            updateEngineeringScene();
-            drawEngineeringScene();
+            networkCanvas.classList.add("fadeOut");
+
+            if (graphEffectsEnabled())
+                geometryBackground.classList.add("fadeIn");
+            else
+                geometryBackground.classList.remove("fadeIn");
+
+            if (engineeringEffectsEnabled())
+                displayEngineeringScene();
+            else
+                hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            FREELANCE
+        ==================================================*/
         case "freelance":
+
             networkCanvas.classList.add("fadeOut");
-            geometryBackground.classList.add("fadeIn");
-            showEngineeringScene();
-            updateEngineeringScene();
-            drawEngineeringScene();
+
+            if (graphEffectsEnabled())
+                geometryBackground.classList.add("fadeIn");
+            else
+                geometryBackground.classList.remove("fadeIn");
+
+            if (engineeringEffectsEnabled())
+                displayEngineeringScene();
+            else
+                hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            RESUME
+        ==================================================*/
         case "resume":
-            updateHeroScene();
-            drawHeroScene();
-            networkCanvas.classList.remove("fadeOut");
+
+            if (heroEffectsEnabled()) {
+                updateHeroScene();
+                drawHeroScene();
+                networkCanvas.classList.remove("fadeOut");
+            }
+            else {
+                networkCanvas.classList.add("fadeOut");
+            }
+
             geometryBackground.classList.remove("fadeIn");
             hideEngineeringScene();
+
             break;
 
+
+        /*==================================================
+            ABOUT
+        ==================================================*/
         case "howIWork":
-            updateHeroScene();
-            drawHeroScene();
-            networkCanvas.classList.remove("fadeOut");
+
+            if (heroEffectsEnabled()) {
+                updateHeroScene();
+                drawHeroScene();
+                networkCanvas.classList.remove("fadeOut");
+            }
+            else {
+                networkCanvas.classList.add("fadeOut");
+            }
+
             geometryBackground.classList.remove("fadeIn");
             hideEngineeringScene();
+
             break;
 
     }

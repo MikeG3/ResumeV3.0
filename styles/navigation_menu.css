@@ -98,7 +98,6 @@
     transform: translateY(0);
 }
 
-
 .menu-divider-line {
     /* Dimensions & Positioning */
     width: 25dvw;
@@ -117,7 +116,6 @@
     border: none;
     outline: none;
 }
-
 
 /*==================================================
     LANGUAGE BUTTON
@@ -163,6 +161,80 @@
     width: 46px;
     height: 46px;
     font-size: .9rem;
+}
+
+/*==================================================
+    VISUAL EFFECTS BUTTON
+==================================================*/
+#effectsButton{
+    position:fixed;
+    top:20px;
+    right:138px;
+    height:46px;
+    min-width:110px;
+    padding:0 16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    border:none;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    color:white;
+    font-family:"Emblema One", serif;
+    font-size:.78rem;
+    letter-spacing:1.5px;
+    cursor:pointer;
+    z-index:1000;
+    transition:
+        transform .35s,
+        background .35s,
+        box-shadow .35s,
+        letter-spacing .35s;
+}
+
+/* Hover */
+#effectsButton:hover{
+    background:rgba(255,255,255,.16);
+    transform:scale(1.05);
+    letter-spacing:2px;
+    box-shadow: 0 0 20px rgba(120,220,255,.35);
+}
+
+/* Click */
+#effectsButton:active{
+    transform:scale(.96);
+}
+
+/*==================================================
+    LABELS
+==================================================*/
+.effectsLabel{
+    opacity:.65;
+}
+
+#effectsMode{
+    color:#9FE7FF;
+    min-width:44px;
+    text-align:left;
+}
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media (max-width:600px){
+
+    #effectsButton{
+        right:118px;
+        min-width:90px;
+        height:42px;
+        padding:0 12px;
+        font-size:.68rem;
+        gap:4px;
+    }
+
 }
 
 @media (max-width: 600px) {
